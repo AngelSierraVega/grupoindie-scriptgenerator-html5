@@ -8,24 +8,7 @@
  * Public License as published by the Free Software Foundation, either 
  * version 3 of the License, or (at your option) any later version.
  */
-
-require_once '/../GIGnode/GIGnode.php';
-
-class GIGhtml5_script extends GIGnode {
-    
-}
-
-class GIGhtml5_javascript extends GIGnode {
-    
-}
-
-/**
- * Represents a GIGhtml5 object
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- */
-class GIGhtml5 extends GIGnode {
-
-}
-
-
-require_once 'GIGhtml5/GIGhtml5_document.php';
+require_once '../GIGhtml5.php';
+$ex = new GIGhtml5_document("1: Simple Document (GIGhtml5_document)");
+$ex->addElement("Hello World!");
+echo $ex;
