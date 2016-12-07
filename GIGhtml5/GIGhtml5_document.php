@@ -19,34 +19,64 @@ class GIGhtml5_document extends GIGhtml5 {
     private $_html;
 
     /**
-     * Creates a new GIGhtml5_document object
-     * @param $title. The title of the html document
-     * @param $lang [optional]. The languaje of the html document
-     * @param $doctype [optional].. The document type
-     * @param $charset [optional].. The encoding of the html document
-     * @version beta.00.01
+     * @version NEW beta.00.01 GIGhtml5_document +__construct
+     * NEW Creates a new GIGhtml5_document object
+     * @param NEW $title. The title of the html document
+     * @param NEW $lang [optional]. The languaje of the html document
+     * @param NEW $doctype [optional].. The document type
+     * @param NEW $charset [optional].. The encoding of the html document
      */
     function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
         try {
             parent::__construct($tag = null, $emptyNode = false);
             $this->_doctype = $this->addElement(new GIGhtml5_document_doctype($doctype));
-            $this->_html = $this->addElement(new GIGhtml5_document_html($title, $lang, $charset) );
+            $this->_html = $this->addElement(new GIGhtml5_document_html($title, $lang, $charset));
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
     }
-    
+
     /**
      * overrided
      * @version beta.00.01
-     */ 
+     */
     public function addElement($element) {
         try {
-            if(isset($this->_html)== FALSE ){
+            if (isset($this->_html) == FALSE) {
                 return parent::addElement($element);
-            }else{
+            } else {
                 return $this->_html->addElement($element);
             }
+        } catch (Exception $e) {
+            displayErrorPage($e->getMessage());
+        }
+    }
+
+    /**
+     * @version NEW beta.00.02 Class GIGhtml5_document +addHeaderLink
+     * NEW Adds a 'link' tag as a child of the head object.
+     * @param NEW $href. Specifies the location of the linked document.
+     * @param NEW $rel. Specifies the relationship between the current document
+     *  and the linked document.
+     */
+    public function addHeaderLink($href, $rel) {
+        try {
+            return $this->_html->addHeaderLink($href, $rel);
+        } catch (Exception $e) {
+            displayErrorPage($e->getMessage());
+        }
+    }
+
+    /**
+     * @version NEW beta.00.02 Class GIGhtml5_document +addScript
+     * NEW Adds a 'script' tag as a child of the the body object.
+     * @param NEW $script. The script or the file path to the script.
+     * @param NEW $srcFile [optional]. True if script is a sourced file. 
+     * Default true.
+     */
+    public function addScript($script, $srcFile = true) {
+        try {
+            return $this->_html->addScript($script, $srcFile);
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -100,37 +130,70 @@ class GIGhtml5_document_doctype extends GIGnode {
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
 class GIGhtml5_document_html extends GIGnode {
-    
+
     private $_body;
+    private $_head;
 
     /**
+     * @version UPD beta.00.02
      * Creates a new GIGhtml5_document_html object
      * @param $lang. The languaje of the html element
      * @param $title. The title of the html element
      * @param $charset. The encoding of the html element
-     * @version beta.00.01
+     * @version UPD beta.00.02 GIGhtml5_document_html +__construct
+     *  - NEW private var _head as an internal referenced object.
+     * @version NEW beta.00.01 GIGhtml5_document_html +__construct
      */
-    function __construct($title,$lang,$charset) {
+    function __construct($title, $lang, $charset) {
         try {
             parent::__construct($tag = "html", $emptyNode = false, ["lang" => $lang]);
-            $this->addElement(new GIGhtml5_document_html_head($charset, $title));
+            $this->_head = $this->addElement(new GIGhtml5_document_html_head($charset, $title));
             $this->_body = $this->addElement(new GIGhtml5_document_body());
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
     }
-    
+
     /**
      * overrided
      * @version beta.00.01
-     */ 
+     */
     public function addElement($element) {
         try {
-            if(isset($this->_body)== FALSE ){
+            if (isset($this->_body) == FALSE) {
                 return parent::addElement($element);
-            }else{
+            } else {
                 return $this->_body->addElement($element);
             }
+        } catch (Exception $e) {
+            displayErrorPage($e->getMessage());
+        }
+    }
+
+    /**
+     * @version NEW beta.00.02 GIGhtml5_document_html +addHeaderLink
+     * NEW Adds a 'link' tag as a child of the head object.
+     * @param NEW $href. Specifies the location of the linked document.
+     * @param NEW $rel. Specifies the relationship between the current document
+     *  and the linked document.
+     */
+    public function addHeaderLink($href, $rel) {
+        try {
+            return $this->_head->addHeaderLink($href, $rel);
+        } catch (Exception $e) {
+            displayErrorPage($e->getMessage());
+        }
+    }
+
+    /**
+     * @version NEW beta.00.02 GIGhtml5_document_html +addScript
+     * NEW Adds a 'script' tag as a child of the the body object.
+     * @param NEW $script. The script or the file path to the script.
+     * @param NEW $srcFile. True if script is a sourced file. 
+     */
+    public function addScript($script, $srcFile) {
+        try {
+            return $this->_body->addScript($script, $srcFile);
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -143,21 +206,41 @@ class GIGhtml5_document_html extends GIGnode {
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
 class GIGhtml5_document_html_head extends GIGnode {
+
     /**
-     * Creates a new GIGhtml5_document_html_head object
-     * @param $charset. The encoding of the html element
-     * @param $title. The title of the html element
-     * @version beta.00.01
+     * @version NEW beta.00.01 GIGhtml5_document_html_head +__construct
+     * NEW Creates a new GIGhtml5_document_html_head object
+     * @param NEW $charset. The encoding of the html element
+     * @param NEW $title. The title of the html element
      */
-    function __construct($charset,$title) {
+    function __construct($charset, $title) {
         try {
-           parent::__construct($tag = "head", $emptyNode=false);
-           $this->addElement(new GIGhtml5_document_html_head_meta(["charset"=>$charset]));
-           $this->addElement(new GIGhtml5_document_html_head_title($title));
+            parent::__construct($tag = "head", $emptyNode = false);
+            $this->addElement(new GIGhtml5_document_html_head_meta(["charset" => $charset]));
+            $this->addElement(new GIGhtml5_document_html_head_title($title));
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
     }
+
+    /**
+     * @version NEW beta.00.02 GIGhtml5_document_html_head +addHeaderLink
+     * NEW Adds a 'link' tag as a child of the current object.
+     * @param NEW $href. Specifies the location of the linked document.
+     * @param NEW $rel. Specifies the relationship between the current document and
+     * the linked document.
+     */
+    public function addHeaderLink($href, $rel) {
+        try {
+            $tmpLink = new GIGhtml5("link", true);
+            $tmpLink->setAttribute("rel", $rel);
+            $tmpLink->setAttribute("href", $href);
+            return $this->addElement($tmpLink);
+        } catch (Exception $e) {
+            displayErrorPage($e->getMessage());
+        }
+    }
+
 }
 
 /**
@@ -166,14 +249,14 @@ class GIGhtml5_document_html_head extends GIGnode {
  */
 class GIGhtml5_document_html_head_meta extends GIGnode {
 
-     /**
+    /**
      * Creates a new GIGhtml5_document_html_head_meta object
      * @param $attributes. Array representing the attributes of the meta tag
      * @version beta.00.01
      */
     function __construct(Array $attributes) {
         try {
-            parent::__construct($tag = "meta", $emptyNode=true, $attributes);
+            parent::__construct($tag = "meta", $emptyNode = true, $attributes);
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -194,11 +277,10 @@ class GIGhtml5_document_html_head_title extends GIGnode {
      */
     function __construct($title) {
         try {
-            parent::__construct($tag = "title", $emptyNode=false, [],[$title]);
+            parent::__construct($tag = "title", $emptyNode = false, [], [$title]);
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
     }
 
 }
-
