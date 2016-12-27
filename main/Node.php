@@ -10,7 +10,7 @@
  */
 namespace GIndie\DML\HTML5;
 
-require_once 'Node/Tag.php';
+require_once __DIR__ . '/Node/Tag.php';
 
 /**
  * Encapsulates the protected attributes of the HTML node object.
@@ -24,7 +24,7 @@ require_once 'Node/Tag.php';
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-trait _protectedAttrs {
+trait _protectedAttrs {   
     /**
      * Creates a new HTML5 node object.
      * 
@@ -43,9 +43,9 @@ trait _protectedAttrs {
     protected function __construct($tag = null, $emptyNode = false, $attributes = [], $content = []) {
         try {
             $this->_emptyNode = $emptyNode;
-            $this->_tagOpen = $emptyNode ? new Tag\EmptyTag($tag, $attributes) : new Tag\OpenTag($tag);
-            $this->_tagClose = $emptyNode ? "" : new Tag\CloseTag($tag);
-            $this->_content = $emptyNode ? "" : new Content\Content($content);
+            $this->_tagOpen = $emptyNode ? new Tag\EmptyTag($tag, $attributes) : new \GIndie\DML\Node\Tag\OpenTag($tag);
+            $this->_tagClose = $emptyNode ? "" : new \GIndie\DML\Node\Tag\CloseTag($tag);
+            $this->_content = $emptyNode ? "" : new \GIndie\DML\Node\Content\Content($content);
         } catch (Exception $e) {
             displayError($e);
         }
@@ -71,4 +71,22 @@ trait _protectedAttrs {
             displayErrorPage($e->getMessage());
         }
     }
+}
+
+
+/**
+ * Represents an HTML node.
+ * 
+ * @category    CodeGenerator
+ * @package     DescripriveMarkupLanguaje
+ * @subpackage  Node
+ * @copyright   Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     beta.00.04
+ * @since       2016-12-21
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
+ */
+class Node extends \GIndie\DML\Node\Factory {
+    use _protectedAttrs;
 }

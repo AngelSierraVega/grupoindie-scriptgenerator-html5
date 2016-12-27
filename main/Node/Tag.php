@@ -11,12 +11,7 @@
 
 namespace GIndie\DML\HTML5\Tag;
 
-require_once '/../../../GI_DML_Node/main/Node/Tag.php';
-
-//namespace GIndie\DML\Node\Tag;
-
 class EmptyTag {
-    //use TagAttributes;
     use \GIndie\DML\Node\Tag\TagMain;
     
     protected static $OpenSimbol = "<";

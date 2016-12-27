@@ -8,12 +8,12 @@
  * Public License as published by the Free Software Foundation, either 
  * version 3 of the License, or (at your option) any later version.
  */
-
+namespace GIndie\DML\HTML5;
 /**
- * Represents a GIGhtml5_document object
+ * Represents a Document object
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class GIGhtml5_document extends GIGhtml5 {
+class Document extends Node {
 
     private $_doctype;
     private $_html;
@@ -26,11 +26,11 @@ class GIGhtml5_document extends GIGhtml5 {
      * @param NEW $doctype [optional].. The document type
      * @param NEW $charset [optional].. The encoding of the html document
      */
-    function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
+    public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
         try {
             parent::__construct($tag = null, $emptyNode = false);
-            $this->_doctype = $this->addElement(new GIGhtml5_document_doctype($doctype));
-            $this->_html = $this->addElement(new GIGhtml5_document_html($title, $lang, $charset));
+            $this->_doctype = $this->addContent(new GIGhtml5_document_doctype($doctype));
+            $this->_html = $this->addContent(new GIGhtml5_document_html($title, $lang, $charset));
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -40,12 +40,13 @@ class GIGhtml5_document extends GIGhtml5 {
      * overrided
      * @version beta.00.01
      */
-    public function addElement($element) {
+    public function addContent($element) {
         try {
             if (isset($this->_html) == FALSE) {
-                return parent::addElement($element);
+                //parent::addContent($content)
+                return parent::addContent($element);
             } else {
-                return $this->_html->addElement($element);
+                return $this->_html->addContent($element);
             }
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
@@ -88,7 +89,7 @@ class GIGhtml5_document extends GIGhtml5 {
  * Represents a GIGhtml5_document_body object
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class GIGhtml5_document_body extends GIGhtml5 {
+class GIGhtml5_document_body extends Node {
 
     /**
      * Creates a new GIGhtml5_document_body object
@@ -108,7 +109,7 @@ class GIGhtml5_document_body extends GIGhtml5 {
  * Represents a GIGhtml5_document_doctype object
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class GIGhtml5_document_doctype extends GIGnode {
+class GIGhtml5_document_doctype extends \GIndie\DML\Node\Node {
 
     /**
      * Creates a new GIGhtml5_document_doctype object
@@ -117,7 +118,7 @@ class GIGhtml5_document_doctype extends GIGnode {
      */
     function __construct($doctype) {
         try {
-            parent::__construct($tag = "!DOCTYPE", $emptyNode = true, [$doctype]);
+            parent::__construct($tag = "!DOCTYPE", $emptyNode = true, [$doctype=>null]);
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -129,7 +130,7 @@ class GIGhtml5_document_doctype extends GIGnode {
  * Represents a GIGhtml5_document_html object
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class GIGhtml5_document_html extends GIGnode {
+class GIGhtml5_document_html extends \GIndie\DML\Node\Node {
 
     private $_body;
     private $_head;
@@ -147,8 +148,8 @@ class GIGhtml5_document_html extends GIGnode {
     function __construct($title, $lang, $charset) {
         try {
             parent::__construct($tag = "html", $emptyNode = false, ["lang" => $lang]);
-            $this->_head = $this->addElement(new GIGhtml5_document_html_head($charset, $title));
-            $this->_body = $this->addElement(new GIGhtml5_document_body());
+            $this->_head = $this->addContent(new GIGhtml5_document_html_head($charset, $title));
+            $this->_body = $this->addContent(new GIGhtml5_document_body());
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -161,9 +162,9 @@ class GIGhtml5_document_html extends GIGnode {
     public function addElement($element) {
         try {
             if (isset($this->_body) == FALSE) {
-                return parent::addElement($element);
+                return parent::addContent($element);
             } else {
-                return $this->_body->addElement($element);
+                return $this->_body->addContent($element);
             }
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
@@ -205,7 +206,7 @@ class GIGhtml5_document_html extends GIGnode {
  * Represents a GIGhtml5_document_html_head object
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class GIGhtml5_document_html_head extends GIGnode {
+class GIGhtml5_document_html_head extends \GIndie\DML\Node\Node {
 
     /**
      * @version NEW beta.00.01 GIGhtml5_document_html_head +__construct
@@ -216,8 +217,8 @@ class GIGhtml5_document_html_head extends GIGnode {
     function __construct($charset, $title) {
         try {
             parent::__construct($tag = "head", $emptyNode = false);
-            $this->addElement(new GIGhtml5_document_html_head_meta(["charset" => $charset]));
-            $this->addElement(new GIGhtml5_document_html_head_title($title));
+            $this->addContent(new GIGhtml5_document_html_head_meta(["charset" => $charset]));
+            $this->addContent(new GIGhtml5_document_html_head_title($title));
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -235,7 +236,7 @@ class GIGhtml5_document_html_head extends GIGnode {
             $tmpLink = new GIGhtml5("link", true);
             $tmpLink->setAttribute("rel", $rel);
             $tmpLink->setAttribute("href", $href);
-            return $this->addElement($tmpLink);
+            return $this->addContent($tmpLink);
         } catch (Exception $e) {
             displayErrorPage($e->getMessage());
         }
@@ -247,7 +248,7 @@ class GIGhtml5_document_html_head extends GIGnode {
  * Represents a GIGhtml5_document_html_head_meta object
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class GIGhtml5_document_html_head_meta extends GIGnode {
+class GIGhtml5_document_html_head_meta extends \GIndie\DML\Node\Node {
 
     /**
      * Creates a new GIGhtml5_document_html_head_meta object
@@ -268,7 +269,7 @@ class GIGhtml5_document_html_head_meta extends GIGnode {
  * Represents a GIGhtml5_document_html_head_title object
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class GIGhtml5_document_html_head_title extends GIGnode {
+class GIGhtml5_document_html_head_title extends \GIndie\DML\Node\Node {
 
     /**
      * Creates a new GIGhtml5_document_html_head_title object

@@ -11,13 +11,15 @@
 
 namespace GIndie\DML\HTML5;
 
-require_once '../GI_DML_Node/main.php';
-require_once 'main/Node.php';
+//require_once '../GI_DML_Node/main.php';
+require_once __DIR__ .'/../GI_DML_Node/main.php';
+require_once __DIR__ .'/main/Node.php';
+require_once __DIR__ .'/main/Document.php';
 
 class Factory extends \GIndie\DML\Node\Factory {
+
     use \GIndie\DML\HTML5\_protectedAttrs;
-    
-    
+
     /**
      * Creates an empty DML node.
      * 
@@ -41,4 +43,19 @@ class Factory extends \GIndie\DML\Node\Factory {
             displayError($e);
         }
     }
+    /**
+     * 
+     * @param type $title
+     * @param type $lang
+     * @param type $doctype
+     * @param type $charset
+     */
+    public static function Document($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
+        try {
+            return new Document($title, $lang, $doctype, $charset);
+        } catch (Exception $e) {
+            displayError($e);
+        }
+    }
+
 }
