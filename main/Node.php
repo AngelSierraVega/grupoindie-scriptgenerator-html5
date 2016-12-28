@@ -8,6 +8,7 @@
  * as published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  */
+
 namespace GIndie\DML\HTML5;
 
 require_once __DIR__ . '/Node/Tag.php';
@@ -24,7 +25,8 @@ require_once __DIR__ . '/Node/Tag.php';
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-trait _protectedAttrs {   
+trait _protectedAttrs {
+
     /**
      * Creates a new HTML5 node object.
      * 
@@ -43,14 +45,14 @@ trait _protectedAttrs {
     protected function __construct($tag = null, $emptyNode = false, $attributes = [], $content = []) {
         try {
             $this->_emptyNode = $emptyNode;
-            $this->_tagOpen = $emptyNode ? new Tag\EmptyTag($tag, $attributes) : new \GIndie\DML\Node\Tag\OpenTag($tag);
+            $this->_tagOpen = $emptyNode ? new Tag\EmptyTag($tag, $attributes) : new \GIndie\DML\Node\Tag\OpenTag($tag, $attributes);
             $this->_tagClose = $emptyNode ? "" : new \GIndie\DML\Node\Tag\CloseTag($tag);
             $this->_content = $emptyNode ? "" : new \GIndie\DML\Node\Content\Content($content);
         } catch (Exception $e) {
             displayError($e);
         }
     }
-    
+
     /**
      * @version NEW beta.00.02 Class GIGhtml5 +addScript
      * NEW Adds a 'script' tag as a child of the the html5 object.
@@ -71,8 +73,8 @@ trait _protectedAttrs {
             displayErrorPage($e->getMessage());
         }
     }
-}
 
+}
 
 /**
  * Represents an HTML node.
@@ -88,5 +90,6 @@ trait _protectedAttrs {
  * 
  */
 class Node extends \GIndie\DML\Node\Factory {
+
     use _protectedAttrs;
 }
