@@ -8,7 +8,9 @@
  * as published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  */
+
 namespace GIndie\DML\HTML5\Document\Head;
+
 /**
  * Represents a GIGhtml5_document_html_head_meta object
  * @version beta.00.02

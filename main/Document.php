@@ -16,7 +16,7 @@ require_once __DIR__ .'/Document/Body.php';
 
 /**
  * Represents a Document object
- * @version beta.00.03
+ * @version beta.00.04
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since 2016-12-28
  */
@@ -190,6 +190,20 @@ class HTML extends \GIndie\DML\Node\Node {
     public function addLink($href, $rel) {
         try {
             return $this->_head->addLink($href, $rel);
+        } catch (Exception $e) {
+            displayError($e);
+        }
+    }
+    
+    /**
+     * 
+     * @version beta.00.04
+     * @param array $attributes
+     * @since 2016-12-28
+     */
+    public function addMeta(array $attributes) {
+        try {
+            return $this->_head->addMeta($attributes);
         } catch (Exception $e) {
             displayError($e);
         }
