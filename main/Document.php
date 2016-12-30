@@ -16,7 +16,7 @@ require_once __DIR__ .'/Document/Body.php';
 
 /**
  * Represents a Document object
- * @version beta.00.04
+ * @version beta.00.05
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since 2016-12-28
  */
@@ -75,16 +75,29 @@ class Document extends Node {
             displayError($e);
         }
     }
+    
+    /**
+     * 
+     * @version beta.00.05
+     * @param array $attributes
+     * @since 2016-12-29
+     */
+    public function addMeta(array $attributes) {
+        try {
+            return $this->_html->addMeta($attributes);
+        } catch (Exception $e) {
+            displayError($e);
+        }
+    }
 
     /**
      * Adds a 'script' tag as a child of the the body object.
-     * @version beta.00.03
+     * @version beta.00.05
      * @param $script The script or the file path to the script.
-     * @param $srcFile [optional] True if script is a sourced file. 
-     * Default true.
+     * @param $srcFile [false] True if script is a sourced file.
      * @since 2016-12-28
      */
-    public function addScript($script, $srcFile = true) {
+    public function addScript($script, $srcFile = false) {
         try {
             return $this->_html->addScript($script, $srcFile);
         } catch (Exception $e) {

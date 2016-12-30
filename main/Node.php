@@ -15,12 +15,10 @@ require_once __DIR__ . '/Node/Tag.php';
 
 /**
  * Encapsulates the protected attributes of the HTML node object.
- * 
+ * @version beta.00.03
  * @category    CodeGenerator
  * @package     DescripriveMarkupLanguaje
  * @subpackage  HTML
- *
- * @version beta.00.01
  * @since   2016-12-22
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -52,28 +50,38 @@ trait _protectedAttrs {
             displayError($e);
         }
     }
+    
+    /**
+     * The script tags of the body object
+     * @var     array|null
+     * @version beta.00.03
+     * @since   2016-12-29
+     */
+    private $_scripts;
 
     /**
-     * @version NEW beta.00.02 Class GIGhtml5 +addScript
-     * NEW Adds a 'script' tag as a child of the the html5 object.
-     * @param NEW $script. The script or the file path to the script.
-     * @param NEW $srcFile [optional]. True if script is a sourced file. 
-     * Default false.
+     * Adds a 'script' tag as a child of the the html5 object.
+     * @version beta.00.03
+     * @param $script The script or the file path to the script.
+     * @param $srcFile [optional] True if script is a sourced file. Default false.
+     * @since 2016-12-29
      */
     public function addScript($script, $srcFile = false) {
         try {
-            $tmpScript = new self("script");
-            if ($srcFile) {
-                $tmpScript->setAttribute("src", $script);
-            } else {
-                $tmpScript->addElement($script);
+            if (isset($this->_scripts) == FALSE) {
+                $this->_scripts = $this->addContent(\GIndie\DML\Node\Factory::ContentOnly([]));
             }
-            return $this->addElement($tmpScript);
+            if ($srcFile) {
+                $tmpScript = \GIndie\DML\Node\Factory::Simple("script", ["src" => $script]);
+            } else {
+                $tmpScript = \GIndie\DML\Node\Factory::Simple("script",[],[$script]);
+            }
+            return $this->_scripts->addContent($tmpScript);
         } catch (Exception $e) {
-            displayErrorPage($e->getMessage());
+            displayError($e);
         }
     }
-
+    
 }
 
 /**

@@ -57,7 +57,7 @@ class Head extends \GIndie\DML\HTML5\Node {
      */
     public function addLink($href, $rel) {
         try {
-            return $this->addContent(new \GIndie\DML\Node\Node("link", false, ["rel" => $rel, "href" => $href]));
+            return $this->addContent(\GIndie\DML\Node\Factory::Simple("link", ["rel" => $rel, "href" => $href]));
         } catch (Exception $e) {
             displayError($e);
         }
@@ -73,7 +73,6 @@ class Head extends \GIndie\DML\HTML5\Node {
         try {
             if (isset($this->_metas) == FALSE) {
                 $this->_metas = $this->addContent(\GIndie\DML\Node\Factory::ContentOnly([]));
-                
             }
             return $this->_metas->addContent(new Head\Meta($attributes));
         } catch (Exception $e) {
