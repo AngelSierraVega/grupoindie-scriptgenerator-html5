@@ -16,11 +16,19 @@ $document = GIndie\DML\HTML5\Factory::Document("TEST");
 
 //$example = GIndie\DML\HTML5\Factory::Empty_("input") ;
 //$document->addContent($example. " || " . "<input />");
-$document->addContent(GIndie\DML\HTML5\Factory::Div([
-            GIndie\DML\HTML5\Factory::Span([
-                GIndie\DML\HTML5\Factory::Anchor("https:\\www.facebook.com", "link", "_blank")
-            ])
-]));
+//$document->addContent(GIndie\DML\HTML5\Factory::Div([
+//            GIndie\DML\HTML5\Factory::Span([
+//                GIndie\DML\HTML5\Factory::Anchor("https:\\www.facebook.com", "link", "_blank")
+//            ])
+//]));
+
+$example = GIndie\DML\HTML5\List_::Ordered(["link1", "link2", "link3"]);
+$document->addContent($example);
+
+$example = GIndie\DML\HTML5\List_::Unordered(["link1", "link2", "link3"]);
+$document->addContent($example);
+
+
 echo $document;
 
 function displayError(Exception $e) {
