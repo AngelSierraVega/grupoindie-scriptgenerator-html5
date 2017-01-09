@@ -82,6 +82,11 @@ trait _protectedAttrs {
         }
     }
     
+    public function setTag($tag){
+        $this->_tagOpen->setTag($tag);
+        $this->_tagClose !== "" ? $this->_tagClose->setTag($tag) : null;
+    }
+    
 }
 
 /**
@@ -100,4 +105,5 @@ trait _protectedAttrs {
 class Node extends \GIndie\DML\Node\Factory {
 
     use _protectedAttrs;
+    
 }
