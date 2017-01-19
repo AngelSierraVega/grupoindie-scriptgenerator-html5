@@ -11,11 +11,13 @@
 
 namespace GIndie\DML\HTML5;
 
-require_once __DIR__ .'/../GI_DML_Node/main.php';
-require_once __DIR__ .'/main/Node.php';
-require_once __DIR__ .'/main/Anchor.php';
-require_once __DIR__ .'/main/List_.php';
-require_once __DIR__ .'/main/Document.php';
+require_once __DIR__ . '/../GI_DML_Node/main.php';
+require_once __DIR__ . '/main/Node.php';
+require_once __DIR__ . '/main/Anchor.php';
+require_once __DIR__ . '/main/List_.php';
+require_once __DIR__ . '/main/Document.php';
+require_once __DIR__ . '/main/Text.php';
+require_once __DIR__ . '/main/Button.php';
 
 class Factory extends \GIndie\DML\Node\Factory {
 
@@ -44,6 +46,7 @@ class Factory extends \GIndie\DML\Node\Factory {
             displayError($e);
         }
     }
+
     /**
      * 
      * @param type $title
@@ -58,26 +61,25 @@ class Factory extends \GIndie\DML\Node\Factory {
             displayError($e);
         }
     }
-    
-    public static function Anchor($link,$text=null,$target=null) {
+
+    public static function Anchor($link, $text = null, $target = null) {
         try {
             return new Anchor\Anchor($link, $text, $target);
         } catch (Exception $e) {
             displayError($e);
         }
     }
-    
+
     public static function Div(array $content = null) {
         try {
-            return new self("div", false, [],$content);
+            return new BuildingBlocks\Div([], $content);
         } catch (Exception $e) {
             displayError($e);
         }
     }
-    
+
     public static function Span(array $content = null) {
         try {
-            //return new self("span", false, [],$content);
             return new BuildingBlocks\Span($attributes, $content);
         } catch (Exception $e) {
             PGIdomBuilder_plataform::AlertError($e);
@@ -86,12 +88,34 @@ class Factory extends \GIndie\DML\Node\Factory {
 
 }
 
-
 namespace GIndie\DML\HTML5\BuildingBlocks;
 
+class Span extends \GIndie\DML\HTML5\Node {
 
-class Span extends \GIndie\DML\HTML5\Node{
     public function __construct($attributes = array(), $content = array()) {
         parent::__construct("span", false, $attributes, $content);
     }
+
+}
+
+/**
+ * 
+ * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @since 2017-01-18
+ * @version beta.00.01
+ */
+class Div extends \GIndie\DML\HTML5\Node {
+
+    /**
+     * 
+     * @param type $attributes
+     * @param type $content
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since 2017-01-18
+     * @version beta.00.01
+     */
+    public function __construct($attributes = array(), $content = array()) {
+        parent::__construct("div", false, $attributes, $content);
+    }
+
 }

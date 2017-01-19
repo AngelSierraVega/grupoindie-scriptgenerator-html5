@@ -22,10 +22,20 @@ $document = GIndie\DML\HTML5\Factory::Document("TEST");
 //            ])
 //]));
 
-$example = GIndie\DML\HTML5\List_::Ordered(["link1", "link2", "link3"]);
-$document->addContent($example);
+//$example = GIndie\DML\HTML5\List_::Ordered(["link1", "link2", "link3"]);
+//$document->addContent($example);
+//
+//$example = GIndie\DML\HTML5\List_::Unordered(["link1", "link2", "link3"]);
+//$document->addContent($example);
 
-$example = GIndie\DML\HTML5\List_::Unordered(["link1", "link2", "link3"]);
+
+
+//$example = new GIndie\DML\HTML5\Button("TEST", [], $type = 0);
+//$document->addContent($example);
+
+
+
+$example = GIndie\DML\HTML5\Format::Header2("Encabezado");
 $document->addContent($example);
 
 
