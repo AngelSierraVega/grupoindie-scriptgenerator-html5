@@ -107,30 +107,7 @@ class Document extends Node {
 
 }
 
-/**
- * Represents a Doctype object
- * @version beta.00.03
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @version alpha.00.02
- * @since 2016-12-28
- */
-class Doctype extends \GIndie\DML\Node\Node {
 
-    /**
-     * Creates a new Doctype object
-     * @param $doctype The document type
-     * @version alpha.00.02
-     * @since 2016-12-28
-     */
-    function __construct($doctype) {
-        try {
-            parent::__construct($tag = "!DOCTYPE", $emptyNode = true, [$doctype => null]);
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-
-}
 
 /**
  * Represents a HTML object

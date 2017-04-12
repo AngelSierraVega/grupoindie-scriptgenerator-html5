@@ -10,36 +10,10 @@
  */
 //require_once '../GI_DML_Node/main/Node.php';
 //require_once 'main.php';
-require_once __DIR__ . '/main.php';
+require_once __DIR__ . '/src/main.php';
 
-$document = GIndie\DML\HTML5\Factory::Document("TEST");
-
-//$example = GIndie\DML\HTML5\Factory::Empty_("input") ;
-//$document->addContent($example. " || " . "<input />");
-//$document->addContent(GIndie\DML\HTML5\Factory::Div([
-//            GIndie\DML\HTML5\Factory::Span([
-//                GIndie\DML\HTML5\Factory::Anchor("https:\\www.facebook.com", "link", "_blank")
-//            ])
-//]));
-
-//$example = GIndie\DML\HTML5\List_::Ordered(["link1", "link2", "link3"]);
-//$document->addContent($example);
-//
-//$example = GIndie\DML\HTML5\List_::Unordered(["link1", "link2", "link3"]);
-//$document->addContent($example);
-
-
-
-//$example = new GIndie\DML\HTML5\Button("TEST", [], $type = 0);
-//$document->addContent($example);
-
-
-
-$example = GIndie\DML\HTML5\Format::Header2("Encabezado");
-$document->addContent($example);
-
-
-echo $document;
+$div = new GIgenerator\DML\HTML5\Div([],["TEST"]);
+echo $div;
 
 function displayError(Exception $e) {
     print($e->getTraceAsString() . "</br>" . $e->getMessage());
