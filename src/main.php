@@ -27,17 +27,16 @@ require_once __DIR__ . '/main/Handlers/Scripts.php';
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-DML.01
+ * @version     GI-HTML5.01
  * @since       2016-12-21
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
 class Node extends \GIgenerator\DML\Node {
-    
+
     use Handlers\classHandler;
     use Handlers\scriptHandler;
-    
-    
+
     /**
      * Calls internal method addClass on trying to add a class attribute.
      * 
@@ -50,7 +49,7 @@ class Node extends \GIgenerator\DML\Node {
      * @return      boolean TRUE if setted. FALSE otherwize
      * @throws      NA
      * 
-     * @version     GI-DML.01.01
+     * @version     GI-HTML5.01.01
      * @since       2016-12-21
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
@@ -67,8 +66,12 @@ class Node extends \GIgenerator\DML\Node {
 
 }
 
+require_once __DIR__ . '/main/Handlers/GlobalAttributes.php';
+
 require_once __DIR__ . '/main/Categories/Basic.php';
 require_once __DIR__ . '/main/Categories/Links.php';
 require_once __DIR__ . '/main/Categories/Lists.php'; // Partial: Not <menu> or <menuitem>
 require_once __DIR__ . '/main/Categories/Meta.php';
 require_once __DIR__ . '/main/Categories/Programming.php';
+
+require_once __DIR__ . '/main/Document.php';

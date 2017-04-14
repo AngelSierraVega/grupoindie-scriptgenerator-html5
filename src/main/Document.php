@@ -1,24 +1,30 @@
 <?php
 
 /*
- * Copyright (C) 2016 Angel Sierra Vega. Grupo INDIE.
+ * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * This software is protected under GNU: you can use, share, study and 
- * modify it but not distribute it under the terms of the GNU General 
- * Public License as published by the Free Software Foundation, either 
- * version 3 of the License, or (at your option) any later version.
+ * This software is protected under GNU: you can use, study and modify it
+ * but not distribute it under the terms of the GNU General Public License 
+ * as published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
  */
 
-namespace GIndie\DML\HTML5;
-
-require_once __DIR__ .'/Document/Head.php';
-require_once __DIR__ .'/Document/Body.php';
+namespace GIgenerator\DML\HTML5;
 
 /**
- * Represents a Document object
- * @version beta.00.05
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since 2016-12-28
+ * Represents an <b>HTML5</b> document.
+ * 
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @version     GI-HTML5.00
+ * @since       2016-12-28
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
 class Document extends Node {
 
@@ -26,191 +32,84 @@ class Document extends Node {
     private $_html;
 
     /**
-     * Creates a new Document object
-     * @version beta.00.02
-     * @param $title The title of the html document.
-     * @param $lang [optional] The languaje of the html document.
-     * @param $doctype [optional] The document type.
-     * @param $charset [optional] The encoding of the html document.
+     * Creates a new Document object.
+     * 
+     * @param       string $title The title of the html document.
+     * @param       string $lang [optional] The languaje of the html document.
+     * @param       string $doctype [optional] The document type.
+     * @param       string $charset [optional] The encoding of the html document.
+     * 
+     * @version     GI-HTML5.00.00
+     * @since       2016-12-28
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
-        try {
-            parent::__construct($tag = null, $emptyNode = false);
-            $this->_doctype = $this->addContent(new Doctype($doctype));
-            $this->_html = $this->addContent(new HTML($title, $lang, $charset));
-        } catch (Exception $e) {
-            displayError($e);
-        }
+        parent::__construct($tag = null, $emptyNode = false);
+        $this->_doctype = parent::addContent(new Basic\Doctype($doctype));
+        $this->_html = parent::addContent(new Basic\HTML($title, $lang, $charset));
     }
 
     /**
+     * Adds content to the document.
      * 
-     * @version beta.00.02
-     * @since 2016-12-28
+     * @param       mixed $content The content to add.
+     * 
+     * @version     GI-HTML5.00.00
+     * @since       2016-12-28
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @return      mixed An instance of the added content.
      */
     public function addContent($content) {
-        try {
-            if (isset($this->_html) == FALSE) {
-                return parent::addContent($content);
-            } else {
-                return $this->_html->addContent($content);
-            }
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-
-    /**
-     * Adds a 'link' tag as a child of the head object.
-     * @version beta.00.03
-     * @param NEW $href. Specifies the location of the linked document.
-     * @param NEW $rel. Specifies the relationship between the current document
-     *  and the linked document.
-     * @since 2016-12-28
-     */
-    public function addLink($href, $rel) {
-        try {
-            return $this->_html->addLink($href, $rel);
-        } catch (Exception $e) {
-            displayError($e);
-        }
+        return $this->_html->addContent($content);
     }
     
     /**
-     * 
-     * @version beta.00.05
-     * @param array $attributes
-     * @since 2016-12-29
-     */
-    public function addMeta(array $attributes) {
-        try {
-            return $this->_html->addMeta($attributes);
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-
-    /**
-     * Adds a 'script' tag as a child of the the body object.
-     * @version beta.00.05
-     * @param $script The script or the file path to the script.
-     * @param $srcFile [false] True if script is a sourced file.
-     * @since 2016-12-28
-     */
-    public function addScript($script, $srcFile = false) {
-        try {
-            return $this->_html->addScript($script, $srcFile);
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-
-}
-
-
-
-/**
- * Represents a HTML object
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since 2016-12-28
- */
-class HTML extends \GIndie\DML\Node\Node {
-
-    private $_body;
-    private $_head;
-
-    /**
-     * Creates a new 'html' tag object
-     * @version beta.00.03
-     * @param $lang The languaje of the html element
-     * @param $title The title of the html element
-     * @param $charset The encoding of the html element
-     * @since 2016-12-28
-     * @edit    beta.00.02<br />
-     *          NEW private var _head as an internal referenced object.
-     */
-    function __construct($title, $lang, $charset) {
-        try {
-            parent::__construct($tag = "html", $emptyNode = false, ["lang" => $lang]);
-            $this->_head = $this->addContent(new Document\Head($charset, $title));
-            $this->_body = $this->addContent(new Document\Body());
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-
-    /**
-     * Alias for addContent
-     * @version beta.00.03
-     * @since 2016-12-28
-     */
-    public function addContent($content) {
-        try {
-            if (isset($this->_body) == FALSE) {
-                return parent::addContent($content);
-            } else {
-                return $this->_body->addContent($content);
-            }
-        } catch (Exception $e) {
-            displayErrorPage($e->getMessage());
-        }
-    }
-
-    /**
-     * Alias for addContent
-     * @version beta.00.03
-     * @since 2016-12-28
-     */
-    public function addElement($element) {
-        try {
-            $this->addContent($element);
-        } catch (Exception $e) {
-            displayErrorPage($e->getMessage());
-        }
-    }
-
-    /**
      * Adds a 'link' tag as a child of the head object.
-     * @version beta.00.03
-     * @param $href Specifies the location of the linked document.
-     * @param $rel Specifies the relationship between the current document
-     *  and the linked document.
-     * @since 2016-12-28
+     * 
+     * @param       string $href Specifies the location of the linked document.
+     * @param       string $rel Specifies the relationship between the current document and the linked document.
+     * 
+     * @version     GI-HTML5.00.00
+     * @since       2016-12-28
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @return      mixed An instance of the added content.
      */
     public function addLink($href, $rel) {
-        try {
-            return $this->_head->addLink($href, $rel);
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-    
-    /**
-     * 
-     * @version beta.00.04
-     * @param array $attributes
-     * @since 2016-12-28
-     */
-    public function addMeta(array $attributes) {
-        try {
-            return $this->_head->addMeta($attributes);
-        } catch (Exception $e) {
-            displayError($e);
-        }
+        return $this->_html->addLink($href, $rel);
     }
 
+
     /**
-     * @version NEW beta.00.02 GIGhtml5_document_html +addScript
-     * NEW Adds a 'script' tag as a child of the the body object.
-     * @param NEW $script. The script or the file path to the script.
-     * @param NEW $srcFile. True if script is a sourced file. 
+     * Adds a 'meta' tag as a child of the object.
+     * 
+     * @param       array $attributes
+     * 
+     * @version     GI-HTML5.00.00
+     * @since       2016-12-29
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @return      mixed An instance of the added content.
      */
-    public function addScript($script, $srcFile) {
-        try {
-            return $this->_body->addScript($script, $srcFile);
-        } catch (Exception $e) {
-            displayError($e);
-        }
+    public function addMeta(array $attributes) {
+        return $this->_html->addMeta($attributes);
+    }
+   
+    /**
+     * Adds a 'script' tag as a child of the object.
+     * 
+     * @param       string $script The script or the file path to the script.
+     * @param       boolean $external [false] True if script is in a external file.
+     * 
+     * @version     GI-HTML5.00.00
+     * @since       2016-12-28
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @return      mixed An instance of the added content.
+     */
+    public function addScript($script, $external = false) {
+        return $this->_html->addScript($script, $external);
     }
 
 }
