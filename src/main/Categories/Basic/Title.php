@@ -20,9 +20,9 @@ namespace GIgenerator\DML\HTML5\Basic;
  * @subpackage  Main
  * @category    API
  * 
- * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-DML.00
+ * @version     GI-HTML5.01
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -31,12 +31,14 @@ class Title extends \GIgenerator\DML\Node {
 
     /**
      * Creates a new Title object
-     * @version beta.00.02
-     * @param $title The title of the document
-     * @since 2016-12-28
+     * 
+     * @param       string $title The title of the document
+     * 
+     * @version     GI-HTML5.01.01
+     * @since       2016-12-28
      */
     function __construct($title) {
-        parent::__construct($tag = "title", $emptyNode = false, [], [$title]);
+        parent::__construct("title", false, [], [$title]);
     }
 
 }
