@@ -21,7 +21,6 @@ require_once __DIR__ . '/Basic/Header.php';
 require_once __DIR__ . '/Basic/Hr.php';
 require_once __DIR__ . '/Basic/Paragraph.php';
 
-
 /**
  * Factory Pattern for the <b>basic tags</b> of <b>HTML5</b>.
  * 
@@ -113,66 +112,53 @@ class Basic {
     }
 
     /**
-     * Defines HTML headings.
-     * 
-     * More info. at <https://www.w3schools.com/tags/tag_hn.asp>
-     * 
-     * @todo        Error throwing on $level
+     * {@see \GIgenerator\DML\HTML5\Basic\Header}
      * 
      * @param       int $level  [1-6] the header level
      * @param       mixed $content  The content of the header
-     * @param       array $attributes [optional] The attributes of the header
+     * @param       NULL|string $classnames  The space separated class names.
      *
-     * @version     GI-HTML5.01.01
+     * @version     GI-HTML5.01.02
      * @since       2017-01-18
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Node
+     * @return      \GIgenerator\DML\HTML5\Basic\Header
      * 
      */
-    public static function Header($level, $content, array $attributes = []) {
-        return Node::Simple("h" . $level, $attributes, [$content]);
+    public static function Header($level, $content, $classnames = NULL) {
+        return new Basic\Header($level, $content, $classnames);
     }
 
     /**
-     * Defines a thematic change in the content
-     * 
-     * More info. at <https://www.w3schools.com/tags/tag_hr.asp>
+     * {@see \GIgenerator\DML\HTML5\Basic\Hr}
      * 
      * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
      *
-     * @version     GI-DML.01.01
+     * @version     GI-DML.01.02
      * @since       2017-04-12
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Node
+     * @return      \GIgenerator\DML\HTML5\Basic\Hr
      * 
      */
     public static function Hr() {
-        return Node::Closed("hr");
+        return new Basic\Hr();
     }
 
     /**
-     * Defines a paragraph.
-     * 
-     * More info. at <https://www.w3schools.com/tags/tag_p.asp>
+     * {@see \GIgenerator\DML\HTML5\Basic\Paragraph}
      * 
      * @param       mixed $content  The content of the paragraph
      *
-     * @version     GI-HTML5.01.01
+     * @version     GI-HTML5.01.02
      * @since       2017-01-18
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Node
+     * @return      \GIgenerator\DML\HTML5\Basic\Paragraph
      * 
      */
-    public static function Paragraph($content,$classes = NULL) {
-        if($classes != NULL ){
-            $rtn = Node::Simple("p", [], [$content]);
-            $rtn->addClass($classes);
-            return $rtn;
-        }
-        return Node::Simple("p", [], [$content]);
+    public static function Paragraph($content, $classnames = NULL) {
+        return new Basic\Paragraph($content, $classnames);
     }
 
     /**
