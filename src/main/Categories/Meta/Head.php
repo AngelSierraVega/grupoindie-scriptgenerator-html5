@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\DML\HTML5\Document;
+namespace GIgenerator\DML\HTML5\Meta;
 
-require_once __DIR__ . '/Head/Meta.php';
-require_once __DIR__ . '/Head/Title.php';
+//require_once __DIR__ . '/Head/Meta.php';
+//require_once __DIR__ . '/Head/Title.php';
 
 /**
  * Represents a GIGhtml5_document_html_head object
@@ -20,7 +20,7 @@ require_once __DIR__ . '/Head/Title.php';
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since 2016-12-28
  */
-class Head extends \GIndie\DML\HTML5\Node {
+class Head extends \GIgenerator\DML\HTML5\Node {
 
     /**
      * The meta tags of the Head object
@@ -41,7 +41,7 @@ class Head extends \GIndie\DML\HTML5\Node {
         try {
             parent::__construct($tag = "head", $emptyNode = false);
             $this->addMeta(["charset" => $charset]);
-            $this->addContent(new Head\Title($title));
+            $this->addContent(new \GIgenerator\DML\HTML5\Basic\Title($title));
         } catch (Exception $e) {
             displayError($e);
         }
@@ -70,14 +70,10 @@ class Head extends \GIndie\DML\HTML5\Node {
      * @since 2016-12-28
      */
     public function addMeta(array $attributes) {
-        try {
-            if (isset($this->_metas) == FALSE) {
-                $this->_metas = $this->addContent(\GIndie\DML\Node\Factory::ContentOnly([]));
-            }
-            return $this->_metas->addContent(new Head\Meta($attributes));
-        } catch (Exception $e) {
-            displayError($e);
+        if (isset($this->_metas) == FALSE) {
+            $this->_metas = $this->addContent(\GIgenerator\DML\Node::ContentOnly([]));
         }
+        return $this->_metas->addContent(new Meta($attributes));
     }
 
 }

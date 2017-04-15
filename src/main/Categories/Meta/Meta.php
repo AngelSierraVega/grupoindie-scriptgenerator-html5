@@ -9,27 +9,24 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\DML\HTML5\Document;
+namespace GIgenerator\DML\HTML5\Meta;
 
 /**
- * Represents a Body object
+ * Represents a GIGhtml5_document_html_head_meta object
  * @version beta.00.02
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since 2016-12-28
  */
-class Body extends \GIndie\DML\HTML5\Node {
+class Meta extends \GIgenerator\DML\HTML5\Node {
 
     /**
-     * Creates a new Body object
+     * Creates a new Meta object
      * @version beta.00.02
+     * @param Array $attributes An array representing the attributes of the meta tag
      * @since 2016-12-28
      */
-    function __construct() {
-        try {
-            parent::__construct($tag = "body");
-        } catch (Exception $e) {
-            displayErrorPage($e->getMessage());
-        }
+    function __construct(Array $attributes) {
+        parent::__construct($tag = "meta", $emptyNode = "closed", $attributes);
     }
 
 }

@@ -69,6 +69,7 @@ class Node extends \GIgenerator\DML\Node {
 require_once __DIR__ . '/main/Handlers/GlobalAttributes.php';
 
 require_once __DIR__ . '/main/Categories/Basic.php';
+require_once __DIR__ . '/main/Categories/StylesSemantics.php'; // Partial: Only <style> <div>  <span>
 require_once __DIR__ . '/main/Categories/Links.php';
 require_once __DIR__ . '/main/Categories/Lists.php'; // Partial: Not <menu> or <menuitem>
 require_once __DIR__ . '/main/Categories/Meta.php';

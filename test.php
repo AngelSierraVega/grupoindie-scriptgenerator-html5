@@ -12,9 +12,9 @@
 //require_once 'main.php';
 require_once __DIR__ . '/src/main.php';
 
-$div = new GIgenerator\DML\HTML5\Div([],["TEST"]);
-echo $div;
-
-function displayError(Exception $e) {
-    print($e->getTraceAsString() . "</br>" . $e->getMessage());
-}
+$doc = new GIgenerator\DML\HTML5\Document("Hello Wolrd!");
+//$doc->addContent();
+$doc->addContent(GIgenerator\DML\HTML5\Basic::Header(1, "Header"));
+$doc->addContent(GIgenerator\DML\HTML5\Basic::Paragraph("Hello Wolrd!") );
+$doc->prettyfy(-1);
+echo $doc;

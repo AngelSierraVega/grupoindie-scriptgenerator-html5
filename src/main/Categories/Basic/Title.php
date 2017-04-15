@@ -9,15 +9,25 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\DML\HTML5\Document\Head;
+namespace GIgenerator\DML\HTML5\Basic;
 
 /**
- * Represents a Title object
- * @version beta.00.02
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since 2016-12-28
+ * Defines a title for the document
+ * 
+ * More info. at <https://www.w3schools.com/tags/tag_title.asp>
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @version     GI-DML.00
+ * @since       2016-12-28
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class Title extends \GIndie\DML\Node\Node {
+class Title extends \GIgenerator\DML\Node {
 
     /**
      * Creates a new Title object
@@ -26,11 +36,7 @@ class Title extends \GIndie\DML\Node\Node {
      * @since 2016-12-28
      */
     function __construct($title) {
-        try {
-            parent::__construct($tag = "title", $emptyNode = false, [], [$title]);
-        } catch (Exception $e) {
-            displayError($e);
-        }
+        parent::__construct($tag = "title", $emptyNode = false, [], [$title]);
     }
 
 }

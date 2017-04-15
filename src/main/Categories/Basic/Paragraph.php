@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (C) 2016 Angel Sierra Vega. Grupo INDIE.
+ * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
  * but not distribute it under the terms of the GNU General Public License 
@@ -9,12 +9,13 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\DML\HTML5\Tag;
+namespace GIgenerator\DML\HTML5\Basic;
 
-class EmptyTag {
-    use \GIndie\DML\Node\Tag\TagMain;
-    
-    protected static $OpenSimbol = "<";
-    protected static $CloseSimbol = " />";
+/**
+ * Description of Paragraph
+ *
+ * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ */
+class Paragraph {
+    //put your code here
 }
-
