@@ -12,10 +12,37 @@
 namespace GIgenerator\DML\HTML5\Basic;
 
 /**
- * Description of Header
+ * Defines HTML headings.
+ * 
+ * More info. at <https://www.w3schools.com/tags/tag_hn.asp>
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @version     GI-HTML5.01
+ * @since       2017-04-14
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class Header {
-    //put your code here
+class Header extends \GIgenerator\DML\HTML5\Node {
+
+    use \GIgenerator\DML\HTML5\Handlers\GlobalAttributes;
+
+    /**
+     * Creates a new Header object
+     * 
+     * @todo        Error throwing on $level
+     * 
+     * @param       int $level  [1-6] the header level
+     * @param       mixed $content  The content of the header
+     * @param       NULL|string $classnames  The space separated class names.
+     * 
+     * @version     GI-HTML5.01.01
+     * @since       2017-04-14
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     */
+    public function __construct($level, $content, $classnames = NULL) {
+        parent::__construct("h" . $level, false, [], [$content]);
+        if ($classnames != NULL) {
+            $this->addClass($classnames);
+        }
+    }
+
 }
