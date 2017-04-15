@@ -12,10 +12,33 @@
 namespace GIgenerator\DML\HTML5\Basic;
 
 /**
- * Description of Hr
+ * Defines a thematic change in the content.
+ * 
+ * More info. at <https://www.w3schools.com/tags/tag_hr.asp>
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @version     GI-HTML5.01
+ * @since       2017-04-14
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class Hr {
-    //put your code here
+class Hr extends \GIgenerator\DML\HTML5\Node {
+
+    use \GIgenerator\DML\HTML5\Handlers\GlobalAttributes;
+
+    /**
+     *
+     * @version     GI-HTML5.01.01
+     * @since       2017-04-14
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     */
+    public function __construct() {
+        parent::__construct("hr", "closed");
+    }
+
 }
