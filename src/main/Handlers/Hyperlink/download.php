@@ -12,10 +12,42 @@
 namespace GIgenerator\DML\HTML5\Handlers\Hyperlink;
 
 /**
- * Description of download
+ * []
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @version     GI-HTML5.00
+ * @since       2017-04-15
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class download {
-    //put your code here
+trait downloadTrait {
+
+    public function getDownload() {
+        return $this->getAttribute("download");
+    }
+
+    public function removeDownload() {
+        $this->unsetAttribute("download");
+        return $this;
+    }
+
+    public function setDownload($value) {
+        $this->setAttribute("download", $value);
+        return $this;
+    }
+
+}
+
+interface download {
+
+    public function getDownload();
+
+    public function removeDownload();
+
+    public function setDownload($value);
 }

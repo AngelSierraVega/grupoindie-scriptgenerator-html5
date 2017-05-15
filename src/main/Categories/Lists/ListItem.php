@@ -9,12 +9,30 @@
  * License, or (at your option) any later version.
  */
 
+namespace GIgenerator\DML\HTML5\Lists;
+
 /**
  * Description of ListItem
  * https://www.w3schools.com/tags/tag_li.asp
- *
+ * 
+ * @param array $attributes
+ * @param array $content
+ * @since   2017-01-04
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @version beta.00.01
  */
-class ListItem {
-    //put your code here
+class ListItem extends \GIgenerator\DML\HTML5\Node {
+
+    /**
+     * 
+     * @param array $attributes
+     * @param array $content
+     * @since   2017-01-04
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @version beta.00.01
+     */
+    public function __construct(array $attributes = array(), array $content = array()) {
+        parent::__construct("li", false, $attributes, $content);
+    }
+
 }

@@ -13,7 +13,7 @@ namespace GIgenerator\DML\HTML5\Meta;
 
 /**
  * Represents a GIGhtml5_document_html_head_meta object
- * @version beta.00.02
+ * @version     GI-HTML5.00
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since 2016-12-28
  */

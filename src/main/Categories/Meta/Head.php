@@ -16,9 +16,9 @@ namespace GIgenerator\DML\HTML5\Meta;
 
 /**
  * Represents a GIGhtml5_document_html_head object
- * @version beta.00.04
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since 2016-12-28
+ * @version     GI-HTML5.00
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @since       2016-12-28
  */
 class Head extends \GIgenerator\DML\HTML5\Node {
 
@@ -56,11 +56,7 @@ class Head extends \GIgenerator\DML\HTML5\Node {
      * @since 2016-12-28
      */
     public function addLink($href, $rel) {
-        try {
-            return $this->addContent(\GIndie\DML\Node\Factory::Simple("link", ["rel" => $rel, "href" => $href]));
-        } catch (Exception $e) {
-            displayError($e);
-        }
+        return $this->addContent(\GIgenerator\DML\Node::Simple("link", ["rel" => $rel, "href" => $href]));
     }
 
     /**

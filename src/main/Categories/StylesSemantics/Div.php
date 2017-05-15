@@ -9,11 +9,30 @@
  * License, or (at your option) any later version.
  */
 
+namespace GIgenerator\DML\HTML5\StylesSemantics;
+
 /**
- * Description of Div
+ * Defines a section in a document
+ * 
+ * https://www.w3schools.com/tags/tag_div.asp
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @version     GI-HTML5.00
+ * @since       2017-04-16
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class Div {
-    //put your code here
+class Div extends \GIgenerator\DML\HTML5\Node {
+
+    use \GIgenerator\DML\HTML5\Handlers\GlobalAttributes;
+
+    public function __construct($content, array $attributes = array()) {
+        parent::__construct("div", false, $attributes, is_array($content) ? $content : [$content]);
+    }
+
 }

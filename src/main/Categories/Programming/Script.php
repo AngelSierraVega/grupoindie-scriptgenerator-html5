@@ -8,7 +8,9 @@
  * as published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  */
+
 namespace GIgenerator\DML\HTML5\Programming;
+
 /**
  * Defines a client-side script
  * 
@@ -36,7 +38,7 @@ class Script extends \GIgenerator\DML\HTML5\Node {
 
     public function __construct($script, $external = false) {
         if ($external) {
-            parent::__construct("script", "closed", ["src" => $script]);
+            parent::__construct("script", false, ["src" => $script]);
         } else {
             parent::__construct("script", false, [], [$script]);
         }

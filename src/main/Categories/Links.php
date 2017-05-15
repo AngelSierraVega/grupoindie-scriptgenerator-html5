@@ -11,6 +11,11 @@
 
 namespace GIgenerator\DML\HTML5;
 
+
+require_once __DIR__ . '/Links/Link.php';
+require_once __DIR__ . '/Links/Anchor.php';
+require_once __DIR__ . '/Links/Hyperlink.php';
+
 /**
  * Factory Pattern for the <b>links</b> of <b>HTML5</b>.
  * 
@@ -28,42 +33,19 @@ namespace GIgenerator\DML\HTML5;
  * 
  */
 class Links {
-    //put your code here
-}
 
-namespace GIgenerator\DML\HTML5\Links;
-
-trait Link {
-    public function setLink($link, $text = null) {
-        try {
-            $this->setAttribute("href", $link);
-            if ($text != null) {
-                $this->addContent($text);
-            }
-        } catch (Exception $e) {
-            displayError($e);
-        }
+    /**
+     * {@see \GIgenerator\DML\HTML5\Links\Hyperlink}
+     *
+     * @version     GI-HTML5.01.02
+     * @since       2017-01-18
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @return      \GIgenerator\DML\HTML5\Links\Hyperlink
+     * 
+     */
+    public static function Hyperlink($link, $content = NULL, $target = NULL) {
+        return new Links\Hyperlink($link, $content, $target);
     }
+
 }
-
-/**
- * Represents a Document object
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- */
-class Anchor extends \GIgenerator\DML\HTML5\Node {
-
-    use Link;
-    
-    public function __construct($link, $text = null, $target = null) {
-        try {
-            $_attributes = ["href" => $link];
-            if($target != null){
-                $_attributes["target"] = $target;
-            }
-            parent::__construct("a", false, $_attributes, $text != null ? [$text] : []);
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-}
-

@@ -20,7 +20,7 @@ namespace GIgenerator\DML\HTML5\Handlers;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-DML.01
+ * @version     GIG-HTML5.00.02
  * @since       2017-03-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -31,7 +31,7 @@ trait scriptHandler {
      * @internal     
      * @var         \GIgenerator\DML\Node  $_scripts Stores an instance of the node containing the scripts. 
      * 
-     * @version     GI-DML.01.01
+     * @version     GIG-HTML5.00.01
      * 
      * @since       2017-03-14
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
@@ -42,7 +42,7 @@ trait scriptHandler {
     /**
      * Adds a 'script' node as a child of the the html5 object.
      * 
-     * @version     GI-DML.01.01
+     * @version     GIG-HTML5.00.01
      * 
      * @param       string $script The script or the file path to the script.
      * @param       boolean $external [optional] TRUE if script is an external file. Default FALSE.
@@ -59,6 +59,21 @@ trait scriptHandler {
             $this->_scripts = $this->addContent(\GIgenerator\DML\Node::ContentOnly([]));
         }
         return $this->_scripts->addContent(\GIgenerator\DML\HTML5\Programming::Script($script, $external));
+    }
+    
+    /**
+     * Adds a 'script' node that executes when document is ready.
+     * 
+     * @param       string $script The script or the file path to the script.
+     * @since       GIG-HTML5.00.02
+     * 
+     * @return      \GIgenerator\DML\HTML5\Programming\Script
+     * @throws      NA
+     * 
+     */
+    public function addScriptOnDocumentReady($script) {
+        return $this->addScript("$(document).ready(function () { {$script} });", false);
+
     }
 
 }

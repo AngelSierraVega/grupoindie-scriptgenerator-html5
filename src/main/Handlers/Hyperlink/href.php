@@ -26,14 +26,29 @@ namespace GIgenerator\DML\HTML5\Handlers\Hyperlink;
  * 
  */
 trait hrefTrait {
-
-    public function setHref($href) {
-        return $this->setAttribute("href", $href);
+    
+    public function getHref(){
+        return $this->getAttribute("href");
+    }
+    
+    public function removeHref(){
+        $this->unsetAttribute("href");
+        return $this;
     }
 
+    public function setHref($href) {
+        $this->setAttribute("href", $href);
+        return $this;
+    }
+    
 }
 
 interface href {
+    
+    public function getHref();
+    
+    public function removeHref();
 
     public function setHref($href);
+  
 }

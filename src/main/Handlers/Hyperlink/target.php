@@ -12,10 +12,42 @@
 namespace GIgenerator\DML\HTML5\Handlers\Hyperlink;
 
 /**
- * Description of target
+ * []
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @version     GI-HTML5.00
+ * @since       2017-04-15
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class target {
-    //put your code here
+trait targetTrait {
+
+    public function getTarget() {
+        return $this->getAttribute("target");
+    }
+
+    public function removeTarget() {
+        $this->unsetAttribute("target");
+        return $this;
+    }
+
+    public function setTarget($value) {
+        $this->setAttribute("target", $value);
+        return $this;
+    }
+
+}
+
+interface target {
+
+    public function getTarget();
+
+    public function removeTarget();
+
+    public function setTarget($value);
 }

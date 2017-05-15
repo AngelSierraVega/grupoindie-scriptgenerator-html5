@@ -16,13 +16,15 @@ namespace GIgenerator\DML\HTML5\Basic;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_html.asp>
  * 
+ * @todo        Documentation for custom functions
+ * 
  * @package     HTML5
  * @subpackage  Main
  * @category    API
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
+ * @version     GI-HTML5.00.02
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -33,7 +35,7 @@ class HTML extends \GIgenerator\DML\Node {
      * The body of the HTML object
      * @var \GIgenerator\DML\HTML5\Basic\Body 
      * 
-     * @version     GI-HTML5.01.01
+     * @version     GIG-HTML5.00.01
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
@@ -44,7 +46,7 @@ class HTML extends \GIgenerator\DML\Node {
      * 
      * @var \GIgenerator\DML\HTML5\Meta\Head 
      * 
-     * @version     GI-HTML5.01.01
+     * @version     GIG-HTML5.00.01
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
@@ -53,7 +55,7 @@ class HTML extends \GIgenerator\DML\Node {
     /**
      * Creates a new 'html' tag object
      * 
-     * @version     GI-HTML5.01.01
+     * @version     GIG-HTML5.00.01
      * 
      * @param       string $title The title of the html element
      * @param       string $lang The languaje of the html element
@@ -69,7 +71,7 @@ class HTML extends \GIgenerator\DML\Node {
     }
 
     /**
-     * @version     GI-HTML5.00
+     * @version     GIG-HTML5.00
      * @since       2016-12-28
      */
     public function addContent($content) {
@@ -78,7 +80,7 @@ class HTML extends \GIgenerator\DML\Node {
 
     /**
      * Adds a 'link' tag as a child of the head object.
-     * @version     GI-HTML5.00
+     * @version     GIG-HTML5.00
      * @param       $href Specifies the location of the linked document.
      * @param       $rel Specifies the relationship between the current document
      *                   and the linked document.
@@ -90,7 +92,7 @@ class HTML extends \GIgenerator\DML\Node {
 
     /**
      * 
-     * @version     GI-HTML5.00
+     * @version     GIG-HTML5.00
      * @param array $attributes
      * @since 2016-12-28
      */
@@ -99,13 +101,31 @@ class HTML extends \GIgenerator\DML\Node {
     }
 
     /**
-     * @version     GI-HTML5.00
+     * @version     GIG-HTML5.00
      * NEW Adds a 'script' tag as a child of the the body object.
      * @param NEW $script. The script or the file path to the script.
      * @param NEW $srcFile. True if script is a sourced file. 
      */
     public function addScript($script, $srcFile) {
         return $this->_body->addScript($script, $srcFile);
+    }
+    
+    /**
+     * 
+     * @since       2017-05-01
+     * @version     GIG-HTML5.00.01
+     */
+    public function addScriptOnDocumentReady($script) {
+        return $this->_body->addScriptOnDocumentReady($script);
+    }
+
+    /**
+     * 
+     * @since       2017-05-01
+     * @version     GIG-HTML5.00.01
+     */
+    public function getBody() {
+        return $this->_body;
     }
 
 }

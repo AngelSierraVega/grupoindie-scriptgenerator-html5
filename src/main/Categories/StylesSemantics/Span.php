@@ -9,11 +9,26 @@
  * License, or (at your option) any later version.
  */
 
+namespace GIgenerator\DML\HTML5\StylesSemantics;
+
 /**
- * Description of Span
+ * Defines a section in a document
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @version     GI-HTML5.00
+ * @since       2017-04-16
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class Span {
-    //put your code here
+class Span extends \GIgenerator\DML\HTML5\Node {
+
+    public function __construct(array $content = array(), array $attributes = array()) {
+        parent::__construct("span", false, $attributes, $content );
+    }
+
 }

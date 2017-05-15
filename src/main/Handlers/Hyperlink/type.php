@@ -12,10 +12,19 @@
 namespace GIgenerator\DML\HTML5\Handlers\Hyperlink;
 
 /**
- * Description of type
+ * []
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @version     GI-HTML5.00
+ * @since       2017-04-15
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
-class type {
+interface type {
     //put your code here
 }

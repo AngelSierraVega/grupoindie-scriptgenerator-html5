@@ -11,7 +11,8 @@
 
 namespace GIgenerator\DML\HTML5;
 
-require_once __DIR__ . '/../../DML/dist/DML.phar';
+//require_once __DIR__ . '/../../DML/dist/DML.phar';
+//require_once filter_input(INPUT_SERVER, 'DOCUMENT_ROOT') . '/GIgenerator/DML/dist/DML.phar';
 
 
 require_once __DIR__ . '/main/Handlers/Classes.php';
@@ -67,6 +68,7 @@ class Node extends \GIgenerator\DML\Node {
 }
 
 require_once __DIR__ . '/main/Handlers/GlobalAttributes.php';
+require_once __DIR__ . '/main/Handlers/Hyperlink.php';
 
 require_once __DIR__ . '/main/Categories/Basic.php';
 require_once __DIR__ . '/main/Categories/StylesSemantics.php'; // Partial: Only <style> <div>  <span>

@@ -11,6 +11,11 @@
 
 namespace GIgenerator\DML\HTML5;
 
+require_once __DIR__ . '/Lists/ListItem.php';
+require_once __DIR__ . '/Lists/_List.php';
+require_once __DIR__ . '/Lists/Ordered.php';
+require_once __DIR__ . '/Lists/Unordered.php';
+
 /**
  * Factory Pattern for the <b>Lists</b> of <b>HTML5</b>.
  * 
@@ -24,139 +29,42 @@ namespace GIgenerator\DML\HTML5;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.01
- * @since       2017-04-12
+ * @version     GI-HTML5.00
+ * @since       2017-01-04
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
 class Lists {
-    // Partial: Not <menu> or <menuitem>
-}
-
-
-namespace GIgenerator\DML\HTML5\Lists;
-
-
-
-/**
- * 
- * @category    CodeGenerator
- * @package     DescripriveMarkupLanguaje
- * @subpackage  HTML
- * @since       2017-01-04
- * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @version     beta.00.01
- * 
- */
-class List_ extends \GIgenerator\DML\HTML5\Node {
 
     /**
+     * {@see \GIgenerator\DML\HTML5\Lists\Ordered}
      * 
-     * @param   array $elements
-     * @return  \self
-     * @since   2017-01-04
-     * @author  Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @version beta.00.01
+     * @param       array $elements
+     *
+     * @version     GI-HTML5.00.02
+     * @since       2017-01-04
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @return      \GIgenerator\DML\HTML5\Lists\Ordered
+     * 
      */
     public static function Ordered(array $elements) {
-        try {
-            return new self(true, $elements);
-        } catch (Exception $e) {
-            displayError($e);
-        }
+        return new Lists\Ordered($elements);
     }
 
     /**
+     * {@see \GIgenerator\DML\HTML5\Lists\Unordered}
      * 
-     * @param array $elements
-     * @return \self
-     * @since   2017-01-04
-     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @version beta.00.01
+     * @param       array $elements
+     *
+     * @version     GI-HTML5.00.02
+     * @since       2017-01-04
+     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @return      \GIgenerator\DML\HTML5\Lists\Unordered
+     * 
      */
     public static function Unordered(array $elements) {
-        try {
-            return new self(false, $elements);
-        } catch (Exception $e) {
-            displayError($e);
-        }
+        return new Lists\Unordered($elements);
     }
-
-    use ListBehavior;
-
-    /**
-     * 
-     * @param $ordered
-     * @param array $elements
-     * @since   2017-01-04
-     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @version beta.00.01
-     */
-    protected function __construct($ordered = true, array $elements = array()) {
-        try {
-            parent::__construct($ordered ? "ol" : "ul", false, [], []);
-            foreach ($elements as $element) {
-                $this->addListElement($element);
-            }
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-
-}
-
-//namespace GIndie\DML\HTML5\List_;
-
-/**
- * 
- * @since   2017-01-04
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @version beta.00.01
- */
-trait ListBehavior {
-
-    /**
-     * 
-     * @param $element
-     * @return 
-     * @since   2017-01-04
-     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @version beta.00.01
-     */
-    public function addListElement($element) {
-        try {
-            if (is_a($element, "\GIndie\DML\HTML5\List_\ListElement")) {
-                return $this->addContent($element);
-            } else {
-                return $this->addContent(new ListElement([], [$element]));
-            }
-        } catch (Exception $e) {
-            displayError($e);
-        }
-    }
-
-}
-
-/**
- * 
- * @param array $attributes
- * @param array $content
- * @since   2017-01-04
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @version beta.00.01
- */
-class ListElement extends \GIgenerator\DML\HTML5\Node {
-
-    /**
-     * 
-     * @param array $attributes
-     * @param array $content
-     * @since   2017-01-04
-     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @version beta.00.01
-     */
-    public function __construct(array $attributes = array(), array $content = array()) {
-        parent::__construct("li", false, $attributes, $content);
-    }
-
 }

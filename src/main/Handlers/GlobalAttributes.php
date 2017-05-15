@@ -44,4 +44,8 @@ trait GlobalAttributes {
     //tabindex 	Specifies the tabbing order of an element
     //title 	Specifies extra information about an element
     //translate 	Specifies whether the content of an element should be translated or not
+    public function setId($value){
+        $this->setAttribute("id",$value);
+        return $this;
+    }
 }
