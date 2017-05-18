@@ -9,7 +9,11 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Meta;
+namespace GIndie\Generator\DML\HTML5\Category\Meta;
+
+use \GIndie\Generator\DML as DML;
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Category\Basic\Title;
 
 //require_once __DIR__ . '/Head/Meta.php';
 //require_once __DIR__ . '/Head/Title.php';
@@ -20,7 +24,7 @@ namespace GIndie\Generator\DML\HTML5\Meta;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since       2016-12-28
  */
-class Head extends \GIndie\Generator\DML\HTML5\Node {
+class Head extends Node {
 
     /**
      * The meta tags of the Head object
@@ -38,8 +42,9 @@ class Head extends \GIndie\Generator\DML\HTML5\Node {
      * @since 2016-12-28
      */
     function __construct($charset, $title) {
-        parent::__construct($tag = "head", $emptyNode = false, ["charset" => $charset]);
-        $this->addContent(new \GIndie\Generator\DML\HTML5\Category\Basic\Title($title));
+        parent::__construct($tag = "head", $emptyNode = false,
+                ["charset" => $charset]);
+        $this->addContent(new Title($title));
     }
 
     /**
@@ -51,7 +56,8 @@ class Head extends \GIndie\Generator\DML\HTML5\Node {
      * @since 2016-12-28
      */
     public function addLink($href, $rel) {
-        return $this->addContent(\GIndie\Generator\DML\Node::Simple("link", ["rel" => $rel, "href" => $href]));
+        return $this->addContent(DML\Node::Simple("link",
+                                ["rel" => $rel, "href" => $href]));
     }
 
     /**
@@ -62,7 +68,7 @@ class Head extends \GIndie\Generator\DML\HTML5\Node {
      */
     public function addMeta(array $attributes) {
         if (isset($this->_metas) == FALSE) {
-            $this->_metas = $this->addContent(\GIndie\Generator\DML\Node::ContentOnly([]));
+            $this->_metas = $this->addContent(DML\Node::ContentOnly([]));
         }
         return $this->_metas->addContent(new Meta($attributes));
     }

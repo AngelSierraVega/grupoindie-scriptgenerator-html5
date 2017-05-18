@@ -9,7 +9,9 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Meta;
+namespace GIndie\Generator\DML\HTML5\Category\Meta;
+
+use \GIndie\Generator\DML\HTML5\Node;
 
 /**
  * Represents a GIGhtml5_document_html_head_meta object
@@ -17,7 +19,7 @@ namespace GIndie\Generator\DML\HTML5\Meta;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since 2016-12-28
  */
-class Meta extends \GIndie\Generator\DML\HTML5\Node {
+class Meta extends Node {
 
     /**
      * Creates a new Meta object

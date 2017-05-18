@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Meta;
-
+namespace GIndie\Generator\DML\HTML5\Category\Meta;
 
 use GIndie\Generator\DML\HTML5\Attribute;
+use \GIndie\Generator\DML\HTML5\Node;
 
 /**
  * Specify a default URL and a default target for all links on a page.
@@ -23,7 +23,7 @@ use GIndie\Generator\DML\HTML5\Attribute;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since  2017-05-15
  */
-class Base extends \GIndie\Generator\DML\HTML5\Node {
+class Base extends Node {
 
     use Attribute\hrefTrait;
     use Attribute\targetTrait;
@@ -37,7 +37,8 @@ class Base extends \GIndie\Generator\DML\HTML5\Node {
      * @param $target [Specifies the default target for all hyperlinks and forms in the page]
      */
     function __construct($href, $target) {
-        parent::__construct($tag = "base", $emptyNode = true, ["href" => $href, "target" => $target]);
+        parent::__construct($tag = "base", $emptyNode = true,
+                ["href" => $href, "target" => $target]);
     }
 
 }
