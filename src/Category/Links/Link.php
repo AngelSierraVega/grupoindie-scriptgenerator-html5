@@ -15,7 +15,7 @@ use \GIndie\Generator\DML\HTML5\Node;
 use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
 
 /**
- * Description of Link
+ * Defines a link between a document and an external resource.
  * 
  * https://www.w3schools.com/tags/tag_link.asp
  *
@@ -25,15 +25,13 @@ use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * 
  * @author Roberto Guzmán Sánchez <robertogs.soft@hotmail.com>
  * @since 2017-05-15
- * @version GIG-HTML5.00.01
+ * @version GIG-HTML5.00.02
  * 
  * 
  */
 class Link extends Node {
 
     use Attribute\GlobalAttributes;
-
-//use Handlers\HyperlinkAttributes;
     use Attribute\crossoriginTrait;
     use Attribute\hrefTrait;
     use Attribute\hreflangTrait;
@@ -46,12 +44,12 @@ class Link extends Node {
     /**
      * Creates a new hyperlink.
      * 
-     * @param       null|mixed $content Either the content or an array of the content.
-     * 
-     * @version     GIG-HTML5.01.01
-     * @since       2017-05-15
+     * @param string $href Specifies the URL of the page the link goes to.
+     * @param string $rel  Specifies the relationship between the current document and the linked document.
+     *
+     * @since       GIG-HTML5.00.01
      * @author      Roberto Guzmán Sánchez <robertogs.soft@hotmail.com>
-     */
+     */    
     public function __construct($href, $rel) {
         parent::__construct("link", true, ["href" => $href, "rel" => $rel]);
     }

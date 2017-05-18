@@ -25,7 +25,7 @@ use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.01
+ * @version     GIG-HTML5.00.01
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
@@ -38,8 +38,7 @@ class Paragraph extends Node {
      * 
      * @param       mixed $content  The content of the paragraph.
      *
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-14
+     * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($content) {

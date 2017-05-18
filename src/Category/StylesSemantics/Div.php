@@ -9,7 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\StylesSemantics;
+namespace GIndie\Generator\DML\HTML5\Category\StylesSemantics;
+
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
 
 /**
  * Defines a section in a document
@@ -22,14 +25,14 @@ namespace GIndie\Generator\DML\HTML5\StylesSemantics;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
+ * @version     GI-HTML5.02
  * @since       2017-04-16
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Div extends \GIndie\Generator\DML\HTML5\Node {
+class Div extends Node {
 
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
+    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new section object.
@@ -41,7 +44,8 @@ class Div extends \GIndie\Generator\DML\HTML5\Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($content, array $attributes = array()) {
-        parent::__construct("div", false, $attributes, is_array($content) ? $content : [$content]);
+        parent::__construct("div", false, $attributes,
+                is_array($content) ? $content : [$content]);
     }
 
 }

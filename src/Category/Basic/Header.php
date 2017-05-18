@@ -19,7 +19,7 @@ use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_hn.asp>
  *
- * @version     GI-HTML5.01
+ * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -28,16 +28,15 @@ class Header extends Node {
 
     use Attribute\GlobalAttributes;
 
-    /**
+    /**w
      * Creates a new Header object
      * 
-     * @todo        Error throwing on $level
+     * @todo        Error throwing on $level.
      * 
      * @param       int $level  [1-6] the header level
      * @param       mixed $content  The content of the header
      * 
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-14
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($level, $content) {

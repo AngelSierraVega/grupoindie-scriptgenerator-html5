@@ -11,6 +11,9 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use \GIndie\Generator\DML\Node;
+use \GIndie\Generator\DML\HTML5\Category\Meta as Meta;
+
 /**
  * Defines an HTML document.
  * 
@@ -24,19 +27,18 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00.02
+ * @version     GIG-HTML5.00.03
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class HTML extends \GIndie\Generator\DML\Node {
+class HTML extends Node {
 
     /**
      * The body of the HTML object
      * @var \GIgenerator\DML\HTML5\Basic\Body 
      * 
-     * @version     GIG-HTML5.00.01
-     * @since       2016-12-28
+     * @since     GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     private $_body;
@@ -46,8 +48,7 @@ class HTML extends \GIndie\Generator\DML\Node {
      * 
      * @var \GIgenerator\DML\HTML5\Meta\Head 
      * 
-     * @version     GIG-HTML5.00.01
-     * @since       2016-12-28
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     private $_head;
@@ -55,24 +56,27 @@ class HTML extends \GIndie\Generator\DML\Node {
     /**
      * Creates a new 'html' tag object
      * 
-     * @version     GIG-HTML5.00.01
+     * @since     GIG-HTML5.00.01
      * 
      * @param       string $title The title of the html element
      * @param       string $lang The languaje of the html element
      * @param       string $charset The encoding of the html element
      * 
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @since       2016-12-28
      */
     function __construct($title, $lang, $charset) {
         parent::__construct("html", false, ["lang" => $lang]);
-        $this->_head = parent::addContent(new \GIgenerator\DML\HTML5\Meta\Head($charset, $title));
-        $this->_body = parent::addContent(new \GIgenerator\DML\HTML5\Basic\Body());
+        $this->_head = parent::addContent(new Meta\Head($charset, $title));
+        $this->_body = parent::addContent(new Body());
     }
 
     /**
-     * @version     GIG-HTML5.00
-     * @since       2016-12-28
+     * {@see \GIgenerator\DML\HTML5\Basic\Body::addContent()}
+     * 
+     * @param       mixed $content The content to be added.   
+     * @since       GIG-HTML5.00.01
+     * 
+     * @return      \GIgenerator\DML\HTML5\Basic\Body::addContent()
      */
     public function addContent($content) {
         return $this->_body->addContent($content);
@@ -80,48 +84,54 @@ class HTML extends \GIndie\Generator\DML\Node {
 
     /**
      * Adds a 'link' tag as a child of the head object.
-     * @version     GIG-HTML5.00
+     * @since       GIG-HTML5.00.01
      * @param       $href Specifies the location of the linked document.
      * @param       $rel Specifies the relationship between the current document
      *                   and the linked document.
-     * @since       2016-12-28
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Head::addLink()
      */
     public function addLink($href, $rel) {
         return $this->_head->addLink($href, $rel);
     }
 
     /**
-     * 
-     * @version     GIG-HTML5.00
-     * @param array $attributes
-     * @since 2016-12-28
+     * Adds attributes to a meta tag.
+     *
+     * @since       GIG-HTML5.00.01
+     * @param       array $attributes Define the attributes for tag meta
+     *
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Head::addMeta()
      */
     public function addMeta(array $attributes) {
         return $this->_head->addMeta($attributes);
     }
 
     /**
-     * @version     GIG-HTML5.00
      * NEW Adds a 'script' tag as a child of the the body object.
-     * @param NEW $script. The script or the file path to the script.
-     * @param NEW $srcFile. True if script is a sourced file. 
+     *
+     * @since       GIG-HTML5.00.001
+     * @param       NEW $script. The script or the file path to the script.
+     * @param       NEW $srcFile. True if script is a sourced file.
+     *
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Body::addScript()
      */
     public function addScript($script, $srcFile) {
         return $this->_body->addScript($script, $srcFile);
     }
-    
+
     /**
-     * 
-     * @since       2017-05-01
-     * @version     GIG-HTML5.00.01
+     * Adds a new script on document.
+     *
+     * @since       GIG-HTML5.00.01
+     *
+     * return       \GIndie\Generator\DML\HTML5\Category\Basic\Body::addScriptOnDocumentReady()
      */
     public function addScriptOnDocumentReady($script) {
         return $this->_body->addScriptOnDocumentReady($script);
     }
 
     /**
-     * 
-     * @since       2017-05-01
+     * @todo        define return.
      * @version     GIG-HTML5.00.01
      */
     public function getBody() {

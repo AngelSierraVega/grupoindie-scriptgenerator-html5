@@ -24,7 +24,7 @@ use \GIndie\Generator\DML\Node;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.01
+ * @version     GIG-HTML5.01
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -36,8 +36,7 @@ class Doctype extends Node {
      * 
      * @param       string $doctype The document type
      * 
-     * @version     GI-HTML5.01.02
-     * @since       2016-12-28
+     * @since       GIG-HTML5.01.02
      */
     function __construct($doctype) {
         parent::__construct("!DOCTYPE", true, [$doctype]);

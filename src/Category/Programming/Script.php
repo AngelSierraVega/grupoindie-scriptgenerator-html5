@@ -9,7 +9,9 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Programming;
+namespace GIndie\Generator\DML\HTML5\Category\Programming;
+
+use \GIndie\Generator\DML\HTML5\Node;
 
 /**
  * Defines a client-side script
@@ -27,7 +29,7 @@ namespace GIndie\Generator\DML\HTML5\Programming;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Script extends \GIndie\Generator\DML\HTML5\Node {
+class Script extends Node {
 
     //supports the Global Attributes in HTML.
     //async 	async 	Specifies that the script is executed asynchronously (only for external scripts)

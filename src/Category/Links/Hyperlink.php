@@ -11,13 +11,9 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Links;
 
-use \GIndie\Generator\DML\HTML5\Node;
 use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
-
-//use Handlers\Hyperlink as Hyperlink;
-
 /**
- * Defines a hyperlink.
+ *  Defines a hyperlink.
  * 
  * More info. at <https://www.w3schools.com/tags/tag_a.asp>
  * 
@@ -27,29 +23,28 @@ use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
+ * @version     GIG-HTML5.00.02
  * @since       2017-04-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Hyperlink extends Node {
-
-    use Attribute\GlobalAttributes;
-    use Attribute\HyperlinkAttributes;
+class Hyperlink extends Anchor {
 
     /**
      * Creates a new hyperlink.
      * 
-     * @param       null|mixed $content Either the content or an array of the content.
+     * @param string        $link    Defines a link between a document and an external resource.
+     * @param null|mixed    $content Either the content or an array of the content.
+     * @param null|string   $target  Specifies where to open the linked document
      * 
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-15
+     * @since       GIG-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($link, $content = NULL, $target = NULL) {
         $content = ( $content == NULL ? [] : ( is_array($content) ? $content : [$content] ) );
-        parent::__construct("a", FALSE, ["href" => $link, "target" => $target],
-                $content);
+        parent::__construct($content);
+        $this->setHref($link);
+        $this->setTarget($target);
     }
 
 }

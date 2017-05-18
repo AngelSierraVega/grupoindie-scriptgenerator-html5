@@ -11,12 +11,6 @@
 
 namespace GIndie\Generator\DML\HTML5\Category;
 
-/*
-require_once __DIR__ . '/Links/Link.php';
-require_once __DIR__ . '/Links/Anchor.php';
-require_once __DIR__ . '/Links/Hyperlink.php';
-*/
-
 /**
  * Factory Pattern for the <b>links</b> of <b>HTML5</b>.
  * 
@@ -28,7 +22,7 @@ require_once __DIR__ . '/Links/Hyperlink.php';
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.01
+ * @version     GIG-HTML5.00.01
  * @since       2017-04-12
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -36,51 +30,45 @@ require_once __DIR__ . '/Links/Hyperlink.php';
 class Links {
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Links\Hyperlink}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Links\Hyperlink}
      *
-     * @version     GI-HTML5.01.02
-     * @since       2017-01-18
+     * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Links\Hyperlink
+     * @return      \GIndie\Generator\DML\HTML5\Category\Links\Hyperlink
      * 
      */
     public static function Hyperlink($link, $content = NULL, $target = NULL) {
         return new Links\Hyperlink($link, $content, $target);
     }
 
-
     /**
-     * {@see \GIgenerator\DML\HTML5\Links\Anchor}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Links\Anchor}
      *
-     * @version     GI-HTML5.00.00
-     * @since       2017-05-17
+     * @since       GIG-HTML5.00.01
      * @author      Izmir Sanchez  <izmirreffi@gmail.com>
      *
-     * @return      \GIndie\Generator\DML\HTML5\Links\Anchor
+     * @return      \GIndie\Generator\DML\HTML5\Category\Links\Anchor
      *
      */
-    public static function Anchor($content = []){
+    public static function Anchor($content = []) {
         return new Links\Anchor($content);
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Links\Anchor}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Links\Anchor}
      *
-     * @version     GI-HTML5.00.00
-     * @since       2017-05-17
+     * @since       GI-HTML5.00.01
      * @author      Izmir Sanchez  <izmirreffi@gmail.com>
      *
-     * @return      \GIndie\Generator\DML\HTML5\Links\Link
+     * @return      \GIndie\Generator\DML\HTML5\Category\Links\Link
      *
      */
-    public static function Link($href, $rel){
+    public static function Link($href, $rel) {
         return new Links\Link($href, $rel);
     }
 
 }
-
-//namespace GIndie\Generator\DML\HTML5\Category;
 
 
 /**
@@ -88,70 +76,25 @@ class Links {
  * @package GIndie\Generator\DML\HTML5
  * @author Izmir Sanchez Juarez
  */
-class Links_test {
-
-    function __construct() {
-        echo self::Hyperlink_test() . "\n";
-        echo self::Anchor_test() . "\n";
-        echo self::Link_test() . "\n";
+class LinksTest extends \GIndie\Test {
+    
+    public static function Anchor() {
+        $expected = '<a>test</a>';
+        $result = Links::Anchor("test");
+        static::execStrCmp($expected, $result);
     }
 
-     static function cmp($expected,$result){
-        return \get_called_class() . "::" . debug_backtrace()[1]['function'] . " result: ". strcmp($expected, $result);
+    public static function Hyperlink_test() {
+        $expected = "<a href=\"https://www.w3schools.com\" target=\"_blank\">Visit W3Schools.com!</a>";
+        $result = Links::Hyperlink("https://www.w3schools.com",
+                        "Visit W3Schools.com!", "_blank");
+        static::execStrCmp($expected, $result);
     }
 
-
-    public static function Hyperlink_test()
-    {
-        $expected = "<a href='https://www.w3schools.com' target='_blank'>Visit W3Schools.com!</a>";
-
-        $result = Links::Hyperlink("https://www.w3schools.com", "Visit W3Schools.com!", "_blank");
-        return static::cmp($expected,$result);
-    }
-
-    public static function Anchor_test()
-    {
-        $expected = '<a>Anchor test</a>';
-        $result = Links::Anchor("Anchor test");
-
-        return static::cmp($expected, $result);
-    }
-
-    public static function Link_Test()
-    {
-        $expected = "<link href='theme.css' rel='stylesheet'>";
+    public static function Link_Test() {
+        $expected = "<link href=\"theme.css\" rel=\"stylesheet\">";
         $result = Links::Link("theme.css", "stylesheet");
-        return static::cmp($expected, $result);
+        static::execStrCmp($expected, $result);
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

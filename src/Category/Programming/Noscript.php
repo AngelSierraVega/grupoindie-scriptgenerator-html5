@@ -9,7 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5\Programming;
+namespace GIgenerator\DML\HTML5\Category\Programming;
+
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
 
 /**
  * The <noscript> tag defines an alternate content for users that have disabled scripts in their browser
@@ -27,9 +30,9 @@ namespace GIgenerator\DML\HTML5\Programming;
  * @since       2017-04-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class Noscript extends \GIndie\Generator\DML\HTML5\Node {
+class Noscript extends Node {
 
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
+    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new Noscript object.

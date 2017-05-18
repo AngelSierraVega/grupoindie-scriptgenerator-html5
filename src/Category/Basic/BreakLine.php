@@ -24,7 +24,7 @@ use \GIndie\Generator\DML\HTML5\Node;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.01
+ * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -34,8 +34,7 @@ class BreakLine extends Node {
     /**
      * Creates a new BreakLine object
      * 
-     * @version     GI-HTML5.01.01
-     * @since       2016-12-28
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct() {

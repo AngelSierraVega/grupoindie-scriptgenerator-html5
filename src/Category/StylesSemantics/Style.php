@@ -1,5 +1,5 @@
 <?php
-use GIndie\Generator\DML\HTML5\Attribute as Attribute;
+
 /*
  * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
@@ -9,11 +9,16 @@ use GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * License, or (at your option) any later version.
  */
 
+namespace GIndie\Generator\DML\HTML5\Category\StylesSemantics;
+
+use GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute;
+
 /**
  *  The <style> tag is used to define style information for an HTML document.
  * More info. at <https://www.w3schools.com/tags/tag_style.asp>
  * 
- * @version     GIG-HTML5.00.01
+ * @version     GIG-HTML5.02
  *
  * @package HTML5
  * @subpackage Main
@@ -23,10 +28,9 @@ use GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * @since 2017-05-15
  *
  */
-class Style extends \GIndie\Generator\DML\HTML5\Node {
-    
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
-    
+class Style extends Node {
+
+    use Attribute\GlobalAttributes;
     use Attribute\mediaTrait;
     use Attribute\scopedTrait;
     use Attribute\typeTrait;
@@ -41,8 +45,8 @@ class Style extends \GIndie\Generator\DML\HTML5\Node {
      * @author      IZmir Sanchez Juarez <izmirreffi@gmail.com>
      */
     function __construct($media, $scoped, $type) {
-        parent::__construct("style", TRUE, ["media" => $media, "scoped" => $scoped, "type" => $type]);
+        parent::__construct("style", TRUE,
+                ["media" => $media, "scoped" => $scoped, "type" => $type]);
     }
-    
-    
+
 }

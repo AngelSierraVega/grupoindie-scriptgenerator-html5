@@ -25,7 +25,7 @@ use \GIndie\Generator\DML\HTML5\Attribute As Attribute;
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.01
+ * @version     GI-HTML5.00.02
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -37,8 +37,7 @@ class Body extends Node {
     /**
      * Creates a new Body object
      * 
-     * @version     GI-HTML5.01.01
-     * @since       2016-12-28
+     * @since     GI-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     function __construct() {

@@ -36,8 +36,7 @@ class Title extends Node {
      * 
      * @param       string $title The title of the document
      * 
-     * @version     GI-HTML5.01.01
-     * @since       2016-12-28
+     * @version     GIG-HTML5.00.02
      */
     function __construct($title) {
         parent::__construct("title", false, [], [$title]);

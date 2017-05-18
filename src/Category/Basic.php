@@ -11,16 +11,6 @@
 
 namespace GIndie\Generator\DML\HTML5\Category;
 
-/*require_once __DIR__ . '/Basic/Comment.php';
-require_once __DIR__ . '/Basic/BreakLine.php';
-require_once __DIR__ . '/Basic/Title.php';
-require_once __DIR__ . '/Basic/Body.php';
-require_once __DIR__ . '/Basic/Doctype.php';
-require_once __DIR__ . '/Basic/HTML.php';
-require_once __DIR__ . '/Basic/Header.php';
-require_once __DIR__ . '/Basic/Hr.php';
-require_once __DIR__ . '/Basic/Paragraph.php';*/
-
 /**
  * Factory Pattern for the <b>basic tags</b> of <b>HTML5</b>.
  * 
@@ -32,7 +22,7 @@ require_once __DIR__ . '/Basic/Paragraph.php';*/
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GIG-HTML5.01
+ * @version     GIG-HTML5.00.02
  * @since       2017-04-12
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -40,13 +30,12 @@ require_once __DIR__ . '/Basic/Paragraph.php';*/
 class Basic {
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\Body}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Body}
      *
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-12
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Basic\Body
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Body
      * 
      */
     public static function Body() {
@@ -54,13 +43,12 @@ class Basic {
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\BreakLine}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\BreakLine}
      *
-     * @version     GI-HTML5.01.02
-     * @since       2017-01-18
+     * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Basic\BreakLine
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\BreakLine
      * 
      */
     public static function BreakLine() {
@@ -68,12 +56,11 @@ class Basic {
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\Comment}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Comment}
      * 
      * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
      *
-     * @version     GI-DML.01.01
-     * @since       2017-04-12
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      * @return      \GIgenerator\DML\HTML5\Basic\Comment
@@ -84,13 +71,12 @@ class Basic {
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\Doctype}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Doctype}
      *
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-12
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return \GIgenerator\DML\HTML5\Basic\Doctype
+     * @return      \GIndie\generator\DML\HTML5\Category\Basic\Doctype
      * 
      */
     public static function Doctype($doctype) {
@@ -98,13 +84,12 @@ class Basic {
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\HTML}
+     * {@see        \GIgenerator\DML\HTML5\Basic\HTML}
      *
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-12
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return \GIgenerator\DML\HTML5\Basic\HTML
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\HTML
      * 
      */
     public static function HTML($title, $lang, $charset) {
@@ -112,33 +97,31 @@ class Basic {
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\Header}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Header}
      * 
      * @param       int $level  [1-6] the header level
      * @param       mixed $content  The content of the header
      * @param       NULL|string $classnames  The space separated class names.
      *
-     * @version     GI-HTML5.01.02
-     * @since       2017-01-18
+     * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Basic\Header
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Header
      * 
      */
-    public static function Header($level, $content, $classnames = NULL) {
-        return new Basic\Header($level, $content, $classnames);
+    public static function Header($level, $content) {
+        return new Basic\Header($level, $content);
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\Hr}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Hr}
      * 
      * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
      *
-     * @version     GI-DML.01.02
-     * @since       2017-04-12
+     * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Basic\Hr
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Hr
      * 
      */
     public static function Hr() {
@@ -146,29 +129,27 @@ class Basic {
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\Paragraph}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Paragraph}
      * 
      * @param       mixed $content  The content of the paragraph
      *
-     * @version     GI-HTML5.01.02
-     * @since       2017-01-18
+     * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Basic\Paragraph
+     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Paragraph
      * 
      */
-    public static function Paragraph($content, $classnames = NULL) {
-        return new Basic\Paragraph($content, $classnames);
+    public static function Paragraph($content) {
+        return new Basic\Paragraph($content);
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Basic\Title}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Title}
      *
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-12
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Basic\Title
+     * @return      \GIndie\Generator\DML\HTML5\Category'\Basic\Title
      * 
      */
     public static function Title($title) {
@@ -179,77 +160,110 @@ class Basic {
 
 /**
  * Class Basic_test
+ *
  * @package GIndie\Generator\DML\HTML5\Category
  * @author Izmir Sanchez Juarez <izmirreffi@gmail.com>
  */
-class Basic_test {
+class BasicTest extends \GIndie\Test{
 
-    function __construct()
+
+    /**
+     * @internal
+     * @test
+     */
+    public static function Body()
     {
-        self::Body_test();
-        self::Breakline_test();
-        self::Comment_test();
-        self::Doctype_test();
-        self::HTML_test();
-        self::Header_test();
-        self::Hr_test();
-        self::Paragraph_test();
-        self::Title_test();
-
+        $expected   = '<body></body>';
+        $result     = Basic::Body();
+        static::execStrCmp($expected, $result);
     }
 
-    public static function Body_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function Breakline()
     {
-        $expected = '<body></body>';
-        return __METHOD__ . strcmp($expected, Basic::Body());
+        $expected   = '<br />';
+        $resutl     = Basic::BreakLine();
+        static::execStrCmp($expected, $resutl);
     }
 
-    public static function Breakline_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function Comment()
     {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
+        $expected   = "<!--This is a comment-->";
+        $result     = Basic::Comment("This is a comment");
+        static::execStrCmp($expected, $result);
     }
 
-    public static function Comment_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function Doctype()
     {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
+        $expected   = "<!DOCTYPE html>";
+        $result     = Basic::Doctype("html");
+        static::execStrCmp($expected, $result);
     }
 
-    public static function Doctype_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function HTML()
     {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
+        $expected   = "<html lang=\"spanish\"><head charset=\"utf-8\"><title>Test</title></head><body></body></html>";
+        $result     = Basic::HTML("Test", "spanish", "utf-8");
+        static::execStrCmp($expected, $result);
     }
 
-    public static function HTML_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function Header()
     {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
+        $expected   = "<h1>Hello World!</h1>";
+        $result     = Basic::Header(1, "Hello World!");
+        static::execStrCmp($expected, $result);
     }
 
-    public static function Header_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function Hr()
     {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
+        $expected   = "<hr />";
+        $result     = Basic::Hr();
+        static::execStrCmp($expected, $result);
     }
 
-    public static function Hr_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function Paragraph()
     {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
+        $expected   = "<p>Content</p>";
+        $result     = Basic::Paragraph("Content");
+        static::execStrCmp($expected, $result);
     }
 
-    public static function Paragraph_test()
+    /**
+     * @internal
+     * @test
+     */
+    public static function Title()
     {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
-    }
-
-    public static function Title_test()
-    {
-        $expected = '';
-        return __METHOD__ . strcmp($expected, '');
+        $expected   = "<title>My title</title>";
+        $result     = Basic::Title("My title");
+        static::execStrCmp($expected, $result);
     }
 
 

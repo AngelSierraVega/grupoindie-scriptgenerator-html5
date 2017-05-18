@@ -9,7 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\StylesSemantics;
+namespace GIndie\Generator\DML\HTML5\Category\StylesSemantics;
+
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
 
 /**
  * Defines a section in a document
@@ -27,9 +30,9 @@ namespace GIndie\Generator\DML\HTML5\StylesSemantics;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Span extends \GIndie\Generator\DML\HTML5\Node {
+class Span extends Node {
 
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
+    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new section object.
@@ -40,8 +43,9 @@ class Span extends \GIndie\Generator\DML\HTML5\Node {
      * @since       2017-04-14
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    public function __construct(array $content = array(), array $attributes = array()) {
-        parent::__construct("span", false, $attributes, $content );
+    public function __construct(array $content = array(),
+            array $attributes = array()) {
+        parent::__construct("span", false, $attributes, $content);
     }
 
 }
