@@ -11,6 +11,9 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
+
 /**
  * Defines HTML headings.
  * 
@@ -21,9 +24,9 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Header extends \GIndie\Generator\DML\HTML5\Node {
+class Header extends Node {
 
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
+    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new Header object

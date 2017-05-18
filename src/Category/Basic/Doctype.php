@@ -11,6 +11,8 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use \GIndie\Generator\DML\Node;
+
 /**
  * Defines the document type.
  * 
@@ -27,18 +29,18 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Doctype extends \GIndie\Generator\DML\Node {
+class Doctype extends Node {
 
     /**
      * Creates a new Doctype object
      * 
      * @param       string $doctype The document type
      * 
-     * @version     GI-HTML5.01.01
+     * @version     GI-HTML5.01.02
      * @since       2016-12-28
      */
     function __construct($doctype) {
-        parent::__construct("!DOCTYPE", true, [$doctype => null]);
+        parent::__construct("!DOCTYPE", true, [$doctype]);
     }
 
 }

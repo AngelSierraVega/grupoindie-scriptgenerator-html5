@@ -11,6 +11,9 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
+
 /**
  * Defines a paragraph.
  * 
@@ -26,9 +29,9 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
-class Paragraph extends \GIndie\Generator\DML\HTML5\Node {
+class Paragraph extends Node {
 
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
+    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new Paragraph object.

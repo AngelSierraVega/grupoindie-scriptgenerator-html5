@@ -11,6 +11,9 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
+
 /**
  * Defines a thematic change in the content.
  * 
@@ -27,9 +30,9 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Hr extends \GIndie\Generator\DML\HTML5\Node {
+class Hr extends Node {
 
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
+    use Attribute\GlobalAttributes;
 
     /**
      *

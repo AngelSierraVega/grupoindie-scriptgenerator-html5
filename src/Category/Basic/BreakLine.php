@@ -11,6 +11,8 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use \GIndie\Generator\DML\HTML5\Node;
+
 /**
  * Inserts a single line break
  * 
@@ -27,9 +29,7 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class BreakLine extends \GIndie\Generator\DML\HTML5\Node {
-
-    use \GIndie\Generator\DML\HTML5\Attribute;
+class BreakLine extends Node {
 
     /**
      * Creates a new BreakLine object
@@ -39,6 +39,7 @@ class BreakLine extends \GIndie\Generator\DML\HTML5\Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct() {
-        parent::__construct("br","closed");
+        parent::__construct("br", "closed");
     }
+
 }

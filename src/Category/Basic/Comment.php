@@ -11,6 +11,9 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use \GIndie\Generator\DML\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
+
 /**
  * Defines a comment.
  * 
@@ -27,9 +30,9 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Comment extends \GIndie\Generator\DML\Node {
-    
-    use \GIndie\Generator\DML\HTML5\Attribute\acceptTrait;
+class Comment extends Node {
+
+    use Attribute\acceptTrait;
 
     /**
      * Creates a new BreakLine object

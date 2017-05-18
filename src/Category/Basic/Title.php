@@ -11,6 +11,8 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
 
+use \GIndie\Generator\DML\Node;
+
 /**
  * Defines a title for the document
  * 
@@ -27,7 +29,7 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Title extends \GIndie\Generator\DML\Node {
+class Title extends Node {
 
     /**
      * Creates a new Title object

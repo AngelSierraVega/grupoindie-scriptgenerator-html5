@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -10,6 +10,9 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Category\Basic;
+
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute As Attribute;
 
 /**
  * Defines the document's body
@@ -27,9 +30,9 @@ namespace GIndie\Generator\DML\HTML5\Category\Basic;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Body extends \GIndie\Generator\DML\HTML5\Node {
+class Body extends Node {
 
-    use \GIgenerator\DML\HTML5\Handlers\GlobalAttributes;
+    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new Body object
