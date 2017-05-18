@@ -11,8 +11,8 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Links;
 
-use GIndie\Generator\DML\HTML5 as HTML5;
-use GIndie\Generator\DML\HTML5\Attribute as Attribute;
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
 
 //use Handlers\Hyperlink as Hyperlink;
 
@@ -32,7 +32,7 @@ use GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Hyperlink extends HTML5\Node {
+class Hyperlink extends Node {
 
     use Attribute\GlobalAttributes;
     use Attribute\HyperlinkAttributes;
@@ -48,7 +48,8 @@ class Hyperlink extends HTML5\Node {
      */
     public function __construct($link, $content = NULL, $target = NULL) {
         $content = ( $content == NULL ? [] : ( is_array($content) ? $content : [$content] ) );
-        parent::__construct("a", FALSE, ["href" => $link, "target" => $target], $content);
+        parent::__construct("a", FALSE, ["href" => $link, "target" => $target],
+                $content);
     }
 
 }

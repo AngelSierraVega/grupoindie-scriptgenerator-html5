@@ -1,6 +1,10 @@
 <?php
 
 namespace GIndie\Generator\DML\HTML5\Category\Links;
+
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute As Attribute;
+
 /**
  * Defines a placeholder for a hyperlink.
  * 
@@ -17,10 +21,10 @@ namespace GIndie\Generator\DML\HTML5\Category\Links;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Anchor extends \GIndie\Generator\DML\HTML5\Node {
+class Anchor extends Node {
 
-    use \GIndie\Generator\DML\HTML5\Attribute\GlobalAttributes;
-    use \GIndie\Generator\DML\HTML5\Attribute\HyperlinkAttributes;
+    use Attribute\GlobalAttributes;
+    use Attribute\HyperlinkAttributes;
 
 
 //download 	filename 	Specifies that the target will be downloaded when a user clicks on the hyperlink
@@ -41,7 +45,8 @@ class Anchor extends \GIndie\Generator\DML\HTML5\Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($content = []) {
-        parent::__construct("a", false, [], is_array($content) ? $content : [$content]);
+        parent::__construct("a", false, [],
+                is_array($content) ? $content : [$content]);
     }
 
 }

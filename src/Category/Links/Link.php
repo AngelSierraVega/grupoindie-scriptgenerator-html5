@@ -11,8 +11,8 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Links;
 
-use GIndie\Generator\DML\HTML5 as HTML5;
-use GIndie\Generator\DML\HTML5\Attribute as Attribute;
+use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
 
 /**
  * Description of Link
@@ -29,9 +29,11 @@ use GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * 
  * 
  */
-class Link extends HTML5\Node{
+class Link extends Node {
+
     use Attribute\GlobalAttributes;
-    //use Handlers\HyperlinkAttributes;
+
+//use Handlers\HyperlinkAttributes;
     use Attribute\crossoriginTrait;
     use Attribute\hrefTrait;
     use Attribute\hreflangTrait;
@@ -40,7 +42,7 @@ class Link extends HTML5\Node{
     use Attribute\sizesTrait;
     use Attribute\targetTrait;
     use Attribute\typeTrait;
-    
+
     /**
      * Creates a new hyperlink.
      * 
@@ -50,9 +52,8 @@ class Link extends HTML5\Node{
      * @since       2017-05-15
      * @author      Roberto Guzmán Sánchez <robertogs.soft@hotmail.com>
      */
-    
     public function __construct($href, $rel) {
-        parent::__construct("link",true, [ "href" => $href, "rel" => $rel  ]);
+        parent::__construct("link", true, ["href" => $href, "rel" => $rel]);
     }
-    
+
 }
