@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5\Lists;
+namespace GIndie\Generator\DML\HTML5\Category\Lists;
 
 use \GIndie\Generator\DML\HTML5\Node;
 /**

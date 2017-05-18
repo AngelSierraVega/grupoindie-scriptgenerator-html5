@@ -9,9 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Lists;
+namespace GIndie\Generator\DML\HTML5\Category\Lists;
 
 use \GIgenerator\DML\HTML5\Lists\_List;
+
 /**
  * Description of Ordered
  * https://www.w3schools.com/tags/tag_ol.asp

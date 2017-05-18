@@ -9,9 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Lists;
+namespace GIndie\Generator\DML\HTML5\Category\Lists;
 
 use \GIndie\Generator\DML\HTML5\Node;
+
 /**
  * Description of ListItem
  * https://www.w3schools.com/tags/tag_li.asp
@@ -32,7 +33,8 @@ class ListItem extends Node {
      * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * @version beta.00.01
      */
-    public function __construct(array $attributes = array(), array $content = array()) {
+    public function __construct(array $attributes = array(),
+            array $content = array()) {
         parent::__construct("li", false, $attributes, $content);
     }
 
