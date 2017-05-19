@@ -8,10 +8,9 @@
  * as published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  */
-
+namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * sspecifies the character encodings that are to be used for the form submission.
- * @accept-charset
+ * Sspecifies the character encodings that are to be used for the form submission.
  * https://www.w3schools.com/tags/att_accept-charset.asp
  * 
  * @package    HTML5
@@ -24,7 +23,6 @@
  * @since       2017-05-16
  * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  */
-namespace GIndie\Generator\DML\HTML5\Attribute;
 trait acceptcharsetTrait {
 
     /**

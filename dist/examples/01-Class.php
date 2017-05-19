@@ -8,7 +8,7 @@
  * as published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  */
-
+require_once '../HTML5.phar';
 
 echo "------------ classHandler ------------ \n\n";
 echo "--- Example 1: addClass. \n";//Should render: <p class='myClass myOtherClass'>This is a paragraph with class</p>

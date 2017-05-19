@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5\Category\Programming;
+namespace GIndie\Generator\DML\HTML5\Category\Programming;
 
 use \GIndie\Generator\DML\HTML5\Node;
 use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
@@ -26,7 +26,7 @@ use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
  *
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
+ * @version     GIG-HTML5.00.03
  * @since       2017-04-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
@@ -39,12 +39,11 @@ class Noscript extends Node {
      *
      * @param       mixed $content  The content of the Noscript.
      *
-     * @version     GI-HTML5.00.01
-     * @since       2017-04-17
+     * @since       GIG-HTML5.00.01
      * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
      */
     function __construct($content) {
-        parent::__construct("p", false, [], [$content]);
+        parent::__construct("noscript", false, [], [$content]);
     }
 
 }

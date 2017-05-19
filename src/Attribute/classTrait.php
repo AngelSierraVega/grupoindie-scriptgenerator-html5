@@ -20,7 +20,7 @@ namespace GIndie\Generator\DML\HTML5\Attribute;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-DML.01
+ * @version     GIG-HTML5.01.01
  * @since       2017-03-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -32,10 +32,7 @@ trait classTrait {
      * 
      * @param       string $classnames The space separated name(s) o the class(es)
      * 
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @since       2017-03-14
-     * 
-     * @version     GI-DML.01.01
+     * @since       GIG-HTML5.01.01
      * 
      * @return      boolean TRUE if added, FALSE otherwise.
      * @throws      NA
@@ -55,10 +52,8 @@ trait classTrait {
      * 
      * @param       string $classname The name of the class to validate
      * 
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @since       2017-03-14
+     * @since       GIG-HTML5.01.01
      * 
-     * @version     GI-DML.01.01
      * 
      * @return      boolean TRUE if class is defined, FALSE otherwise.
      * @throws      NA
@@ -78,9 +73,7 @@ trait classTrait {
      * @param       string $classname The name of the class to remove.
      * 
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @since       2017-03-14
-     * 
-     * @version     GI-DML.01.01
+     * @since       GIG-HTML5.01.01
      * 
      * @return      boolean TRUE if removed, FALSE otherwise.
      * @throws      NA
@@ -105,7 +98,7 @@ trait classTrait {
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-DML.01
+ * @version     GIG-HTML5.01.01
  * @since       2017-03-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -117,7 +110,7 @@ class Classes {
      * 
      * @var         array $_classes
      * 
-     * @version     GI-DML.01
+     * @version     GIG-HTML5.01.01
      * @since       2017-03-14
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
@@ -129,8 +122,7 @@ class Classes {
      * 
      * @param   string $classnames The space separated name(s) o the class(es)
      * 
-     * @version     GI-DML.01
-     * @since       2017-03-14
+     * @since       GIG-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      */
@@ -143,8 +135,7 @@ class Classes {
      * 
      * @return      string The space separated name(s) o the class(es)
      * 
-     * @version     GI-DML.01
-     * @since       2017-03-14
+     * @since       GIG-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __toString() {
@@ -159,8 +150,7 @@ class Classes {
      * @param       string $classnames The space separated name(s) o the class(es)
      * @return      boolean TRUE
      * 
-     * @version     GI-DML.01
-     * @since       2017-03-14
+     * @since       GIG-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function addClass($classnames) {
@@ -178,8 +168,7 @@ class Classes {
      * @param       string $classname The name o the class to remove.
      * @return      boolean TRUE if removed, FALSE otherwize.
      * 
-     * @version     GI-DML.01
-     * @since       2017-03-14
+     * @since       GIG-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function removeClass($classname) {
@@ -196,8 +185,7 @@ class Classes {
      * @param       string $classname The name o the class to validate.
      * @return      boolean TRUE if defined, FALSE otherwize.
      * 
-     * @version     GI-DML.01
-     * @since       2017-03-14
+     * @since       GIG-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function hasClass($classname) {

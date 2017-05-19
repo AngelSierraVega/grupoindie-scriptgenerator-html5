@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5;
+namespace GIndie\Generator\DML\HTML5;
 
 /**
  * Represents an <b>HTML5</b> document.

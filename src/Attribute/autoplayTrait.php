@@ -11,12 +11,11 @@
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * specifies the types of files that the server accepts (that can be submitted through a file upload).
- * @accept 
- * https://www.w3schools.com/tags/att_accept.asp
+ * Specifies that the audio/video will start playing as soon as it is ready
+ * https://www.w3schools.com/tags/att_autoplay.asp
  * 
- * @package    DML
- * @subpackage HTML5
+ * @package    HTML5
+ * @subpackage Main
  * @category   API
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
@@ -31,7 +30,7 @@ trait autoplayTrait {
      * @since   GIG-HTML5.00.01
      * 
      */
-    public function getAccept() {
+    public function getAutoplay() {
         return $this->getAttribute("autoplay");
     }
     /**
@@ -39,7 +38,7 @@ trait autoplayTrait {
      * @since   GIG-HTML5.00.01
      * 
      */      
-    public function removeAccept() {
+    public function removeAutoplay() {
         $this->unsetAttribute("autoplay");
         return $this;
     }
@@ -50,7 +49,7 @@ trait autoplayTrait {
      * 
      * @since GIG-HTML5.00.01
      */
-    public function setAccept($value) {
+    public function setAutoplay($value) {
         $this->setAttribute("autoplay", $value);
         return $this;
     }

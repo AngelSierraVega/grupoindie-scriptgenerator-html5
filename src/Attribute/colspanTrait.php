@@ -10,7 +10,48 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * Defines the number of columns a table cell should span.
+ * @colspan
+ * https://www.w3schools.com/tags/att_colspan.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-17
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait colspanTrait {
-    //put your code here
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getColspan() {
+        return $this->getAttribute("colspan");
+    }
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */      
+    public function removeColspan() {
+        $this->unsetAttribute("colspan");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setColspan($value) {
+        $this->setAttribute("colspan", $value);
+        return $this;
+    }
 }

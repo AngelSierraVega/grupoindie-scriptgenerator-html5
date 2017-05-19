@@ -10,7 +10,48 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * Gives the value associated with the http-equiv or name attribute.
+ * @content
+ * https://www.w3schools.com/tags/att_content.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-17
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait contentTrait {
-    //put your code here
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getContent() {
+        return $this->getAttribute("content");
+    }
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */      
+    public function removeContent() {
+        $this->unsetAttribute("content");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setContent($value) {
+        $this->setAttribute("content", $value);
+        return $this;
+    }
 }

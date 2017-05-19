@@ -9,9 +9,9 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5;
+namespace GIndie\Generator\DML\HTML5\Category;
 
-require_once __DIR__ . '/Programming/Script.php';
+//require_once __DIR__ . '/Programming/Script.php';
 
 /**
  * Factory Pattern for the <b>programming tags</b> of <b>HTML</b>.
@@ -24,7 +24,7 @@ require_once __DIR__ . '/Programming/Script.php';
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
+ * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -32,21 +32,53 @@ require_once __DIR__ . '/Programming/Script.php';
 class Programming {
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Programming\Script}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\Programming\Script}
      *
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-12
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return \GIgenerator\DML\HTML5\Programming\Script
+     * @return      \GIndie\Generator\DML\HTML5\Category\Programming\Script
      * 
      */
     public static function Script($script, $external = false) {
         return new Programming\Script($script, $external);
     }
 
-    //<noscript> 	Defines an alternate content for users that do not support client-side scripts
-    //<embed> 	Defines a container for an external (non-HTML) application
-    //<object> 	Defines an embedded object
-    //<param> 	Defines a parameter for an object
+
+    public static function Noscript($content) {
+        return new Programming\Noscript($content);
+    }
+}
+
+/**
+ * Class ProgrammingTest
+ *
+ * @package     GIgenerator\DML\HTML5\Category\Programming
+ * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
+ * @since       2017-04-18
+ */
+class ProgrammingTest extends \GIndie\Test {
+
+    /**
+     * @iternal
+     * @test
+     */
+    public static function Script()
+    {
+        $expected   = "<script src=\"index.js\"></script>";
+        $result     = Programming::Script("index.js", true);
+        static::execStrCmp($expected, $result);
+    }
+
+    /**
+     * @internal
+     * @test
+     */
+    public static function Noscript()
+    {
+        $expected   = "<noscript>Does not support Javascript</noscript>";
+        $result     = Programming::Noscript("Does not support Javascript");
+        static::execStrCmp($expected, $result);
+    }
+
 }

@@ -9,13 +9,13 @@
  * License, or (at your option) any later version.
  */
 
+namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- *  specifies where to send the form-data when a form is submitted.
- * @action
+ * Specifies where to send the form-data when a form is submitted.
  * https://www.w3schools.com/tags/att_action.asp
  * 
- * @package    DML
- * @subpackage HTML5
+ * @package    HTML5
+ * @subpackage Main
  * @category   API
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
@@ -24,7 +24,6 @@
  * @since       2017-05-16
  * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  */
-namespace GIndie\Generator\DML\HTML5\Attribute;
 trait actionTrait {
 
     /**

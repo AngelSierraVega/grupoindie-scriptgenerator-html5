@@ -14,24 +14,29 @@ namespace GIndie\Generator\DML\HTML5\Category\Lists;
 use \GIndie\Generator\DML\HTML5\Node;
 
 /**
- * Description of ListItem
- * https://www.w3schools.com/tags/tag_li.asp
+ * Tag is used in ordered lists.
+ * More info. at <https://www.w3schools.com/tags/tag_li.asp>
  * 
- * @param array $attributes
- * @param array $content
- * @since   2017-01-04
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @version beta.00.01
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @version     GIG-HTML5.00.02
+ * @since       2017-05-18
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
  */
 class ListItem extends Node {
 
     /**
      * 
-     * @param array $attributes
-     * @param array $content
-     * @since   2017-01-04
-     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @version beta.00.01
+     * @param   array $attributes
+     * @param   array $content
+     * @since   GIG-HTML5.00.02
+     * @author  Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
      */
     public function __construct(array $attributes = array(),
             array $content = array()) {

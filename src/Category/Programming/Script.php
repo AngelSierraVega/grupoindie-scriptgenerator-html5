@@ -24,7 +24,7 @@ use \GIndie\Generator\DML\HTML5\Node;
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-DML.00
+ * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -38,6 +38,13 @@ class Script extends Node {
     //src 	URL 	Specifies the URL of an external script file
     //type 	media_type 	Specifies the media type of the script
 
+    /**
+     * Script   constructor.
+     *
+     * @since   GIG-HTML5.00.01
+     * @param   null|string $script
+     * @param   bool $external
+     */
     public function __construct($script, $external = false) {
         if ($external) {
             parent::__construct("script", false, ["src" => $script]);

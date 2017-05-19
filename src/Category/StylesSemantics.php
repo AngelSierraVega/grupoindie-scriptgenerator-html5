@@ -9,63 +9,94 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5;
-
-require_once __DIR__ . '/StylesSemantics/Span.php';
-require_once __DIR__ . '/StylesSemantics/Div.php';
+namespace GIndie\Generator\DML\HTML5\Category;
 
 /**
  * Description of StylesSemantics
  * 
- * @version     GIG-HTML5.00.02
+ * @version     GIG-HTML5.00.03
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
 class StylesSemantics {
     
     /**
-     * {@see \GIgenerator\DML\HTML5\StylesSemantics\Style}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Style}
      * 
      * @since       GIG-HTML5.00.02
      * @author      Lili... <correo@correo>
      * 
-     * @return      \GIgenerator\DML\HTML5\StylesSemantics\Style
+     * @return      \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Style
      * 
      */
     public static function Style($content) {
         return new StylesSemantics\Style($content);
     }
 
-    //<style> 	Defines style information for a document
-    
-    //<div> 	Defines a section in a document
     /**
-     * {@see \GIgenerator\DML\HTML5\StylesSemantics\Div}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Div}
      *
-     * @version     GI-HTML5.00.01
-     * @since       2017-04-16
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\StylesSemantics\Div
+     * @return      \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Div
      * 
      */
     public static function Div($content, array $attributes = array()) {
         return new StylesSemantics\Div($content, $attributes);
     }
 
-    //<span> 	
     /**
-     * {@see \GIgenerator\DML\HTML5\StylesSemantics\Span}
+     * {@see        \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Span}
      *
-     * @version     GI-HTML5.00.01
-     * @since       2017-04-16
+     * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\StylesSemantics\Span
+     * @return      \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Span
      * 
      */
-    public static function Span(array $content = array(), array $attributes = array()) {
+    public static function Span($content, array $attributes = array()) {
         return new StylesSemantics\Span($content,$attributes);
     }
+
+}
+
+/**
+ * Class StylesSemanticsTest
+ * @package GIgenerator\DML\HTML5\Category
+ * @author Izmir Sanchez Juarez <izmirreffi@gmail.com>
+ */
+class StylesSemanticsTest extends \GIndie\Test {
+
+    /**
+     * @internal
+     * @test
+     */
+    public static function Style() {
+        $expected   = '<style>h1 {color:red;}p {color:blue;}</style>';
+        $result     = StylesSemantics::Style("h1 {color:red;}p {color:blue;}");
+        static::execStrCmp($expected, $result);
+    }
+
+    /**
+     * @internal
+     * @test
+     */
+    public static function Div() {
+        $expected   = "<div>My div</div>";
+        $result     = StylesSemantics::Div("My div");
+        static::execStrCmp($expected, $result);
+    }
+
+    /**
+     * @internal
+     * @test
+     */
+    public static function Span() {
+        $expected   = "<span>Hello span</span>";
+        $result     = StylesSemantics::Span("Hello span");
+        static::execStrCmp($expected, $result);
+    }
+
 
 }

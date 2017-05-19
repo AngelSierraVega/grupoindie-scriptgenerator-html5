@@ -18,14 +18,14 @@ use \GIndie\Generator\DML\HTML5\Attribute;
  *  The <style> tag is used to define style information for an HTML document.
  * More info. at <https://www.w3schools.com/tags/tag_style.asp>
  * 
- * @version     GIG-HTML5.02
+ * @version     GIG-HTML5.00.04
  *
- * @package HTML5
- * @subpackage Main
- * @category API
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since 2017-05-15
+ * @since       2017-05-15
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  *
  */
 class Style extends Node {
@@ -38,15 +38,15 @@ class Style extends Node {
     /**
      * Creates a new style object.
      *
-     * @param       null|mixed type Either the content or an array of the content.
+     * @param       string $media Specifies what media/device the media resource is optimized for
+     * @param       string $scope Specifies that the styles only apply to this element's parent element and that element's child elements
+     * @param       string $type  Specifies the media type of the <style> tag
      *
-     * @version     GI-HTML5.00.01
-     * @since       2017-05-17
+     * @since       GIG-HTML5.00.01
      * @author      IZmir Sanchez Juarez <izmirreffi@gmail.com>
      */
-    function __construct($media, $scoped, $type) {
-        parent::__construct("style", TRUE,
-                ["media" => $media, "scoped" => $scoped, "type" => $type]);
+    function __construct($content) {
+        parent::__construct("style", FALSE, [], [$content]);
     }
 
 }

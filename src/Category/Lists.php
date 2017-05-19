@@ -9,12 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5;
-
-require_once __DIR__ . '/Lists/ListItem.php';
-require_once __DIR__ . '/Lists/_List.php';
-require_once __DIR__ . '/Lists/Ordered.php';
-require_once __DIR__ . '/Lists/Unordered.php';
+namespace GIndie\Generator\DML\HTML5\Category;
 
 /**
  * Factory Pattern for the <b>Lists</b> of <b>HTML5</b>.
@@ -29,7 +24,7 @@ require_once __DIR__ . '/Lists/Unordered.php';
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
+ * @version     GIG-HTML5.00.03
  * @since       2017-01-04
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -37,15 +32,32 @@ require_once __DIR__ . '/Lists/Unordered.php';
 class Lists {
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Lists\Ordered}
+     * {@see \GIndie\Generator\DML\HTML5\Lists\ListItem}
+     * 
+     * @param   array $attributes
+     * @param   array $content
+     *
+     * @since       GIG-HTML5.00.03
+     * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+     * 
+     * @return      \GIndie\Generator\DML\HTML5\Lists\ListItem
+     * 
+     */
+    public static function ListItem(array $attributes = array(),
+            array $content = array()) {
+        return new Lists\ListItem($attributes, $content);
+    }
+
+    /**
+     * {@see \GIndie\Generator\DML\HTML5\Lists\Ordered}
      * 
      * @param       array $elements
      *
-     * @version     GI-HTML5.00.02
-     * @since       2017-01-04
+     * @since       GIG-HTML5.00.02
+     * @version     GIG-HTML5.00.03
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Lists\Ordered
+     * @return      \GIndie\Generator\DML\HTML5\Lists\Ordered
      * 
      */
     public static function Ordered(array $elements) {
@@ -53,18 +65,56 @@ class Lists {
     }
 
     /**
-     * {@see \GIgenerator\DML\HTML5\Lists\Unordered}
+     * {@see \GIndie\Generator\DML\HTML5\Lists\Unordered}
      * 
      * @param       array $elements
      *
-     * @version     GI-HTML5.00.02
-     * @since       2017-01-04
+     * @since       GIG-HTML5.00.02
+     * @version     GIG-HTML5.00.03
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIgenerator\DML\HTML5\Lists\Unordered
+     * @return      \GIndie\Generator\DML\HTML5\Lists\Unordered
      * 
      */
     public static function Unordered(array $elements) {
         return new Lists\Unordered($elements);
     }
+
+}
+
+/**
+ * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
+class Lists_test extends \GIndie\Test {
+
+    /**
+     * @test
+     * @internal 
+     */
+    public static function ListItem() {
+        $expected = "<li>Coffee</li>";
+        $result = Lists::ListItem([], ["Coffee"]);
+        static::execStrCmp($expected, $result);
+    }
+
+    /**
+     * @test
+     * @internal 
+     */
+    public static function Ordered() {
+        $expected = "<ol><li>Coffee</li></ol>";
+        $result = Lists::Ordered(["Coffee"]);
+        static::execStrCmp($expected, $result);
+    }
+
+    /**
+     * @test
+     * @internal 
+     */
+    public static function Unordered() {
+        $expected = "<ul><li>Coffee</li></ul>";
+        $result = Lists::Unordered(["Coffee"]);
+        static::execStrCmp($expected, $result);
+    }
+
 }

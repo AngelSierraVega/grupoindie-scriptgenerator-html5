@@ -10,7 +10,47 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * Specifies that the value of the <keygen> element will be challenged when submitted.
+ * https://www.w3schools.com/tags/att_challenge.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-17
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait challengeTrait {
-    //put your code here
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getChallenge() {
+        return $this->getAttribute("challenge");
+    }
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */      
+    public function removeChallenge() {
+        $this->unsetAttribute("challenge");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setChallenge($value) {
+        $this->setAttribute("challenge", $value);
+        return $this;
+    }
 }

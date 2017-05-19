@@ -18,10 +18,16 @@ use \GIndie\Generator\DML\HTML5\Node;
  * Specify a default URL and a default target for all links on a page.
  *
  * More info. at <https://www.w3schools.com/tags/tag_base.asp>.
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version GIG-HTML5.00.01
+ * @version GIG-HTML5.00.02
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since  2017-05-15
+ * @since  2017-05-18
  */
 class Base extends Node {
 
@@ -33,8 +39,8 @@ class Base extends Node {
      * Creates a new tag base object
      * @since GIG-HTML5.00.01
      * @author Izmir Sanchez Juarez <izmirreffi@gmail.com>
-     * @param $href   [Specifies the base URL for all relative URLs in the page]
-     * @param $target [Specifies the default target for all hyperlinks and forms in the page]
+     * @param $href   Specifies the base URL for all relative URLs in the page
+     * @param $target Specifies the default target for all hyperlinks and forms in the page
      */
     function __construct($href, $target) {
         parent::__construct($tag = "base", $emptyNode = true,

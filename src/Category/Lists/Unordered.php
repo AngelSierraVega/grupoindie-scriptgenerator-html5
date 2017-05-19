@@ -11,10 +11,9 @@
 
 namespace GIndie\Generator\DML\HTML5\Category\Lists;
 
-use \GIgenerator\DML\HTML5\Lists\_List;
 /**
- * Description of Unordered
- * https://www.w3schools.com/tags/tag_ul.asp
+ * Tag defines an unordered
+ * More info. at  <https://www.w3schools.com/tags/tag_ul.asp>
  * 
  * @package     HTML5
  * @subpackage  Main
@@ -22,8 +21,8 @@ use \GIgenerator\DML\HTML5\Lists\_List;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
- * @since       2017-04-17
+ * @version     GI-HTML5.00.01
+ * @since       2017-05-18
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
@@ -31,8 +30,8 @@ class Unordered extends _List {
 
     /**
      *
-     * @version     GI-HTML5.00
-     * @since       2017-04-17
+     * @param       array $elements
+     * @since       GI-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      */

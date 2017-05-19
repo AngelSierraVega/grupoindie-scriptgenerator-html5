@@ -11,8 +11,7 @@
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * Specifies whether the <form> or the <input> element should have autocomplete enabled
- * @autocomplete 
+ * Specifies whether a form or an input field should have autocomplete on or off.
  * https://www.w3schools.com/tags/att_autocomplete.asp
  * 
  * @package    HTML5

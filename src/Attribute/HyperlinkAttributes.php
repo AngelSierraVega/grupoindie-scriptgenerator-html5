@@ -10,18 +10,18 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/*
 require_once __DIR__ . '/Hyperlink/download.php';
 require_once __DIR__ . '/Hyperlink/href.php';
 require_once __DIR__ . '/Hyperlink/hreflang.php';
 require_once __DIR__ . '/Hyperlink/media.php';
 require_once __DIR__ . '/Hyperlink/rel.php';
 require_once __DIR__ . '/Hyperlink/target.php';
-require_once __DIR__ . '/Hyperlink/type.php';
+require_once __DIR__ . '/Hyperlink/type.php';*/
 
 trait HyperlinkAttributes {
 
-    use Hyperlink\hrefTrait;
-    use Hyperlink\targetTrait;
-    use Hyperlink\downloadTrait;
+    use hrefTrait;
+    use targetTrait;
+    use downloadTrait;
 }

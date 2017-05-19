@@ -25,7 +25,7 @@ use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00
+ * @version     GIG-HTML5.00.03
  * @since       2017-04-16
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -39,13 +39,11 @@ class Span extends Node {
      *
      * @param       mixed $content  The content of the section.
      *
-     * @version     GI-HTML5.01.01
-     * @since       2017-04-14
+     * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    public function __construct(array $content = array(),
-            array $attributes = array()) {
-        parent::__construct("span", false, $attributes, $content);
+    public function __construct($content, array $attributes = array()) {
+        parent::__construct("span", false, $attributes, is_array($content) ? $content : [$content]);
     }
 
 }

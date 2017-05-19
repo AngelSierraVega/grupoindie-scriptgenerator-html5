@@ -8,10 +8,10 @@
  * as published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  */
+
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * specifies the types of files that the server accepts (that can be submitted through a file upload).
- * @accept 
+ * Specifies the types of files that the server accepts (that can be submitted through a file upload).
  * https://www.w3schools.com/tags/att_accept.asp
  * 
  * @package    HTML5
@@ -37,6 +37,7 @@ trait acceptTrait {
     /**
      * [description]
      * @since   GIG-HTML5.00.01
+     * @return self
      * 
      */      
     public function removeAccept() {

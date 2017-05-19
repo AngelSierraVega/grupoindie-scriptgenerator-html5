@@ -10,13 +10,11 @@
  */
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * Specifies that the element should automatically get focus when the page loads,
- * can be used on the following elements:button, input, keygen, select, textarea.
- * @autofocus
+ * specifies that the element should automatically get focus when the page loads.
  * https://www.w3schools.com/tags/att_autofocus.asp
  * 
- * @package    DML
- * @subpackage HTML5
+ * @package    HTML5
+ * @subpackage Main
  * @category   API
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
@@ -31,7 +29,7 @@ trait autofocusTrait {
      * @since   GIG-HTML5.00.01
      * 
      */
-    public function getAccept() {
+    public function getAutofocus() {
         return $this->getAttribute("autofocus");
     }
     /**
@@ -39,7 +37,7 @@ trait autofocusTrait {
      * @since   GIG-HTML5.00.01
      * 
      */      
-    public function removeAccept() {
+    public function removeAutofocus() {
         $this->unsetAttribute("autofocus");
         return $this;
     }
@@ -50,7 +48,7 @@ trait autofocusTrait {
      * 
      * @since GIG-HTML5.00.01
      */
-    public function setAccept($value) {
+    public function setAutofocus($value) {
         $this->setAttribute("autofocus", $value);
         return $this;
     }

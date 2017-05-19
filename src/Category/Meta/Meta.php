@@ -14,21 +14,29 @@ namespace GIndie\Generator\DML\HTML5\Category\Meta;
 use \GIndie\Generator\DML\HTML5\Node;
 
 /**
- * Represents a GIGhtml5_document_html_head_meta object
- * @version     GI-HTML5.00
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since 2016-12-28
+ * Describes metadata within an HTML document.
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2016-12-28
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  */
 class Meta extends Node {
 
     /**
      * Creates a new Meta object
-     * @version beta.00.02
+     * 
      * @param Array $attributes An array representing the attributes of the meta tag
-     * @since 2016-12-28
+     * 
+     * @since GIG-HTML5.00.01
      */
-    function __construct(Array $attributes) {
-        parent::__construct($tag = "meta", $emptyNode = "closed", $attributes);
+    function __construct(array $attributes) {
+        parent::__construct("meta", "closed", $attributes);
     }
 
 }

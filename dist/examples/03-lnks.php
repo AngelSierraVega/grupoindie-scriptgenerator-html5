@@ -1,6 +1,6 @@
 <?php
 
-/*
+/* 
  * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -9,13 +9,3 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5\Meta;
-
-/**
- * Description of Base
- *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- */
-class Base {
-    //put your code here
-}

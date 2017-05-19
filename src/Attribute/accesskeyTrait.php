@@ -8,9 +8,9 @@
  * License, or (at your option) any later version.
  */
 
+namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * specifies a shortcut key to activate/focus an element.
- * @accesskey 
+ * Specifies a shortcut key to activate/focus an element.
  * https://www.w3schools.com/tags/att_accesskey.asp
  * 
  * @package    HTML5
@@ -23,7 +23,6 @@
  * @since       2017-05-16
  * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  */
-namespace GIndie\Generator\DML\HTML5\Attribute;
 trait accesskeyTrait {
 
     /**

@@ -9,13 +9,4 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIgenerator\DML\HTML5\Programming;
 
-/**
- * Description of Noscript
- *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- */
-class Noscript {
-    //put your code here
-}

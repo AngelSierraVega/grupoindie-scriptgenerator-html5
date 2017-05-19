@@ -9,50 +9,6 @@
  * License, or (at your option) any later version.
  */
 
-class Span extends \GIgenerator\DML\HTML5\Node {
-
-    public function __construct($attributes = array(), $content = array()) {
-        parent::__construct("span", false, $attributes, $content);
-    }
-
-    public static function Anchor($link, $text = null, $target = null) {
-        return new Basic\Anchor($link, $text, $target);
-    }
-
-    public static function Div(array $content = null) {
-        return new Basic\Div([], $content);
-    }
-
-    public static function Span(array $content = null) {
-        return new Basic\Span($attributes, $content);
-    }
-
-}
-
-/**
- * 
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @since 2017-01-18
- * @version beta.00.01
- */
-class Div extends \GIgenerator\DML\HTML5\Node {
-
-    /**
-     * 
-     * @param type $attributes
-     * @param type $content
-     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @since 2017-01-18
-     * @version beta.00.01
-     */
-    public function __construct($attributes = array(), $content = array()) {
-        parent::__construct("div", false, $attributes, $content);
-    }
-
-}
-
-
-
 /**
  * 
  * @since   2017-01-18

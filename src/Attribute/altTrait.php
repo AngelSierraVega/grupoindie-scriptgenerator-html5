@@ -9,13 +9,13 @@
  * License, or (at your option) any later version.
  */
 
+namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * provides alternative information for an image if a user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
- * @alt
+ * Specifies an alternate text when the original element fails to display.
  * https://www.w3schools.com/tags/att_alt.asp
  * 
- * @package    DML
- * @subpackage HTML5
+ * @package    HTML5
+ * @subpackage Main
  * @category   API
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
@@ -24,7 +24,7 @@
  * @since       2017-05-16
  * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  */
-namespace GIndie\Generator\DML\HTML5\Attribute;
+
 trait altTrait {
 
     /**
