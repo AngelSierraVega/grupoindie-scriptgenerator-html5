@@ -12,7 +12,6 @@
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
  * Specifies the visible width of a text area.
- * @cols
  * https://www.w3schools.com/tags/att_cols.asp
  * 
  * @package    HTML5

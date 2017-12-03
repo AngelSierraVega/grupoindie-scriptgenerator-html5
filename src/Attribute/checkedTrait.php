@@ -10,6 +10,7 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
+
 /**
  * Specifies that an <input> element should be pre-selected when the page loads (for type="checkbox" or type="radio").
  * https://www.w3schools.com/tags/att_checked.asp
@@ -24,24 +25,32 @@ namespace GIndie\Generator\DML\HTML5\Attribute;
  * @since       2017-05-17
  * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  */
-trait checkedTrait {
+trait checkedTrait
+{
+
     /**
      * [description]
      * @since   GIG-HTML5.00.01
      * 
      */
-    public function getChecked() {
+    public function getChecked()
+    {
         return $this->getAttribute("checked");
     }
+
     /**
      * [description]
+     * @return self
+     * 
      * @since   GIG-HTML5.00.01
      * 
-     */      
-    public function removeChecked() {
+     */
+    public function removeChecked()
+    {
         $this->unsetAttribute("checked");
         return $this;
     }
+
     /**
      * 
      * @param string $value The value of the attribute.
@@ -49,8 +58,10 @@ trait checkedTrait {
      * 
      * @since GIG-HTML5.00.01
      */
-    public function setChecked($value) {
+    public function setChecked($value)
+    {
         $this->setAttribute("checked", $value);
         return $this;
     }
+
 }

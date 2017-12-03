@@ -9,7 +9,47 @@
  * License, or (at your option) any later version.
  */
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * https://www.w3schools.com/tags/att_contextmenu.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-19
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait crossoriginTrait {
-    //put your code here
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getCrossorigin() {
+        return $this->getAttribute("crossorigin");
+    }
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * @return self
+     * 
+     */      
+    public function removeCrossorigin() {
+        $this->unsetAttribute("crossorigin");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setCrossorigin($value) {
+        $this->setAttribute("crossorigin", $value);
+        return $this;
+    }
 }

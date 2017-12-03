@@ -55,6 +55,8 @@ class Head extends Node {
     function __construct($charset, $title) {
         parent::__construct($tag = "head", $emptyNode = false,
                 ["charset" => $charset]);
+        //
+        //$this->addContent(new DML\HTML5\Category\StylesSemantics\Div(array("")));
         $this->addContent(new Title($title));
     }
 
@@ -69,7 +71,7 @@ class Head extends Node {
      * @author  Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function addLink($href, $rel) {
-        return $this->addContent(DML\Node::Simple("link",
+        return $this->addContentGetPointer(DML\Node::Simple("link",
                                 ["rel" => $rel, "href" => $href]));
     }
 
@@ -81,9 +83,9 @@ class Head extends Node {
      */
     public function addMeta(array $attributes) {
         if (isset($this->_metas) == FALSE) {
-            $this->_metas = $this->addContent(DML\Node::ContentOnly([]));
+            $this->_metas = $this->addContentGetPointer(DML\Node::ContentOnly([]));
         }
-        return $this->_metas->addContent(new Meta($attributes));
+        return $this->_metas->addContentGetPointer(new Meta($attributes));
     }
 
 }

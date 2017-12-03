@@ -10,7 +10,48 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * Specifies the date and time when the text was deleted/inserted.
+ * https://www.w3schools.com/tags/att_datetime.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-19
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait datetimeTrait {
-    //put your code here
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getDatetime() {
+        return $this->getAttribute("datetime");
+    }
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * @return self
+     * 
+     */      
+    public function removeDatetime() {
+        $this->unsetAttribute("datetime");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setDatetime($value) {
+        $this->setAttribute("datetime", $value);
+        return $this;
+    }
 }

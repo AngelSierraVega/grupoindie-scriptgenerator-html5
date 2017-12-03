@@ -10,7 +10,48 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * Specifies the HTTP method to use when sending form-data.
+ * @method
+ * https://www.w3schools.com/tags/att_method.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-19
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait methodTrait {
-    //put your code here
+    /**
+     * [description]
+     * 
+     * @since   GIG-HTML5.00.01
+     */    
+    public function getMethod() {
+        return $this->getAttribute("method");
+    }
+    /**
+     * @return $this
+     * 
+     * @since   GIG-HTML5.00.01
+     */    
+    public function removeMethod() {
+        $this->unsetAttribute("method");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since   GIG-HTML5.00.01
+     */
+    public function setMethod($value) {
+        $this->setAttribute("method", $value);
+        return $this;
+    }
 }

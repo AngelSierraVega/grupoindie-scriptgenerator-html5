@@ -66,8 +66,8 @@ class HTML extends Node {
      */
     function __construct($title, $lang, $charset) {
         parent::__construct("html", false, ["lang" => $lang]);
-        $this->_head = parent::addContent(new Meta\Head($charset, $title));
-        $this->_body = parent::addContent(new Body());
+        $this->_head = parent::addContentGetPointer(new Meta\Head($charset, $title));
+        $this->_body = parent::addContentGetPointer(new Body());
     }
 
     /**

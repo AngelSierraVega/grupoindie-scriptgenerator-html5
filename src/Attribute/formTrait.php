@@ -10,7 +10,47 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * Specifies the name of the form the element belongs to.
+ * https://www.w3schools.com/tags/att_form.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-19
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait formTrait {
-    //put your code here
+    /**
+     * [description]
+     * 
+     * @since   GIG-HTML5.00.01
+     */    
+    public function getForm() {
+        return $this->getAttribute("form");
+    }
+    /**
+     * @return $this
+     * 
+     * @since   GIG-HTML5.00.01
+     */    
+    public function removeForm() {
+        $this->unsetAttribute("form");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since   GIG-HTML5.00.01
+     */
+    public function setForm($value) {
+        $this->setAttribute("form", $value);
+        return $this;
+    }
 }

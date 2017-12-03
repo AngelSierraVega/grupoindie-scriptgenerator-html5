@@ -29,6 +29,8 @@ namespace GIndie\Generator\DML\HTML5\Attribute;
  */
 trait GlobalAttributes {
 
+    use classTrait;
+
     //accesskey 	Specifies a shortcut key to activate/focus an element
     //class 	Specifies one or more classnames for an element (refers to a class in a style sheet)
     //contenteditable 	Specifies whether the content of an element is editable or not
@@ -48,6 +50,10 @@ trait GlobalAttributes {
     public function setId($value) {
         $this->setAttribute("id", $value);
         return $this;
+    }
+    
+    public function getId() {
+        return $this->getAttribute("id");
     }
 
 }

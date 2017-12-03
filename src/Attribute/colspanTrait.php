@@ -11,8 +11,7 @@
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * Defines the number of columns a table cell should span.
- * @colspan
+ * Specifies the number of columns a table cell should span.
  * https://www.w3schools.com/tags/att_colspan.asp
  * 
  * @package    HTML5

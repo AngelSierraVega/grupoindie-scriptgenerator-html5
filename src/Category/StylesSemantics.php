@@ -55,7 +55,7 @@ class StylesSemantics {
      * @return      \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Span
      * 
      */
-    public static function Span($content, array $attributes = array()) {
+    public static function Span($content = \NULL, array $attributes = array()) {
         return new StylesSemantics\Span($content,$attributes);
     }
 

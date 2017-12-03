@@ -10,7 +10,48 @@
  */
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
-
+/**
+ * Specifies that audio/video controls should be displayed.
+ * https://www.w3schools.com/tags/att_controls.asp
+ * 
+ * @package    HTML5
+ * @subpackage Main
+ * @category   API
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @version     GIG-HTML5.00.01
+ * @since       2017-05-19
+ * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 trait controlsTrait {
-    //put your code here
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getControls() {
+        return $this->getAttribute("controls");
+    }
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * @return self
+     * 
+     */      
+    public function removeControls() {
+        $this->unsetAttribute("controls");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setControls($value) {
+        $this->setAttribute("controls", $value);
+        return $this;
+    }
 }

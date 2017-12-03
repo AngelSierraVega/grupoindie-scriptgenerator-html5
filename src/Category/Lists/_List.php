@@ -12,6 +12,7 @@
 namespace GIndie\Generator\DML\HTML5\Category\Lists;
 
 use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\Generator\DML\HTML5\Attribute;
 
 /**
  * Abstract representation of a list.
@@ -27,6 +28,8 @@ use \GIndie\Generator\DML\HTML5\Node;
  * 
  */
 abstract class _List extends Node {
+    
+    use Attribute\GlobalAttributes;
 
     /**
      * Creates an ordered/unodered HTML list element.

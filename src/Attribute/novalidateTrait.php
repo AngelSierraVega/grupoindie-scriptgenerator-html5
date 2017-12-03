@@ -11,6 +11,6 @@
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
 
-trait novalidateTrate {
+trait novalidateTrait {
     //put your code here
 }

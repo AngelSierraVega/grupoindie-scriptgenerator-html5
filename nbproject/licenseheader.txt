@@ -1,0 +1,16 @@
+<#assign licenseFirst = "/**">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}${project.displayName} - ${name} ${date?date?string("yyyy-MM-dd")}
+${licensePrefix}@copyright (C) ${date?date?string("yyyy")} Angel Sierra Vega. Grupo INDIE.
+${licensePrefix?replace(" +$", "", "r")}
+${licensePrefix}@package MineralDeLaReforma
+${licensePrefix}@subpackage AdmininstracionIngresos
+${licensePrefix?replace(" +$", "", "r")}
+${licensePrefix}@version MR-ADIN.00.00
+<#if licenseLast??>
+${licenseLast}
+</#if>

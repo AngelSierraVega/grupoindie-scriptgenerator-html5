@@ -42,8 +42,8 @@ class Span extends Node {
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    public function __construct($content, array $attributes = array()) {
-        parent::__construct("span", false, $attributes, is_array($content) ? $content : [$content]);
+    public function __construct($content = \NULL, array $attributes = array()) {
+        parent::__construct("span", \FALSE, $attributes, $content);
     }
 
 }

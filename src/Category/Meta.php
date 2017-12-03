@@ -70,25 +70,39 @@ class Meta {
 
 }
 
+/**
+ * Class MetaTest
+ *
+ * @package GIndie\Generator\DML\HTML5\Category
+ * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ */
 class MetaTest extends \GIndie\Test {
 
-    
-
+    /**
+     * @test
+     * @internal 
+     */
     public static function Base() {
         $expected = "<base href=\"http://www.w3schools.com/images/\" target=\"_blank\">";
         $result = Meta::Base("http://www.w3schools.com/images/", "_blank");
         static::execStrCmp($expected, $result);
     }
-
+    /**
+     * @test
+     * @internal 
+     */
     public static function Head() {
         $expected = "<head charset=\"utf-8\"><title>Test</title></head>";
         $result = Meta::Head("utf-8", "Test");
         static::execStrCmp($expected, $result);
     }
-
+    /**
+     * @test
+     * @internal 
+     */
     public static function Meta() {
-        $expected = "<meta name=\"author\" />";
-        $result = Meta::Meta(["name" => "author"]);
+        $expected = "<meta name=\"autor\" />";
+        $result = Meta::Meta(["name" => "autor"]);
         static::execStrCmp($expected, $result);
     }
 

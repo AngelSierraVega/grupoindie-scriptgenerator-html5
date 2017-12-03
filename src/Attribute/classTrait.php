@@ -13,7 +13,6 @@ namespace GIndie\Generator\DML\HTML5\Attribute;
 
 /**
  * An abstraction layer for the class related functions of an HTML5 node.
- * 
  * @package     HTML5
  * @subpackage  Main
  * @category    API
@@ -39,10 +38,14 @@ trait classTrait {
      */
     public function addClass($classnames) {
         $class = $this->getAttribute("class");
-        if ($class == false) {
-            return parent::setAttribute("class",
-                            $class = new Classes($classnames));
+        if ($class == \FALSE) {
+            return parent::setAttribute("class", new Classes($classnames));
         } else {
+            if (is_string($class)) {
+                parent::setAttribute("class",
+                        new Classes($class . " " . $classnames));
+                $class = $this->getAttribute("class");
+            }
             return $class->addClass($classnames);
         }
     }
@@ -83,6 +86,10 @@ trait classTrait {
         if ($class == false) {
             return false;
         } else {
+            if (is_string($class)) {
+                parent::setAttribute("class", new Classes($class));
+                $class = $this->getAttribute("class");
+            }
             return $class->removeClass($classname);
         }
     }
@@ -104,8 +111,7 @@ trait classTrait {
  * 
  */
 class Classes {
-
-    /**
+    /*     * q
      * Stores the class names.
      * 
      * @var         array $_classes
@@ -115,6 +121,7 @@ class Classes {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      */
+
     private $_classes;
 
     /**

@@ -45,8 +45,8 @@ class Document extends Node {
      */
     public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
         parent::__construct($tag = null, $emptyNode = false);
-        $this->_doctype = parent::addContent(new Basic\Doctype($doctype));
-        $this->_html = parent::addContent(new Basic\HTML($title, $lang, $charset));
+        $this->_doctype = parent::addContentGetPointer(new Category\Basic\Doctype($doctype));
+        $this->_html = parent::addContentGetPointer(new Category\Basic\HTML($title, $lang, $charset));
     }
 
     /**
@@ -54,7 +54,7 @@ class Document extends Node {
      * 
      * @param       mixed $content The content to add.
      * 
-     * @version     GIG-HTML5.00.00
+     * @version     GIG-HqwTML5.00.00
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 

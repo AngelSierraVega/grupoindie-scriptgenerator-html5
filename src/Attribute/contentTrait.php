@@ -12,7 +12,6 @@
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
  * Gives the value associated with the http-equiv or name attribute.
- * @content
  * https://www.w3schools.com/tags/att_content.asp
  * 
  * @package    HTML5

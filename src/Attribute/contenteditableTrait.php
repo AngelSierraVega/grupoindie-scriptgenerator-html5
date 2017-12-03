@@ -22,9 +22,37 @@ namespace GIndie\Generator\DML\HTML5\Attribute;
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  * 
  * @version     GIG-HTML5.00.01
- * @since       2017-05-17
+ * @since       2017-05-19
  * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  */
 trait contenteditableTrait {
-    //put your code here
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getContenteditable() {
+        return $this->getAttribute("contenteditable");
+    }
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * @return self
+     * 
+     */      
+    public function removeContenteditable() {
+        $this->unsetAttribute("contenteditable");
+        return $this;
+    }
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setContenteditable($value) {
+        $this->setAttribute("contenteditable", $value);
+        return $this;
+    }
 }

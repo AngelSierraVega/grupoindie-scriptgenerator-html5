@@ -10,7 +10,7 @@
  */
 namespace GIndie\Generator\DML\HTML5\Attribute;
 /**
- * specifies that the element should automatically get focus when the page loads.
+ * Specifies that the element should automatically get focus when the page loads.
  * https://www.w3schools.com/tags/att_autofocus.asp
  * 
  * @package    HTML5

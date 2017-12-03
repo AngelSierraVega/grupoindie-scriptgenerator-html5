@@ -11,12 +11,14 @@
 
 namespace GIndie\Generator\DML\HTML5;
 
+use GIndie\Generator\DML;
+
 spl_autoload_register(function($className) {
     if (substr($className, -4) == 'Test') {
         $className = substr($className, 0, \strrpos($className, "Test"));
     }
     $edited = substr($className,
-            strlen(__NAMESPACE__) + strrpos($className, __NAMESPACE__));
+                     strlen(__NAMESPACE__) + strrpos($className, __NAMESPACE__));
     $edited = str_replace("\\", \DIRECTORY_SEPARATOR, __DIR__ . $edited) . ".php";
     if (is_readable($edited)) {
         require_once($edited);
@@ -46,7 +48,7 @@ require_once __DIR__ . '/main/common.php';
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Node extends \GIndie\Generator\DML\Node\Node {
+class Node extends DML\Node\Node {
 
     /**
      * @deprecated since GIG-HTML5.01.03
@@ -105,10 +107,10 @@ class Node extends \GIndie\Generator\DML\Node\Node {
      */
     public function addScript($script, $external = FALSE) {
         if (isset($this->_scripts) == FALSE) {
-            $this->_scripts = $this->addContent(\GIgenerator\DML\Node::ContentOnly([]));
+            $this->_scripts = $this->addContentGetPointer(DML\Node::ContentOnly([]));
         }
-        return $this->_scripts->addContent(\GIgenerator\DML\HTML5\Programming::Script($script,
-                                $external));
+        return $this->_scripts->addContentGetPointer(Category\Programming::Script($script,
+                                                                                  $external));
     }
 
     /**
@@ -123,7 +125,21 @@ class Node extends \GIndie\Generator\DML\Node\Node {
      */
     public function addScriptOnDocumentReady($script) {
         return $this->addScript("$(document).ready(function () { {$script} });",
-                        false);
+                                false);
+    }
+
+    public function __toString() {
+        if ($this->_emptyNode == \FALSE) {
+            $this->addContent($this->defineScript());
+        }
+        return parent::__toString();
+    }
+
+    /**
+     * @return string
+     */
+    public function defineScript() {
+        return "";
     }
 
 }

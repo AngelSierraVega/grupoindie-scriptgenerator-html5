@@ -11,6 +11,57 @@
 
 namespace GIndie\Generator\DML\HTML5\Attribute;
 
-trait nameTrait {
-    //put your code here
+/**
+ * Specifies a name for the element
+ * 
+ * https://www.w3schools.com/tags/att_name.asp
+ * 
+ * @package     HTML5
+ * @subpackage  Main
+ * @category    API
+ * 
+ * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @version     GIG-HTML5.00.01
+ * @since       2017-08-19
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * 
+ */
+trait nameTrait
+{
+
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function getName()
+    {
+        return $this->getAttribute("name");
+    }
+
+    /**
+     * [description]
+     * @since   GIG-HTML5.00.01
+     * 
+     */
+    public function removeName()
+    {
+        $this->unsetAttribute("name");
+        return $this;
+    }
+
+    /**
+     * 
+     * @param string $value The value of the attribute.
+     * @return self
+     * 
+     * @since GIG-HTML5.00.01
+     */
+    public function setName($value)
+    {
+        $this->setAttribute("name", $value);
+        return $this;
+    }
+
 }

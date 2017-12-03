@@ -33,7 +33,7 @@ class Meta extends Node {
      * 
      * @param Array $attributes An array representing the attributes of the meta tag
      * 
-     * @since GIG-HTML5.00.01
+     * @since GIG-HTML5.00.02
      */
     function __construct(array $attributes) {
         parent::__construct("meta", "closed", $attributes);

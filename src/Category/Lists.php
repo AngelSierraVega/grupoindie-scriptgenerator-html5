@@ -83,9 +83,13 @@ class Lists {
 }
 
 /**
+ * Class MetaTest
+ *
+ * @package GIndie\Generator\DML\HTML5\Category
  * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+ * 
  */
-class Lists_test extends \GIndie\Test {
+class ListsTest extends \GIndie\Test {
 
     /**
      * @test
