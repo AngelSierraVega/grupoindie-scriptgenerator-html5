@@ -21,12 +21,12 @@ $tmpDir = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT');
 require_once $tmpDir.'/GIgenerator/DML/dist/DML.phar';
 require_once $tmpDir . '/GIgenerator/HTML5/src/main.php';
 
-//echo \GIndie\Generator\DML\HTML5\Category\Meta::Meta([]);
+//echo \GIndie\ScriptGenerator\HTML5\Category\Meta::Meta([]);
 
 print("MetaTest:<br>");
-\GIndie\Generator\DML\HTML5\Category\MetaTest::run();
+\GIndie\ScriptGenerator\HTML5\Category\MetaTest::run();
 print("\n");
 
 print("ListsTest:<br>");
-\GIndie\Generator\DML\HTML5\Category\ListsTest::run();
+\GIndie\ScriptGenerator\HTML5\Category\ListsTest::run();
 print("\n");

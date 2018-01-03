@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Specifies that audio/video controls should be displayed.
  * https://www.w3schools.com/tags/att_controls.asp

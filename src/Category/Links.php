@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category;
+namespace GIndie\ScriptGenerator\HTML5\Category;
 
 /**
  * Factory Pattern for the <b>links</b> of <b>HTML5</b>.
@@ -30,12 +30,12 @@ namespace GIndie\Generator\DML\HTML5\Category;
 class Links {
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Links\Hyperlink}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Links\Hyperlink}
      *
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Links\Hyperlink
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Links\Hyperlink
      * 
      */
     public static function Hyperlink($link, $content = NULL, $target = NULL) {
@@ -43,12 +43,12 @@ class Links {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Links\Anchor}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Links\Anchor}
      *
      * @since       GIG-HTML5.00.01
      * @author      Izmir Sanchez  <izmirreffi@gmail.com>
      *
-     * @return      \GIndie\Generator\DML\HTML5\Category\Links\Anchor
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Links\Anchor
      *
      */
     public static function Anchor($content = []) {
@@ -56,12 +56,12 @@ class Links {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Links\Anchor}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Links\Anchor}
      *
      * @since       GI-HTML5.00.01
      * @author      Izmir Sanchez  <izmirreffi@gmail.com>
      *
-     * @return      \GIndie\Generator\DML\HTML5\Category\Links\Link
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Links\Link
      *
      */
     public static function Link($href, $rel) {
@@ -73,7 +73,7 @@ class Links {
 
 /**
  * Class Link_test
- * @package GIndie\Generator\DML\HTML5
+ * @package GIndie\ScriptGenerator\HTML5
  * @author Izmir Sanchez Juarez
  */
 class LinksTest extends \GIndie\Test {

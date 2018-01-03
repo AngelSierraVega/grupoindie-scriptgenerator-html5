@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category;
+namespace GIndie\ScriptGenerator\HTML5\Category;
 
 /**
  * Factory Pattern for the <b>Lists</b> of <b>HTML5</b>.
@@ -32,7 +32,7 @@ namespace GIndie\Generator\DML\HTML5\Category;
 class Lists {
 
     /**
-     * {@see \GIndie\Generator\DML\HTML5\Lists\ListItem}
+     * {@see \GIndie\ScriptGenerator\HTML5\Lists\ListItem}
      * 
      * @param   array $attributes
      * @param   array $content
@@ -40,7 +40,7 @@ class Lists {
      * @since       GIG-HTML5.00.03
      * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Lists\ListItem
+     * @return      \GIndie\ScriptGenerator\HTML5\Lists\ListItem
      * 
      */
     public static function ListItem(array $attributes = array(),
@@ -49,7 +49,7 @@ class Lists {
     }
 
     /**
-     * {@see \GIndie\Generator\DML\HTML5\Lists\Ordered}
+     * {@see \GIndie\ScriptGenerator\HTML5\Lists\Ordered}
      * 
      * @param       array $elements
      *
@@ -57,7 +57,7 @@ class Lists {
      * @version     GIG-HTML5.00.03
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Lists\Ordered
+     * @return      \GIndie\ScriptGenerator\HTML5\Lists\Ordered
      * 
      */
     public static function Ordered(array $elements) {
@@ -65,7 +65,7 @@ class Lists {
     }
 
     /**
-     * {@see \GIndie\Generator\DML\HTML5\Lists\Unordered}
+     * {@see \GIndie\ScriptGenerator\HTML5\Lists\Unordered}
      * 
      * @param       array $elements
      *
@@ -73,7 +73,7 @@ class Lists {
      * @version     GIG-HTML5.00.03
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Lists\Unordered
+     * @return      \GIndie\ScriptGenerator\HTML5\Lists\Unordered
      * 
      */
     public static function Unordered(array $elements) {
@@ -85,7 +85,7 @@ class Lists {
 /**
  * Class MetaTest
  *
- * @package GIndie\Generator\DML\HTML5\Category
+ * @package GIndie\ScriptGenerator\HTML5\Category
  * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  * 
  */

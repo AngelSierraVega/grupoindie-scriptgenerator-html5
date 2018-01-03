@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /*
 require_once __DIR__ . '/Hyperlink/download.php';
 require_once __DIR__ . '/Hyperlink/href.php';

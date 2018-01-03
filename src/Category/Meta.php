@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category;
+namespace GIndie\ScriptGenerator\HTML5\Category;
 
 /**
  * Factory Pattern for the <b>Meta</b> of <b>HTML5</b>.
@@ -30,12 +30,12 @@ namespace GIndie\Generator\DML\HTML5\Category;
 class Meta {
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Meta\Base}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Meta\Base}
      *
      * @since       GIG-HTML5.00.02
      * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
      *
-     * @return      \GIndie\Generator\DML\HTML5\Category\Meta\Base
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Meta\Base
      *
      */
     public static function Base($href, $target) {
@@ -43,12 +43,12 @@ class Meta {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Meta\Head}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Meta\Head}
      *
      * @since       GIG-HTML5.00.02
      * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
      *
-     * @return      \GIndie\Generator\DML\HTML5\Category\Meta\Head
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Meta\Head
      *
      */
     public static function Head($charset, $title) {
@@ -56,12 +56,12 @@ class Meta {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Meta\Meta}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Meta\Meta}
      *
      * @since       GIG-HTML5.00.02
      * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
      *
-     * @return      \GIndie\Generator\DML\HTML5\Category\Meta\Meta
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Meta\Meta
      *
      */
     public static function Meta(Array $attributes) {
@@ -73,7 +73,7 @@ class Meta {
 /**
  * Class MetaTest
  *
- * @package GIndie\Generator\DML\HTML5\Category
+ * @package GIndie\ScriptGenerator\HTML5\Category
  * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
  */
 class MetaTest extends \GIndie\Test {

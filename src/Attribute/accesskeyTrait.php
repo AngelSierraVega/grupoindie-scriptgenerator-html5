@@ -8,7 +8,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Specifies a shortcut key to activate/focus an element.
  * https://www.w3schools.com/tags/att_accesskey.asp

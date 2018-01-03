@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Lists;
+namespace GIndie\ScriptGenerator\HTML5\Category\Lists;
 
-use \GIndie\Generator\DML\HTML5\Node;
-use \GIndie\Generator\DML\HTML5\Attribute;
+use \GIndie\ScriptGenerator\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
  * Abstract representation of a list.
@@ -50,7 +50,7 @@ abstract class _List extends Node {
      * Adds an element to the list.
      * 
      * @param   mixed $element The elemen to add
-     * @return  \GIndie\Generator\DML\HTML5\Node::addContent()
+     * @return  \GIndie\ScriptGenerator\HTML5\Node::addContent()
      * 
      * @since   GIG-HTML5.00.01
      */

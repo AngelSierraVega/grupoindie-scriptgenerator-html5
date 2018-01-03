@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
  * Specifies that an <input> element should be pre-selected when the page loads (for type="checkbox" or type="radio").

@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\StylesSemantics;
+namespace GIndie\ScriptGenerator\HTML5\Category\StylesSemantics;
 
-use GIndie\Generator\DML\HTML5\Node;
-use \GIndie\Generator\DML\HTML5\Attribute;
+use GIndie\ScriptGenerator\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
  *  The <style> tag is used to define style information for an HTML document.

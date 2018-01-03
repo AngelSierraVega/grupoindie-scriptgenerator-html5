@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
  * Specifies the URL of the page the link goes to.

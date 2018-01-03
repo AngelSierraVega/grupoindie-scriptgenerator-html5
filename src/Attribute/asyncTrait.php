@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Specifies that the script will be executed asynchronously as soon as it is available.
  * https://www.w3schools.com/tags/att_async.asp

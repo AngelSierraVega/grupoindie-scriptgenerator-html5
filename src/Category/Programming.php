@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category;
+namespace GIndie\ScriptGenerator\HTML5\Category;
 
 //require_once __DIR__ . '/Programming/Script.php';
 
@@ -32,12 +32,12 @@ namespace GIndie\Generator\DML\HTML5\Category;
 class Programming {
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Programming\Script}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Programming\Script}
      *
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Programming\Script
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Programming\Script
      * 
      */
     public static function Script($script, $external = false) {

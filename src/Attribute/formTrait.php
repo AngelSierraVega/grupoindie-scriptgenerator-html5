@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Specifies the name of the form the element belongs to.
  * https://www.w3schools.com/tags/att_form.asp

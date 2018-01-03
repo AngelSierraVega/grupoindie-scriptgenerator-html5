@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Meta;
+namespace GIndie\ScriptGenerator\HTML5\Category\Meta;
 
-use GIndie\Generator\DML\HTML5\Attribute;
-use \GIndie\Generator\DML\HTML5\Node;
+use GIndie\ScriptGenerator\HTML5\Attribute;
+use \GIndie\ScriptGenerator\HTML5\Node;
 
 /**
  * Specify a default URL and a default target for all links on a page.

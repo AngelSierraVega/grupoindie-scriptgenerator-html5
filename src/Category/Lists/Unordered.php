@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Lists;
+namespace GIndie\ScriptGenerator\HTML5\Category\Lists;
 
 /**
  * Tag defines an unordered

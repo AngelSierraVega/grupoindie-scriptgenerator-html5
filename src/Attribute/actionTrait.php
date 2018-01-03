@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Specifies where to send the form-data when a form is submitted.
  * https://www.w3schools.com/tags/att_action.asp

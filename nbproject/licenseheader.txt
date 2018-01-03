@@ -4,13 +4,14 @@
 <#if licenseFirst??>
 ${licenseFirst}
 </#if>
-${licensePrefix}${project.displayName} - ${name} ${date?date?string("yyyy-MM-dd")}
-${licensePrefix}@copyright (C) ${date?date?string("yyyy")} Angel Sierra Vega. Grupo INDIE.
+${licensePrefix}${project.displayName} - ${name}
 ${licensePrefix?replace(" +$", "", "r")}
-${licensePrefix}@package MineralDeLaReforma
-${licensePrefix}@subpackage AdmininstracionIngresos
+${licensePrefix}@copyright (c) ${date?date?string("yyyy")} Angel Sierra Vega. Grupo INDIE.
 ${licensePrefix?replace(" +$", "", "r")}
-${licensePrefix}@version MR-ADIN.00.00
+${licensePrefix}@package ScriptGenerator
+${licensePrefix}@subpackage HTML5
+${licensePrefix?replace(" +$", "", "r")}
+${licensePrefix}@version SG-HTML5.00.00 ${date?date?string("yy-MM-dd")} [Class/Trait/Interface] created.
 <#if licenseLast??>
 ${licenseLast}
 </#if>

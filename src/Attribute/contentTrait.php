@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Gives the value associated with the http-equiv or name attribute.
  * https://www.w3schools.com/tags/att_content.asp

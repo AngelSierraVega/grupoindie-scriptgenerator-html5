@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category;
+namespace GIndie\ScriptGenerator\HTML5\Category;
 
 /**
  * Factory Pattern for the <b>basic tags</b> of <b>HTML5</b>.
@@ -30,12 +30,12 @@ namespace GIndie\Generator\DML\HTML5\Category;
 class Basic {
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Body}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Body}
      *
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Body
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Body
      * 
      */
     public static function Body() {
@@ -43,12 +43,12 @@ class Basic {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\BreakLine}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\BreakLine}
      *
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\BreakLine
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\BreakLine
      * 
      */
     public static function BreakLine() {
@@ -56,7 +56,7 @@ class Basic {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Comment}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Comment}
      * 
      * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
      *
@@ -71,12 +71,12 @@ class Basic {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Doctype}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Doctype}
      *
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\generator\DML\HTML5\Category\Basic\Doctype
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Doctype
      * 
      */
     public static function Doctype($doctype) {
@@ -89,7 +89,7 @@ class Basic {
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\HTML
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\HTML
      * 
      */
     public static function HTML($title, $lang, $charset) {
@@ -97,7 +97,7 @@ class Basic {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Header}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Header}
      * 
      * @param       int $level  [1-6] the header level
      * @param       mixed $content  The content of the header
@@ -106,7 +106,7 @@ class Basic {
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Header
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Header
      * 
      */
     public static function Header($level, $content) {
@@ -114,14 +114,14 @@ class Basic {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Hr}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Hr}
      * 
      * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
      *
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Hr
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Hr
      * 
      */
     public static function Hr() {
@@ -129,14 +129,14 @@ class Basic {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Paragraph}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Paragraph}
      * 
      * @param       mixed $content  The content of the paragraph
      *
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Paragraph
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Paragraph
      * 
      */
     public static function Paragraph($content) {
@@ -144,12 +144,12 @@ class Basic {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\Basic\Title}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Title}
      *
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category'\Basic\Title
+     * @return      \GIndie\ScriptGenerator\HTML5\Category'\Basic\Title
      * 
      */
     public static function Title($title) {
@@ -161,7 +161,7 @@ class Basic {
 /**
  * Class Basic_test
  *
- * @package GIndie\Generator\DML\HTML5\Category
+ * @package GIndie\ScriptGenerator\HTML5\Category
  * @author Izmir Sanchez Juarez <izmirreffi@gmail.com>
  */
 class BasicTest extends \GIndie\Test{

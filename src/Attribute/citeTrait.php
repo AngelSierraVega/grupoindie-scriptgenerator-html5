@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Specifies a URL to a document that explains the quote, or why the text was inserted/changed.
  * https://www.w3schools.com/tags/att_cite.asp

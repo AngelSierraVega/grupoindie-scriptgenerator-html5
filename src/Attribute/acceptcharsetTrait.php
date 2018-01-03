@@ -8,7 +8,7 @@
  * as published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
  */
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Sspecifies the character encodings that are to be used for the form submission.
  * https://www.w3schools.com/tags/att_accept-charset.asp

@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Basic;
+namespace GIndie\ScriptGenerator\HTML5\Category\Basic;
 
 use \GIndie\Generator\DML\Node;
-use \GIndie\Generator\DML\HTML5\Category\Meta as Meta;
+use \GIndie\ScriptGenerator\HTML5\Category\Meta as Meta;
 
 /**
  * Defines an HTML document.
@@ -88,7 +88,7 @@ class HTML extends Node {
      * @param       $href Specifies the location of the linked document.
      * @param       $rel Specifies the relationship between the current document
      *                   and the linked document.
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Head::addLink()
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Head::addLink()
      */
     public function addLink($href, $rel) {
         return $this->_head->addLink($href, $rel);
@@ -100,7 +100,7 @@ class HTML extends Node {
      * @since       GIG-HTML5.00.01
      * @param       array $attributes Define the attributes for tag meta
      *
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Head::addMeta()
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Head::addMeta()
      */
     public function addMeta(array $attributes) {
         return $this->_head->addMeta($attributes);
@@ -113,7 +113,7 @@ class HTML extends Node {
      * @param       NEW $script. The script or the file path to the script.
      * @param       NEW $srcFile. True if script is a sourced file.
      *
-     * @return      \GIndie\Generator\DML\HTML5\Category\Basic\Body::addScript()
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Body::addScript()
      */
     public function addScript($script, $srcFile) {
         return $this->_body->addScript($script, $srcFile);
@@ -124,7 +124,7 @@ class HTML extends Node {
      *
      * @since       GIG-HTML5.00.01
      *
-     * return       \GIndie\Generator\DML\HTML5\Category\Basic\Body::addScriptOnDocumentReady()
+     * return       \GIndie\ScriptGenerator\HTML5\Category\Basic\Body::addScriptOnDocumentReady()
      */
     public function addScriptOnDocumentReady($script) {
         return $this->_body->addScriptOnDocumentReady($script);

@@ -10,7 +10,7 @@
  */
 
 
-namespace GIndie\Generator\DML\HTML5\Attribute;
+namespace GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Used to store custom data private to the page or application.
  * https://www.w3schools.com/tags/att_data-.asp

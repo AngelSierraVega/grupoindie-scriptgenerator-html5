@@ -1,9 +1,9 @@
 <?php
 
-namespace GIndie\Generator\DML\HTML5\Category\Links;
+namespace GIndie\ScriptGenerator\HTML5\Category\Links;
 
-use \GIndie\Generator\DML\HTML5\Node;
-use \GIndie\Generator\DML\HTML5\Attribute As Attribute;
+use \GIndie\ScriptGenerator\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
 
 /**
  * Defines a placeholder for a hyperlink.

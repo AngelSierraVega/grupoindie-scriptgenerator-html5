@@ -9,11 +9,11 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Meta;
+namespace GIndie\ScriptGenerator\HTML5\Category\Meta;
 
 use \GIndie\Generator\DML as DML;
-use \GIndie\Generator\DML\HTML5\Node;
-use \GIndie\Generator\DML\HTML5\Category\Basic\Title;
+use \GIndie\ScriptGenerator\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Category\Basic\Title;
 
 /**
  * Element is a container for all the head elements

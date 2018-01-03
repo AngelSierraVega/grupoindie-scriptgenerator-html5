@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Basic;
+namespace GIndie\ScriptGenerator\HTML5\Category\Basic;
 
-use GIndie\Generator\DML\HTML5\Node;
-use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
+use GIndie\ScriptGenerator\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
 
 /**
  * Defines a paragraph.

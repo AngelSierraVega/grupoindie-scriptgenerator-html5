@@ -9,9 +9,9 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Programming;
+namespace GIndie\ScriptGenerator\HTML5\Category\Programming;
 
-use \GIndie\Generator\DML\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Node;
 
 /**
  * Defines a client-side script

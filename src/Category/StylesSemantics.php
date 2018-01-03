@@ -9,7 +9,7 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category;
+namespace GIndie\ScriptGenerator\HTML5\Category;
 
 /**
  * Description of StylesSemantics
@@ -21,12 +21,12 @@ namespace GIndie\Generator\DML\HTML5\Category;
 class StylesSemantics {
     
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Style}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Style}
      * 
      * @since       GIG-HTML5.00.02
      * @author      Lili... <correo@correo>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Style
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Style
      * 
      */
     public static function Style($content) {
@@ -34,12 +34,12 @@ class StylesSemantics {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Div}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Div}
      *
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Div
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Div
      * 
      */
     public static function Div($content, array $attributes = array()) {
@@ -47,12 +47,12 @@ class StylesSemantics {
     }
 
     /**
-     * {@see        \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Span}
+     * {@see        \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Span}
      *
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\Generator\DML\HTML5\Category\StylesSemantics\Span
+     * @return      \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Span
      * 
      */
     public static function Span($content = \NULL, array $attributes = array()) {

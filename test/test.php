@@ -14,18 +14,18 @@ $tmpDir .= "/Dropbox/localdev";
 require_once $tmpDir.'/GIgenerator/DML/dist/DML.phar';
 require_once $tmpDir . '/GIgenerator/HTML5/src/main.php';
 
-//echo \GIndie\Generator\DML\HTML5\Category\Meta::Meta(["author" => "dfkuro"]);
+//echo \GIndie\ScriptGenerator\HTML5\Category\Meta::Meta(["author" => "dfkuro"]);
 
-//echo \GIndie\Generator\DML\HTML5\Category\StylesSemantics::Style("h1 {color:red;}p {color:blue;}");
+//echo \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics::Style("h1 {color:red;}p {color:blue;}");
 
 print("LinksTest:\n");
-\GIndie\Generator\DML\HTML5\Category\LinksTest::run();
+\GIndie\ScriptGenerator\HTML5\Category\LinksTest::run();
 
 print("\nBasicTest\n");
-\GIndie\Generator\DML\HTML5\Category\BasicTest::run();
+\GIndie\ScriptGenerator\HTML5\Category\BasicTest::run();
 
 print("\nProgrammingTest\n");
-\GIndie\Generator\DML\HTML5\Category\ProgrammingTest::run();
+\GIndie\ScriptGenerator\HTML5\Category\ProgrammingTest::run();
 
 print("\nStyleSemantics\n");
-\GIndie\Generator\DML\HTML5\Category\StylesSemanticsTest::run();
+\GIndie\ScriptGenerator\HTML5\Category\StylesSemanticsTest::run();

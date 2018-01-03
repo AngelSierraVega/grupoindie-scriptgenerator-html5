@@ -9,10 +9,10 @@
  * License, or (at your option) any later version.
  */
 
-namespace GIndie\Generator\DML\HTML5\Category\Programming;
+namespace GIndie\ScriptGenerator\HTML5\Category\Programming;
 
-use \GIndie\Generator\DML\HTML5\Node;
-use \GIndie\Generator\DML\HTML5\Attribute as Attribute;
+use \GIndie\ScriptGenerator\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
 
 /**
  * The <noscript> tag defines an alternate content for users that have disabled scripts in their browser

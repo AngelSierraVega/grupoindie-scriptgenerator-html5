@@ -11,7 +11,9 @@
  * @version GIG-HTML5.02.00
  */
 
-namespace GIndie\Generator\DML\HTML5;
+namespace GIndie\ScriptGenerator\HTML5;
+
+use GIndie\ScriptGenerator\DML;
 
 /**
  * Represents an <b>HTML5</b> node.
@@ -20,40 +22,36 @@ namespace GIndie\Generator\DML\HTML5;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-class Node extends DML\Node\Node
+class Node extends DML\Node
 {
+
     /**
-     * @var \GIgenerator\DML\Node  $_scripts Stores an instance of the node containing the scripts. 
-     * 
-     * @version GIG-HTML5.00.01
+     * @var \GIgenerator\DML\Node Stores an instance of the content-only node containing the scripts. 
      * 
      * @since GIG-HTML5.01.??
+     * @version GIG-HTML.02.00 Renamed due to compliance with PSR-1.
      * 
      */
-    private $_scripts;
+    private $scripts;
 
     /**
      * Adds a 'script' node as a child of the the html5 object.
      * 
-     * @version     GIG-HTML5.00.01
+     * @param string $script The script or the file path to the script.
+     * @param boolean $external [optional] TRUE if script is an external file. Default FALSE.
      * 
-     * @param       string $script The script or the file path to the script.
-     * @param       boolean $external [optional] TRUE if script is an external file. Default FALSE.
+     * @return \GIgenerator\DML\HTML5\Programming\Script
      * 
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @since       2017-03-14
-     * 
-     * @return      \GIgenerator\DML\HTML5\Programming\Script
-     * @throws      NA
+     * @since GIG-HTML5.01.??
+     * @version GIG-HTML.02.00 renamed vars from _scripts to scripts
      * 
      */
-    public function addScript($script, $external = FALSE)
+    public function addScript($script, $external = false)
     {
-        if (isset($this->_scripts) == FALSE) {
-            $this->_scripts = $this->addContentGetPointer(DML\Node::ContentOnly([]));
+        if (isset($this->scripts) == false) {
+            $this->scripts = $this->addContentGetPointer(DML\Node::ContentOnly([]));
         }
-        return $this->_scripts->addContentGetPointer(Category\Programming::Script($script,
-                                                                                  $external));
+        return $this->scripts->addContentGetPointer(Category\Programming::Script($script, $external));
     }
 
     /**
@@ -68,8 +66,7 @@ class Node extends DML\Node\Node
      */
     public function addScriptOnDocumentReady($script)
     {
-        return $this->addScript("$(document).ready(function () { {$script} });",
-                                false);
+        return $this->addScript("$(document).ready(function () { {$script} });", false);
     }
 
     public function __toString()
