@@ -26,8 +26,13 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * @since       2017-04-12
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
+ * @edit SG-HTML5.00.01 18-01-02
+ * - Added unit test from local class LinksTest
+ * - Deleted local class LinksTest
+ * - Renamed methods for PSR-1 compliance.
  */
-class Links {
+class Links
+{
 
     /**
      * {@see        \GIndie\ScriptGenerator\HTML5\Category\Links\Hyperlink}
@@ -37,8 +42,12 @@ class Links {
      * 
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Links\Hyperlink
      * 
+     * @ut_params html "https://www.w3schools.com" "Visit W3Schools.com!" "_blank"
+     * @ut_str html "<a href="https://www.w3schools.com" target="_blank">Visit W3Schools.com!</a>"
+     * @edit SG-HTML5.00.01
      */
-    public static function Hyperlink($link, $content = NULL, $target = NULL) {
+    public static function hyperlink($link, $content = null, $target = null)
+    {
         return new Links\Hyperlink($link, $content, $target);
     }
 
@@ -49,9 +58,14 @@ class Links {
      * @author      Izmir Sanchez  <izmirreffi@gmail.com>
      *
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Links\Anchor
+     * 
+     * @ut_params anchor "test"
+     * @ut_str anchor "<a>test</a>"
+     * @edit SG-HTML5.00.01
      *
      */
-    public static function Anchor($content = []) {
+    public static function anchor($content = null)
+    {
         return new Links\Anchor($content);
     }
 
@@ -63,38 +77,13 @@ class Links {
      *
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Links\Link
      *
+     * @ut_params link "theme.css" "stylesheet"
+     * @ut_str link "<link href="theme.css" rel="stylesheet">"
+     * @edit SG-HTML5.00.01
      */
-    public static function Link($href, $rel) {
+    public static function link($href, $rel)
+    {
         return new Links\Link($href, $rel);
-    }
-
-}
-
-
-/**
- * Class Link_test
- * @package GIndie\ScriptGenerator\HTML5
- * @author Izmir Sanchez Juarez
- */
-class LinksTest extends \GIndie\Test {
-    
-    public static function Anchor() {
-        $expected = '<a>test</a>';
-        $result = Links::Anchor("test");
-        static::execStrCmp($expected, $result);
-    }
-
-    public static function Hyperlink_test() {
-        $expected = "<a href=\"https://www.w3schools.com\" target=\"_blank\">Visit W3Schools.com!</a>";
-        $result = Links::Hyperlink("https://www.w3schools.com",
-                        "Visit W3Schools.com!", "_blank");
-        static::execStrCmp($expected, $result);
-    }
-
-    public static function Link_Test() {
-        $expected = "<link href=\"theme.css\" rel=\"stylesheet\">";
-        $result = Links::Link("theme.css", "stylesheet");
-        static::execStrCmp($expected, $result);
     }
 
 }

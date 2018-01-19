@@ -28,7 +28,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Hr extends Node {
 
@@ -40,7 +41,8 @@ class Hr extends Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct() {
-        parent::__construct("hr", "closed");
+        parent::__construct(static::TYPE_EMPTY_CLOSED, "hr");
+        //parent::__construct("hr", "closed");
     }
 
 }

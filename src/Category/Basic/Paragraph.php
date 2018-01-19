@@ -28,6 +28,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @version     GIG-HTML5.00.01
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Paragraph extends Node {
 
@@ -42,7 +44,8 @@ class Paragraph extends Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($content) {
-        parent::__construct("p", false, [], [$content]);
+        parent::__construct(static::TYPE_DEFAULT, "p",[],$content);
+        //parent::__construct("p", false, [], [$content]);
     }
 
 }

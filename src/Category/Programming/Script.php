@@ -27,7 +27,7 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-18
  */
 class Script extends Node {
 
@@ -44,12 +44,13 @@ class Script extends Node {
      * @since   GIG-HTML5.00.01
      * @param   null|string $script
      * @param   bool $external
+     * @edit SG-HTML5.00.01 18-01-18
      */
     public function __construct($script, $external = false) {
         if ($external) {
-            parent::__construct("script", false, ["src" => $script]);
+            parent::__construct(static::TYPE_DEFAULT, "script", ["src" => $script]);
         } else {
-            parent::__construct("script", false, [], [$script]);
+            parent::__construct(static::TYPE_DEFAULT, "script", [], [$script]);
         }
     }
 

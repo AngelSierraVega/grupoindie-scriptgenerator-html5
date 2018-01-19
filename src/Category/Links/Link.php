@@ -27,7 +27,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @since 2017-05-15
  * @version GIG-HTML5.00.02
  * 
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Link extends Node {
 
@@ -51,7 +52,8 @@ class Link extends Node {
      * @author      Roberto Guzmán Sánchez <robertogs.soft@hotmail.com>
      */    
     public function __construct($href, $rel) {
-        parent::__construct("link", true, ["href" => $href, "rel" => $rel]);
+        parent::__construct(static::TYPE_EMPTY_OPEN, "link",["href" => $href, "rel" => $rel]);
+        //parent::__construct("link", true, ["href" => $href, "rel" => $rel]);
     }
 
 }

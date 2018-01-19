@@ -24,7 +24,7 @@ namespace GIndie\ScriptGenerator\HTML5;
  * @version     GIG-HTML5.00.01
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-18
  */
 class Document extends Node {
 
@@ -42,9 +42,10 @@ class Document extends Node {
      * @version     GIG-HTML5.00.00
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @edit SG-HTML5.00.01 18-01-18
      */
     public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
-        parent::__construct($tag = null, $emptyNode = false);
+        parent::__construct(static::TYPE_CONTENT_ONLY);
         $this->_doctype = parent::addContentGetPointer(new Category\Basic\Doctype($doctype));
         $this->_html = parent::addContentGetPointer(new Category\Basic\HTML($title, $lang, $charset));
     }

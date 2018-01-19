@@ -27,7 +27,8 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class BreakLine extends Node {
 
@@ -38,7 +39,7 @@ class BreakLine extends Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct() {
-        parent::__construct("br", "closed");
+        parent::__construct(static::TYPE_EMPTY_CLOSED, "br");
     }
 
 }

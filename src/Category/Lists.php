@@ -28,97 +28,80 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * @since       2017-01-04
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
+ * @edit SG-HTML5.00.01 18-01-18
+ * 
  */
-class Lists {
-
+class Lists
+{
+    
     /**
      * {@see \GIndie\ScriptGenerator\HTML5\Lists\ListItem}
      * 
-     * @param   array $attributes
-     * @param   array $content
+     * @param array $attributes
+     * @param array $content
      *
-     * @since       GIG-HTML5.00.03
-     * @author      Liliana Hernández Castañeda <liliana.hercast@gmail.com>
+     * @since GIG-HTML5.00.03
+     * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
      * 
-     * @return      \GIndie\ScriptGenerator\HTML5\Lists\ListItem
-     * 
+     * @return \GIndie\ScriptGenerator\HTML5\Lists\ListItem
+     * @ut_params listItem [] ["Coffee"] 
+     * @ut_str listItem "<li>Coffee</li>"
+     * @edit SG-HTML5.00.01
+     * - Added unit test from class BasicTest
+     * - Deleted class BasicTest
+     * - Renamed methods for PSR-1 compliance.
      */
-    public static function ListItem(array $attributes = array(),
-            array $content = array()) {
+    public static function listItem(array $attributes = [], array $content = [])
+    {
         return new Lists\ListItem($attributes, $content);
     }
-
+    
     /**
      * {@see \GIndie\ScriptGenerator\HTML5\Lists\Ordered}
      * 
-     * @param       array $elements
+     * @param array $elements
      *
-     * @since       GIG-HTML5.00.02
-     * @version     GIG-HTML5.00.03
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since GIG-HTML5.00.02
+     * @version GIG-HTML5.00.03
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\ScriptGenerator\HTML5\Lists\Ordered
+     * @return \GIndie\ScriptGenerator\HTML5\Lists\Ordered
      * 
+     * @ut_params ordered ["Coffee"]
+     * @ut_str ordered "<ol><li>Coffee</li></ol>"
+     * 
+     * @edit SG-HTML5.00.01
+     * - Added unit test from class BasicTest
+     * - Deleted class BasicTest
+     * - Renamed methods for PSR-1 compliance.
      */
-    public static function Ordered(array $elements) {
+    public static function ordered(array $elements)
+    {
         return new Lists\Ordered($elements);
     }
-
+    
     /**
      * {@see \GIndie\ScriptGenerator\HTML5\Lists\Unordered}
      * 
-     * @param       array $elements
+     * @param array $elements
      *
-     * @since       GIG-HTML5.00.02
-     * @version     GIG-HTML5.00.03
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since GIG-HTML5.00.02
+     * @version GIG-HTML5.00.03
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\ScriptGenerator\HTML5\Lists\Unordered
+     * @return \GIndie\ScriptGenerator\HTML5\Lists\Unordered
      * 
+     * @ut_params unordered ["Coffee"]
+     * @ut_str unordered "<ul><li>Coffee</li></ul>"
+     * 
+     * @edit SG-HTML5.00.01
+     * - Added unit test from class BasicTest
+     * - Deleted class BasicTest
+     * - Renamed methods for PSR-1 compliance.
      */
-    public static function Unordered(array $elements) {
+    public static function unordered(array $elements)
+    {
         return new Lists\Unordered($elements);
-    }
-
-}
-
-/**
- * Class MetaTest
- *
- * @package GIndie\ScriptGenerator\HTML5\Category
- * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
- * 
- */
-class ListsTest extends \GIndie\Test {
-
-    /**
-     * @test
-     * @internal 
-     */
-    public static function ListItem() {
-        $expected = "<li>Coffee</li>";
-        $result = Lists::ListItem([], ["Coffee"]);
-        static::execStrCmp($expected, $result);
-    }
-
-    /**
-     * @test
-     * @internal 
-     */
-    public static function Ordered() {
-        $expected = "<ol><li>Coffee</li></ol>";
-        $result = Lists::Ordered(["Coffee"]);
-        static::execStrCmp($expected, $result);
-    }
-
-    /**
-     * @test
-     * @internal 
-     */
-    public static function Unordered() {
-        $expected = "<ul><li>Coffee</li></ul>";
-        $result = Lists::Unordered(["Coffee"]);
-        static::execStrCmp($expected, $result);
     }
 
 }

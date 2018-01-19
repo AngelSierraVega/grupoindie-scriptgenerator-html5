@@ -14,89 +14,84 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
 /**
  * Description of StylesSemantics
  * 
- * @version     GIG-HTML5.00.03
+ * @version GIG-HTML5.00.03
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @edit SG-HTML5.00.01 18-01-18
+ * - Added unit test from class BasicTest
+ * - Deleted class BasicTest
+ * - Renamed methods for PSR-1 compliance.
  */
-class StylesSemantics {
-    
-    /**
-     * {@see        \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Style}
-     * 
-     * @since       GIG-HTML5.00.02
-     * @author      Lili... <correo@correo>
-     * 
-     * @return      \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Style
-     * 
-     */
-    public static function Style($content) {
-        return new StylesSemantics\Style($content);
-    }
+class StylesSemantics
+{
 
     /**
-     * {@see        \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Div}
+     * {@see \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Div}
      *
-     * @since       GIG-HTML5.00.01
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since GIG-HTML5.00.01
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Div
+     * @return \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Div
      * 
+     * @ut_params div "My div"
+     * @ut_str div "<div>My div</div>"
+     * 
+     * @edit SG-HTML5.00.01
      */
-    public static function Div($content, array $attributes = array()) {
+    public static function div($content, array $attributes = array())
+    {
         return new StylesSemantics\Div($content, $attributes);
     }
+    
+    /**
+     * 
+     * @param type $content
+     * @param type $classnames
+     * @return \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Footer
+     * 
+     * @ut_params footer "This is a footer"
+     * @ut_str footer "<footer>This is a footer</footer>"
+     * 
+     * @edit SG-HTML5.00.01
+     */
+    public static function footer($content, $classnames = null)
+    {
+        return new StylesSemantics\Footer($content, $classnames);
+    }
 
     /**
-     * {@see        \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Span}
+     * {@see \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Span}
      *
-     * @since       GIG-HTML5.00.01
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since GIG-HTML5.00.01
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Span
+     * @return \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Span
      * 
+     * @ut_params span "Hello span"
+     * @ut_str span "<span>Hello span</span>"
+     * 
+     * @edit SG-HTML5.00.01
      */
-    public static function Span($content = \NULL, array $attributes = array()) {
-        return new StylesSemantics\Span($content,$attributes);
-    }
-
-}
-
-/**
- * Class StylesSemanticsTest
- * @package GIgenerator\DML\HTML5\Category
- * @author Izmir Sanchez Juarez <izmirreffi@gmail.com>
- */
-class StylesSemanticsTest extends \GIndie\Test {
-
-    /**
-     * @internal
-     * @test
-     */
-    public static function Style() {
-        $expected   = '<style>h1 {color:red;}p {color:blue;}</style>';
-        $result     = StylesSemantics::Style("h1 {color:red;}p {color:blue;}");
-        static::execStrCmp($expected, $result);
+    public static function span($content = \NULL, array $attributes = array())
+    {
+        return new StylesSemantics\Span($content, $attributes);
     }
 
     /**
-     * @internal
-     * @test
+     * {@see \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Style}
+     * 
+     * @since GIG-HTML5.00.02
+     * 
+     * @return \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics\Style
+     * 
+     * @ut_params style "h1 {color:red;}p {color:blue;}"
+     * @ut_str style "<style>h1 {color:red;}p {color:blue;}</style>"
+     * 
+     * @edit SG-HTML5.00.01 <angel.sierra@grupoindie>
      */
-    public static function Div() {
-        $expected   = "<div>My div</div>";
-        $result     = StylesSemantics::Div("My div");
-        static::execStrCmp($expected, $result);
+    public static function style($content)
+    {
+        return new StylesSemantics\Style($content);
     }
-
-    /**
-     * @internal
-     * @test
-     */
-    public static function Span() {
-        $expected   = "<span>Hello span</span>";
-        $result     = StylesSemantics::Span("Hello span");
-        static::execStrCmp($expected, $result);
-    }
-
 
 }

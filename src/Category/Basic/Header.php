@@ -22,7 +22,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Header extends Node {
 
@@ -40,7 +41,8 @@ class Header extends Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     public function __construct($level, $content) {
-        parent::__construct("h" . $level, false, [], [$content]);
+        parent::__construct(static::TYPE_DEFAULT, "h" . $level,[],$content);
+        //parent::__construct("h" . $level, false, [], [$content]);
     }
 
 }

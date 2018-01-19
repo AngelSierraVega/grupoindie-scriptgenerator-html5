@@ -26,9 +26,10 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  *
  * @since       2017-05-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- *
+ * @edit SG-HTML5.00.01 18-01-18
  */
-class Style extends Node {
+class Style extends Node
+{
 
     use Attribute\GlobalAttributes;
     use Attribute\mediaTrait;
@@ -44,9 +45,11 @@ class Style extends Node {
      *
      * @since       GIG-HTML5.00.01
      * @author      IZmir Sanchez Juarez <izmirreffi@gmail.com>
+     * @edit SG-HTML5.00.01 18-01-18 <angel.sierra@grupoindie.com>
      */
-    function __construct($content) {
-        parent::__construct("style", FALSE, [], [$content]);
+    function __construct($content)
+    {
+        parent::__construct(static::TYPE_DEFAULT, "style", [], $content);
     }
 
 }

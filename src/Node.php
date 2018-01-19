@@ -20,7 +20,8 @@ use GIndie\ScriptGenerator\DML;
  * 
  * @version GIG-HTML5.01.03  
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Node extends DML\Node
 {
@@ -69,12 +70,17 @@ class Node extends DML\Node
         return $this->addScript("$(document).ready(function () { {$script} });", false);
     }
 
+    /**
+     * 
+     * @return type
+     * @edit SG-HTML5.00.01
+     */
     public function __toString()
     {
-        if ($this->_emptyNode == \FALSE) {
-            $this->addContent($this->defineScript());
-        }
-        return parent::__toString();
+//        if ($this->_emptyNode == \FALSE) {
+//            $this->addContent();
+//        }
+        return parent::__toString().$this->defineScript();
     }
 
     /**

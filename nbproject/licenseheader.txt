@@ -11,7 +11,7 @@ ${licensePrefix?replace(" +$", "", "r")}
 ${licensePrefix}@package ScriptGenerator
 ${licensePrefix}@subpackage HTML5
 ${licensePrefix?replace(" +$", "", "r")}
-${licensePrefix}@version SG-HTML5.00.00 ${date?date?string("yy-MM-dd")} [Class/Trait/Interface] created.
+${licensePrefix}@version SG-HTML5.00.00 ${date?date?string("yy-MM-dd")} Empty [class/trait/interface/file] created.
 <#if licenseLast??>
 ${licenseLast}
 </#if>

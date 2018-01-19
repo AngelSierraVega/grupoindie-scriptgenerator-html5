@@ -11,7 +11,7 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Meta;
 
-use \GIndie\Generator\DML as DML;
+use \GIndie\ScriptGenerator\DML;
 use \GIndie\ScriptGenerator\HTML5\Node;
 use \GIndie\ScriptGenerator\HTML5\Category\Basic\Title;
 
@@ -29,7 +29,7 @@ use \GIndie\ScriptGenerator\HTML5\Category\Basic\Title;
  * @version     GIG-HTML5.00.01
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-18
  */
 class Head extends Node {
 
@@ -51,12 +51,10 @@ class Head extends Node {
      * 
      * @since   GIG-HTML5.00.05
      * @author  Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @edit SG-HTML5.00.01 18-01-18
      */
     function __construct($charset, $title) {
-        parent::__construct($tag = "head", $emptyNode = false,
-                ["charset" => $charset]);
-        //
-        //$this->addContent(new DML\HTML5\Category\StylesSemantics\Div(array("")));
+        parent::__construct(static::TYPE_DEFAULT, "head",["charset" => $charset]);
         $this->addContent(new Title($title));
     }
 

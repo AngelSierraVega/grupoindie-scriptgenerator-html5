@@ -11,7 +11,7 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Basic;
 
-use \GIndie\Generator\DML\Node;
+use \GIndie\ScriptGenerator\HTML5\Node;
 
 /**
  * Defines a title for the document
@@ -27,7 +27,8 @@ use \GIndie\Generator\DML\Node;
  * @version     GI-HTML5.01
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Title extends Node {
 
@@ -39,7 +40,8 @@ class Title extends Node {
      * @version     GIG-HTML5.00.02
      */
     function __construct($title) {
-        parent::__construct("title", false, [], [$title]);
+        parent::__construct(static::TYPE_DEFAULT, "title",[],$title);
+        //parent::__construct("title", false, [], [$title]);
     }
 
 }

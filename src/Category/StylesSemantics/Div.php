@@ -19,16 +19,16 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * https://www.w3schools.com/tags/tag_div.asp
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package HTML5
+ * @subpackage Main
+ * @category API
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GIG-HTML5.02
- * @since       2017-04-16
- * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @version GIG-HTML5.02
+ * @since 2017-04-16
+ * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @edit SG-HTML5.00.01 18-01-18
  */
 class Div extends Node {
 
@@ -37,15 +37,15 @@ class Div extends Node {
     /**
      * Creates a new section object.
      *
-     * @param       mixed $content  The content of the section.
-     * @param       array $attributes The attributes for the div tag
+     * @param mixed $content  The content of the section.
+     * @param array $attributes The attributes for the div tag
      *
-     * @since       GIG-HTML5.01.01
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since GIG-HTML5.01.01
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @edit SG-HTML5.00.01 18-01-18
      */
     public function __construct($content, array $attributes = array()) {
-        parent::__construct("div", false, $attributes,
-                is_array($content) ? $content : [$content]);
+        parent::__construct(static::TYPE_DEFAULT, "div", $attributes, $content);
     }
 
 }

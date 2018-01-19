@@ -11,8 +11,8 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Basic;
 
-use \GIndie\Generator\DML\Node;
-use \GIndie\ScriptGenerator\HTML5\Category\Meta as Meta;
+use \GIndie\ScriptGenerator\HTML5\Node;
+use \GIndie\ScriptGenerator\HTML5\Category\Meta;
 
 /**
  * Defines an HTML document.
@@ -30,7 +30,8 @@ use \GIndie\ScriptGenerator\HTML5\Category\Meta as Meta;
  * @version     GIG-HTML5.00.03
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class HTML extends Node {
 
@@ -65,7 +66,8 @@ class HTML extends Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     function __construct($title, $lang, $charset) {
-        parent::__construct("html", false, ["lang" => $lang]);
+        parent::__construct(static::TYPE_DEFAULT, "html",["lang" => $lang]);
+        //parent::__construct("html", false, ["lang" => $lang]);
         $this->_head = parent::addContentGetPointer(new Meta\Head($charset, $title));
         $this->_body = parent::addContentGetPointer(new Body());
     }
@@ -114,8 +116,9 @@ class HTML extends Node {
      * @param       NEW $srcFile. True if script is a sourced file.
      *
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Body::addScript()
+     * 
      */
-    public function addScript($script, $srcFile) {
+    public function addScript($script, $external = false) {
         return $this->_body->addScript($script, $srcFile);
     }
 

@@ -29,6 +29,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @version     GIG-HTML5.00.03
  * @since       2017-04-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @edit SG-HTML5.00.01 18-01-18
  */
 class Noscript extends Node {
 
@@ -41,9 +42,10 @@ class Noscript extends Node {
      *
      * @since       GIG-HTML5.00.01
      * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
+     * @edit SG-HTML5.00.01 18-01-18 <angel.sierra@grupoindie.com>
      */
     function __construct($content) {
-        parent::__construct("noscript", false, [], [$content]);
+        parent::__construct(static::TYPE_DEFAULT, "noscript", [], $content);
     }
 
 }

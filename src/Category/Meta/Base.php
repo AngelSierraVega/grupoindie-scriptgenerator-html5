@@ -28,8 +28,10 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * @version GIG-HTML5.00.02
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since  2017-05-18
+ * @edit SG-HTML5.00.01 18-01-18
  */
-class Base extends Node {
+class Base extends Node
+{
 
     use Attribute\hrefTrait;
     use Attribute\targetTrait;
@@ -37,14 +39,17 @@ class Base extends Node {
 
     /**
      * Creates a new tag base object
+     * 
      * @since GIG-HTML5.00.01
+     * 
      * @author Izmir Sanchez Juarez <izmirreffi@gmail.com>
      * @param $href   Specifies the base URL for all relative URLs in the page
      * @param $target Specifies the default target for all hyperlinks and forms in the page
+     * @edit SG-HTML5.00.01 <angel.sierra@grupoindie.com>
      */
-    function __construct($href, $target) {
-        parent::__construct($tag = "base", $emptyNode = true,
-                ["href" => $href, "target" => $target]);
+    function __construct($href, $target)
+    {
+        parent::__construct(static::TYPE_EMPTY_OPEN, "base", ["href" => $href, "target" => $target]);
     }
 
 }

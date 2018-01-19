@@ -28,7 +28,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
  * @version     GI-HTML5.00.02
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Body extends Node {
 
@@ -41,7 +42,7 @@ class Body extends Node {
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
     function __construct() {
-        parent::__construct($tag = "body");
+        parent::__construct(static::TYPE_DEFAULT, "body");
     }
 
 }

@@ -25,6 +25,7 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * @version     GIG-HTML5.00.01
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @edit SG-HTML5.00.01 18-01-18
  */
 class Meta extends Node {
 
@@ -34,9 +35,10 @@ class Meta extends Node {
      * @param Array $attributes An array representing the attributes of the meta tag
      * 
      * @since GIG-HTML5.00.02
+     * @edit SG-HTML5.00.01 <angel.sierra@grupoindie.com>
      */
     function __construct(array $attributes) {
-        parent::__construct("meta", "closed", $attributes);
+        parent::__construct(static::TYPE_EMPTY_CLOSED, "meta", $attributes);
     }
 
 }

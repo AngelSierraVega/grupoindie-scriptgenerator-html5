@@ -28,7 +28,7 @@ namespace GIndie\ScriptGenerator\HTML5;
     }
 });
 
-require_once __DIR__ . '/main/common.php';
+//require_once __DIR__ . '/main/common.php';
 
 
 //require_once __DIR__ . '/../../DML/dist/DML.phar';

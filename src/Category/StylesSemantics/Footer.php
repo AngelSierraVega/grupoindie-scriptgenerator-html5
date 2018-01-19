@@ -15,36 +15,37 @@ use \GIndie\ScriptGenerator\HTML5\Node;
 use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
 
 /**
- * Defines a section in a document
- *
- * More info: <https://www.w3schools.com/tags/tag_div.asp>
- *
+ * Defines a footer section in a document.
+ * 
+ * https://www.w3schools.com/tags/tag_footer.asp
+ * 
  * @package     HTML5
- * @subpackage  Main
+ * @subpackage  Extended
  * @category    API
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GIG-HTML5.00.03
- * @since       2017-04-16
+ * @version     GI-HTML5.00
+ * @since       2017-04-17
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18
  */
-class Span extends Node {
+class Footer extends Node {
 
     use Attribute\GlobalAttributes;
 
     /**
-     * Creates a new section object.
-     *
-     * @param       mixed $content  The content of the section.
-     *
-     * @since       GIG-HTML5.00.02
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * 
+     * @param type $content
+     * @param type $classnames
+     * 
      * @edit SG-HTML5.00.01 18-01-18
      */
-    public function __construct($content = null, array $attributes = []) {
-        parent::__construct(static::TYPE_DEFAULT, "span", $attributes, $content);
+    public function __construct($content, $classnames = null) {
+        parent::__construct(static::TYPE_DEFAULT, "footer", [], $content);
+        if ($classnames != null) {
+            $this->addClass($classnames);
+        }
     }
 
 }

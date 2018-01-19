@@ -11,7 +11,7 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Basic;
 
-use \GIndie\Generator\DML\Node;
+use \GIndie\ScriptGenerator\HTML5\Node;
 
 /**
  * Defines the document type.
@@ -27,7 +27,8 @@ use \GIndie\Generator\DML\Node;
  * @version     GIG-HTML5.01
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-03
+ * - Updated for new DML node
  */
 class Doctype extends Node {
 
@@ -39,7 +40,8 @@ class Doctype extends Node {
      * @since       GIG-HTML5.01.02
      */
     function __construct($doctype) {
-        parent::__construct("!DOCTYPE", true, [$doctype]);
+        //parent::__construct("!DOCTYPE", true, [$doctype]);
+        parent::__construct(static::TYPE_EMPTY_OPEN, "!DOCTYPE",$doctype);
     }
 
 }

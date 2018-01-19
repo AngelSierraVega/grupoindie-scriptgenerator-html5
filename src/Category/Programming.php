@@ -27,58 +27,45 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * @version     GIG-HTML5.00.02
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-18
+ * - Added unit test from class BasicTest
+ * - Deleted class BasicTest
+ * - Renamed methods for PSR-1 compliance.
  */
-class Programming {
+class Programming
+{
 
     /**
-     * {@see        \GIndie\ScriptGenerator\HTML5\Category\Programming\Script}
+     * {@see \GIndie\ScriptGenerator\HTML5\Category\Programming\Script}
      *
-     * @since       GIG-HTML5.00.01
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since GIG-HTML5.00.01
+     * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      \GIndie\ScriptGenerator\HTML5\Category\Programming\Script
+     * @return \GIndie\ScriptGenerator\HTML5\Category\Programming\Script
      * 
+     * @ut_params script "index.js" "true"
+     * @ut_str script "<script src="index.js"></script>"
+     * 
+     * @edit SG-HTML5.00.01 <angel.sierra@grupoindie>
      */
-    public static function Script($script, $external = false) {
+    public static function script($script, $external = false)
+    {
         return new Programming\Script($script, $external);
     }
 
-
-    public static function Noscript($content) {
+    /**
+     * 
+     * @param type $content
+     * @return \GIndie\ScriptGenerator\HTML5\Category\Programming\Noscript
+     * 
+     * @ut_params noscript "Does not support Javascript"
+     * @ut_str noscript "<noscript>Does not support Javascript</noscript>"
+     * 
+     * @edit SG-HTML5.00.01 <angel.sierra@grupoindie>
+     */
+    public static function noscript($content)
+    {
         return new Programming\Noscript($content);
-    }
-}
-
-/**
- * Class ProgrammingTest
- *
- * @package     GIgenerator\DML\HTML5\Category\Programming
- * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
- * @since       2017-04-18
- */
-class ProgrammingTest extends \GIndie\Test {
-
-    /**
-     * @iternal
-     * @test
-     */
-    public static function Script()
-    {
-        $expected   = "<script src=\"index.js\"></script>";
-        $result     = Programming::Script("index.js", true);
-        static::execStrCmp($expected, $result);
-    }
-
-    /**
-     * @internal
-     * @test
-     */
-    public static function Noscript()
-    {
-        $expected   = "<noscript>Does not support Javascript</noscript>";
-        $result     = Programming::Noscript("Does not support Javascript");
-        static::execStrCmp($expected, $result);
     }
 
 }

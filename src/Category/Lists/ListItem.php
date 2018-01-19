@@ -26,9 +26,10 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * @version     GIG-HTML5.00.02
  * @since       2017-05-18
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * 
+ * @edit SG-HTML5.00.01 18-01-18
  */
-class ListItem extends Node {
+class ListItem extends Node
+{
 
     /**
      * 
@@ -36,11 +37,11 @@ class ListItem extends Node {
      * @param   array $content
      * @since   GIG-HTML5.00.02
      * @author  Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * 
+     * @edit SG-HTML5.00.01
      */
-    public function __construct(array $attributes = array(),
-            array $content = array()) {
-        parent::__construct("li", false, $attributes, $content);
+    public function __construct(array $attributes = [], array $content = [])
+    {
+        parent::__construct(static::TYPE_DEFAULT, "li", $attributes, $content);
     }
 
 }

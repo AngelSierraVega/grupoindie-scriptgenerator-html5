@@ -25,10 +25,16 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * @since       2017-01-04
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @version     GIG-HTML5.00.01
- * 
+ * @edit SG-HTML5.00.01 18-01-18
+ * @edit SG-HTML5.00.02 18-01-20
+ * - Updated: addListElement()
  */
-abstract class _List extends Node {
-    
+abstract class _List extends Node
+{
+
+    /**
+     * 
+     */
     use Attribute\GlobalAttributes;
 
     /**
@@ -38,9 +44,11 @@ abstract class _List extends Node {
      * @param   array $elements
      * 
      * @since   GIG-HTML5.00.01
+     * @edit SG-HTML5.00.01
      */
-    protected function __construct($ordered = \TRUE, array $elements = []) {
-        parent::__construct($ordered ? "ol" : "ul", \FALSE, [], []);
+    protected function __construct($ordered = \TRUE, array $elements = [])
+    {
+        parent::__construct(static::TYPE_DEFAULT, $ordered ? "ol" : "ul");
         foreach ($elements as $element) {
             $this->addListElement($element);
         }
@@ -49,17 +57,21 @@ abstract class _List extends Node {
     /**
      * Adds an element to the list.
      * 
-     * @param   mixed $element The elemen to add
-     * @return  \GIndie\ScriptGenerator\HTML5\Node::addContent()
+     * @param mixed $element The elemen to add
+     * @return \GIndie\ScriptGenerator\HTML5\Category\Lists\_List
      * 
-     * @since   GIG-HTML5.00.01
+     * @since GIG-HTML5.00.01
+     * @edit SG-HTML5.00.02
+     * - Return $this instead of function result
      */
-    public function addListElement($element) {
+    public function addListElement($element)
+    {
         if (\is_a($element, __NAMESPACE__ . "\ListItem")) {
-            return $this->addContent($element);
+            $this->addContent($element);
         } else {
-            return $this->addContent(new ListItem([], [$element]));
+            $this->addContent(new ListItem([], [$element]));
         }
+        return $this;
     }
 
 }
