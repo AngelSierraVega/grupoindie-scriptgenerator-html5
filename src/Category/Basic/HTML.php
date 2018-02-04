@@ -32,6 +32,8 @@ use \GIndie\ScriptGenerator\HTML5\Category\Meta;
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
  * - Updated for new DML node
+ * @edit SG-HTML5.00.02 18-02-02
+ * - Bug correction
  */
 class HTML extends Node {
 
@@ -116,10 +118,10 @@ class HTML extends Node {
      * @param       NEW $srcFile. True if script is a sourced file.
      *
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Body::addScript()
-     * 
+     * @edit SG-HTML5.00.02
      */
     public function addScript($script, $external = false) {
-        return $this->_body->addScript($script, $srcFile);
+        return $this->_body->addScript($script, $external);
     }
 
     /**

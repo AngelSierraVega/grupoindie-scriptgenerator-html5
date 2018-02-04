@@ -39,15 +39,16 @@ trait classTrait {
     public function addClass($classnames) {
         $class = $this->getAttribute("class");
         if ($class == \FALSE) {
-            return parent::setAttribute("class", new Classes($classnames));
+            parent::setAttribute("class", new Classes($classnames));
         } else {
             if (is_string($class)) {
                 parent::setAttribute("class",
                         new Classes($class . " " . $classnames));
                 $class = $this->getAttribute("class");
             }
-            return $class->addClass($classnames);
+            $class->addClass($classnames);
         }
+        return $this;
     }
 
     /**

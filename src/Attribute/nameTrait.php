@@ -58,9 +58,9 @@ trait nameTrait
      * 
      * @since GIG-HTML5.00.01
      */
-    public function setName($value)
+    public function setName($name)
     {
-        $this->setAttribute("name", $value);
+        $this->setAttribute("name", $name);
         return $this;
     }
 
