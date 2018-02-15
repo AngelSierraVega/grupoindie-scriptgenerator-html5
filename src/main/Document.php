@@ -25,6 +25,8 @@ namespace GIndie\ScriptGenerator\HTML5;
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18
+ * @edit SG-HTML5.00.02 18-02-14
+ * - Updated addContent()
  */
 class Document extends Node {
 
@@ -42,7 +44,7 @@ class Document extends Node {
      * @version     GIG-HTML5.00.00
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @edit SG-HTML5.00.01 18-01-18
+     * @edit SG-HTML5.00.01
      */
     public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
         parent::__construct(static::TYPE_CONTENT_ONLY);
@@ -59,10 +61,12 @@ class Document extends Node {
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
-     * @return      mixed An instance of the added content.
+     * @return $this
+     * @edit SG-HTML5.00.02
      */
     public function addContent($content) {
-        return $this->_html->addContent($content);
+        $this->_html->addContent($content);
+        return $this;
     }
 
     /**

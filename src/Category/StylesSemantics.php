@@ -21,6 +21,8 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * - Added unit test from class BasicTest
  * - Deleted class BasicTest
  * - Renamed methods for PSR-1 compliance.
+ * @edit SG-HTML5.00.02 18-02-14
+ * - No required attribute on div()
  */
 class StylesSemantics
 {
@@ -36,9 +38,9 @@ class StylesSemantics
      * @ut_params div "My div"
      * @ut_str div "<div>My div</div>"
      * 
-     * @edit SG-HTML5.00.01
+     * @edit SG-HTML5.00.02
      */
-    public static function div($content, array $attributes = array())
+    public static function div($content = null, array $attributes = array())
     {
         return new StylesSemantics\Div($content, $attributes);
     }

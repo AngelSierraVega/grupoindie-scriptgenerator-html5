@@ -11,6 +11,32 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Attribute;
 
-trait idTrait {
-    //put your code here
+/**
+ * @edit SG-HTML5.00.01 18-02-14
+ * - Created setId(), getId()
+ */
+trait idTrait
+{
+
+    /**
+     * @since SG-HTML5.00.01
+     * @param type $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->setAttribute("id", $id);
+        return $this;
+    }
+
+    /**
+     * 
+     * @return string
+     * @since SG-HTML5.00.01
+     */
+    public function getId()
+    {
+        return $this->getAttribute("id");
+    }
+
 }
