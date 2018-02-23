@@ -47,5 +47,5 @@ namespace GIndie\ScriptGenerator\HTML5;
 
 require_once __DIR__ . '/main/Document.php';
 
-require_once __DIR__ . '/GIndie/ScriptGenerator/HTML5/Plugins/UnitTest/HandlerProject.php';
+//require_once __DIR__ . '/GIndie/ScriptGenerator/HTML5/Plugins/UnitTest/HandlerProject.php';
 

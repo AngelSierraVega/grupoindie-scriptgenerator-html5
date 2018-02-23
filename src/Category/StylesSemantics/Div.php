@@ -29,9 +29,14 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @since 2017-04-16
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18
+ * @edit SG-HTML5.00.02 18-02-19
  */
-class Div extends Node {
+class Div extends Node
+{
 
+    /**
+     * 
+     */
     use Attribute\GlobalAttributes;
 
     /**
@@ -42,9 +47,11 @@ class Div extends Node {
      *
      * @since GIG-HTML5.01.01
      * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @edit SG-HTML5.00.01 18-01-18
+     * @edit SG-HTML5.00.02
+     * - Attribute $content not required
      */
-    public function __construct($content, array $attributes = array()) {
+    public function __construct($content = null, array $attributes = array())
+    {
         parent::__construct(static::TYPE_DEFAULT, "div", $attributes, $content);
     }
 
