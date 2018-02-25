@@ -29,7 +29,7 @@ class Img extends \GIndie\ScriptGenerator\HTML5\Node
      * 
      * @since SG-HTML5.00.01
      */
-    protected function __construct($src, $alt)
+    public function __construct($src, $alt)
     {
         parent::__construct(static::TYPE_DEFAULT, "img", ["src" => $src, "alt" => $alt], null);
     }
