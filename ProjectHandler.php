@@ -1,15 +1,9 @@
 <?php
 
-/**
- * SG-HTML5 - HandlerProject
- */
-
-namespace GIndie\ScriptGenerator\HTML5\Plugins\UnitTest;
-
-use GIndie\ScriptGenerator\HTML5;
+namespace GIndie\ScriptGenerator\HTML5;
 
 /**
- * Description of HandlerProject
+ * DVLP-SG1-HTML5 - ProjectHandler
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
@@ -17,15 +11,18 @@ use GIndie\ScriptGenerator\HTML5;
  * @package ScriptGenerator
  * @subpackage HTML5
  *
- * @version SG-HTML5.00.00 18-01-03 [Class/Trait/Interface] created.
+ * @version SG-HTML5.00.00 18-02-24 Empty class created.
  * @edit SG-HTML5.00.01
- * - Added code from DML\UnitTest.php
+ * - Class extends \GIndie\ProjectHandler
+ * - Implemented abstrac methods 
+ * @edit SG-HTML5.00.02 18-02-27
+ * - Created projectClasses()
  */
-class HandlerProject extends \GIndie\UnitTest\HandlerProject
+class ProjectHandler extends \GIndie\ProjectHandler
 {
 
     /**
-     * @since SG-HTML5.00.01
+     * @since SG-HTML5.00.02
      * @return array
      * @todo Unit test for Node\Tag\Attributes
      */
@@ -39,32 +36,52 @@ class HandlerProject extends \GIndie\UnitTest\HandlerProject
             , HTML5\Category\StylesSemantics::class
         ];
     }
-    
+
     /**
-     * @since SG-HTML5.00.01
      * @return string
+     * @since SG-DML.00.01
+     * @todo
+     * - Deprecate method
+     */
+    public static function autoloaderFilename()
+    {
+        return "main.php";
+    }
+
+    /**
+     * @return string
+     * @since SG-DML.00.01
+     */
+    public static function pathToSourceCode()
+    {
+        return \pathinfo(__FILE__, \PATHINFO_DIRNAME) . \DIRECTORY_SEPARATOR;
+    }
+
+    /**
+     * @return string
+     * @since SG-DML.00.01
      */
     public static function projectName()
     {
-        return "\HTML5";
+        return "HTML5";
     }
 
     /**
-     * @since SG-HTML5.00.01
      * @return string
+     * @since SG-DML.00.01
      */
     public static function projectNamespace()
     {
-        return "\ScriptGenerator";
+        return "ScriptGenerator";
     }
 
     /**
-     * @since SG-HTML5.00.01
      * @return string
+     * @since SG-DML.00.01
      */
     public static function projectVendor()
     {
-        return "\GIndie";
+        return "GIndie";
     }
 
 }
