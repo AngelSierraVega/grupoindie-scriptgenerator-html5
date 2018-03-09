@@ -1,37 +1,38 @@
 <?php
 
-/*
- * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * This software is protected under GNU: you can use, study and modify it
- * but not distribute it under the terms of the GNU General Public License 
- * as published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
- */
-
 namespace GIndie\ScriptGenerator\HTML5;
 
 /**
  * Represents an <b>HTML5</b> document.
  * 
+ * @copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package ScriptGenerator
+ * @subpackage DML
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version     GIG-HTML5.00.01
- * @since       2016-12-28
- * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @version GIG-HTML5.00.00 16-12-28
+ * @edit GIG-HTML5.00.01
  * @edit SG-HTML5.00.01 18-01-18
  * @edit SG-HTML5.00.02 18-02-14
  * - Updated addContent()
+ * - Updated varnames due to PSR-1 violation
  */
 class Document extends Node {
 
-    private $_doctype;
-    private $_html;
+    /**
+     *
+     * @var \GIndie\ScriptGenerator\HTML5\Category\Basic\Doctype 
+     * @edit SG-HTML5.00.02
+     */
+    private $doctype;
+    
+    /**
+     *
+     * @var \GIndie\ScriptGenerator\HTML5\Category\Basic\HTML 
+     * @edit SG-HTML5.00.02
+     */
+    private $html;
 
     /**
      * Creates a new Document object.
@@ -48,8 +49,8 @@ class Document extends Node {
      */
     public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
         parent::__construct(static::TYPE_CONTENT_ONLY);
-        $this->_doctype = parent::addContentGetPointer(new Category\Basic\Doctype($doctype));
-        $this->_html = parent::addContentGetPointer(new Category\Basic\HTML($title, $lang, $charset));
+        $this->doctype = parent::addContentGetPointer(new Category\Basic\Doctype($doctype));
+        $this->html = parent::addContentGetPointer(new Category\Basic\HTML($title, $lang, $charset));
     }
 
     /**
@@ -65,7 +66,7 @@ class Document extends Node {
      * @edit SG-HTML5.00.02
      */
     public function addContent($content) {
-        $this->_html->addContent($content);
+        $this->html->addContent($content);
         return $this;
     }
 
@@ -82,7 +83,7 @@ class Document extends Node {
      * @return      mixed An instance of the added content.
      */
     public function addLink($href, $rel) {
-        return $this->_html->addLink($href, $rel);
+        return $this->html->addLink($href, $rel);
     }
 
     /**
@@ -97,7 +98,7 @@ class Document extends Node {
      * @return      mixed An instance of the added content.
      */
     public function addMeta(array $attributes) {
-        return $this->_html->addMeta($attributes);
+        return $this->html->addMeta($attributes);
     }
 
     /**
@@ -113,7 +114,7 @@ class Document extends Node {
      * @return      mixed An instance of the added content.
      */
     public function addScript($script, $external = false) {
-        return $this->_html->addScript($script, $external);
+        return $this->html->addScript($script, $external);
     }
     
     //
@@ -124,7 +125,7 @@ class Document extends Node {
      * @version     GIG-HTML5.00.01
      */
     public function addScriptOnDocumentReady($script) {
-        return $this->_html->addScriptOnDocumentReady($script);
+        return $this->html->addScriptOnDocumentReady($script);
     }
 
     /**
@@ -133,7 +134,7 @@ class Document extends Node {
      * @version     GIG-HTML5.00.01
      */
     public function getBody() {
-        return $this->_html->getBody();
+        return $this->html->getBody();
     }
 
 }

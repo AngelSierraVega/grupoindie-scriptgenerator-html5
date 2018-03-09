@@ -17,6 +17,8 @@ namespace GIndie\ScriptGenerator\HTML5;
  * - Implemented abstrac methods 
  * @edit SG-HTML5.00.02 18-02-27
  * - Created projectClasses()
+ * @edit SG-HTML5.00.03 18-03-09
+ * - Deprecated autoloaderFilename()
  */
 class ProjectHandler extends \GIndie\ProjectHandler
 {
@@ -40,10 +42,9 @@ class ProjectHandler extends \GIndie\ProjectHandler
     /**
      * @return string
      * @since SG-DML.00.01
-     * @todo
-     * - Deprecate method
+     * @deprecated since SG-HTML5.00.03
      */
-    public static function autoloaderFilename()
+    public static function autoloaderFilenameDPR()
     {
         return "main.php";
     }
