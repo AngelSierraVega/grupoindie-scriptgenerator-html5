@@ -18,13 +18,14 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * 
  * More info. at <https://www.w3schools.com/tags/ref_byfunc.asp>.
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version     GIG-HTML5.00.03
+ * @version 00.80
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo add <dl> <dt> <dd>
+ * 
  * @since       2017-01-04
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -62,7 +63,6 @@ class Lists
      * @param array $elements
      *
      * @since GIG-HTML5.00.02
-     * @version GIG-HTML5.00.03
      * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      * @return \GIndie\ScriptGenerator\HTML5\Lists\Ordered
@@ -86,7 +86,6 @@ class Lists
      * @param array $elements
      *
      * @since GIG-HTML5.00.02
-     * @version GIG-HTML5.00.03
      * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      * @return \GIndie\ScriptGenerator\HTML5\Lists\Unordered

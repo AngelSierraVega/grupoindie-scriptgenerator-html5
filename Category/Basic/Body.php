@@ -19,19 +19,22 @@ use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_body.asp>
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Basic
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GI-HTML5.00.02
- * @since       2016-12-28
+ * @version 00.A0
+ * @since 16-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @edit SG-HTML5.00.01 18-01-03
+ * @edit 18-01-03
  * - Updated for new DML node
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo Validate attributes
  */
-class Body extends Node {
+class Body extends Node
+{
 
     use Attribute\GlobalAttributes;
 
@@ -41,7 +44,8 @@ class Body extends Node {
      * @since     GI-HTML5.01.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    function __construct() {
+    function __construct()
+    {
         parent::__construct(static::TYPE_DEFAULT, "body");
     }
 

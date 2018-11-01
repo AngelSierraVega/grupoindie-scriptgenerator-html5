@@ -20,18 +20,20 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  *
  * More info. at <https://www.w3schools.com/tags/tag_noscript.asp>
  *
- * @package     HTML5
- * @subpackage  Main
- * @category    API
- *
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version     GIG-HTML5.00.03
+ * @package GIndie\ScriptGenerator\HTML5\Category\Programming
+ * 
+ * @version 00.A0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo Validate attributes
+ * 
  * @since       2017-04-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18
  */
-class Noscript extends Node {
+class Noscript extends Node
+{
 
     use Attribute\GlobalAttributes;
 
@@ -44,7 +46,8 @@ class Noscript extends Node {
      * @author      Izmir Sanchez Juarez <izmirreffi@gmail.com>
      * @edit SG-HTML5.00.01 18-01-18 <angel.sierra@grupoindie.com>
      */
-    function __construct($content) {
+    function __construct($content)
+    {
         parent::__construct(static::TYPE_DEFAULT, "noscript", [], $content);
     }
 

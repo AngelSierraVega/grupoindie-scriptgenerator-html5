@@ -1,30 +1,26 @@
 <?php
 
-/*
- * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
+/**
+ * 
+ * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
  *
- * This software is protected under GNU: you can use, study and modify it
- * but not distribute it under the terms of the GNU General Public License 
- * as published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
+ * @package GIndie\ScriptGenerator\HTML5\Attribute
+ * 
+ * @version 00.01
+ * @since 17-04-15
+ * @edit 18-02-27
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Programm class
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
- * []
- *
- * @package     HTML5
- * @subpackage  Main
- * @category    API
- * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version     GI-HTML5.00
- * @since       2017-04-15
- * @authzor      Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  */
-trait httpequivTrait {
+trait httpequivTrait
+{
     
 }

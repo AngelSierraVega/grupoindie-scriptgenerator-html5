@@ -17,13 +17,13 @@ namespace GIndie\ScriptGenerator\HTML5\Category\Lists;
  * Description defines an ordered list
  * More info. at <https://www.w3schools.com/tags/tag_ol.asp>
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version     GIG-HTML5.00.01
+ * @version 00.F0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * 
  * @since       2017-05-18
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 

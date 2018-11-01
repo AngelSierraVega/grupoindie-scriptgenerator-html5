@@ -21,21 +21,24 @@ use \GIndie\ScriptGenerator\HTML5\Category\Meta;
  * 
  * @todo        Documentation for custom functions
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Basic
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GIG-HTML5.00.03
+ * @version 00.A0
  * @since       2016-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
  * - Updated for new DML node
  * @edit SG-HTML5.00.02 18-02-02
  * - Bug correction
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo Validate attributes
  */
-class HTML extends Node {
+class HTML extends Node
+{
 
     /**
      * The body of the HTML object
@@ -67,8 +70,9 @@ class HTML extends Node {
      * 
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    function __construct($title, $lang, $charset) {
-        parent::__construct(static::TYPE_DEFAULT, "html",["lang" => $lang]);
+    function __construct($title, $lang, $charset)
+    {
+        parent::__construct(static::TYPE_DEFAULT, "html", ["lang" => $lang]);
         //parent::__construct("html", false, ["lang" => $lang]);
         $this->_head = parent::addContentGetPointer(new Meta\Head($charset, $title));
         $this->_body = parent::addContentGetPointer(new Body());
@@ -82,7 +86,8 @@ class HTML extends Node {
      * 
      * @return      \GIgenerator\DML\HTML5\Basic\Body::addContent()
      */
-    public function addContent($content) {
+    public function addContent($content)
+    {
         return $this->_body->addContent($content);
     }
 
@@ -94,7 +99,8 @@ class HTML extends Node {
      *                   and the linked document.
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Head::addLink()
      */
-    public function addLink($href, $rel) {
+    public function addLink($href, $rel)
+    {
         return $this->_head->addLink($href, $rel);
     }
 
@@ -106,7 +112,8 @@ class HTML extends Node {
      *
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Head::addMeta()
      */
-    public function addMeta(array $attributes) {
+    public function addMeta(array $attributes)
+    {
         return $this->_head->addMeta($attributes);
     }
 
@@ -120,7 +127,8 @@ class HTML extends Node {
      * @return      \GIndie\ScriptGenerator\HTML5\Category\Basic\Body::addScript()
      * @edit SG-HTML5.00.02
      */
-    public function addScript($script, $external = false) {
+    public function addScript($script, $external = false)
+    {
         return $this->_body->addScript($script, $external);
     }
 
@@ -131,15 +139,16 @@ class HTML extends Node {
      *
      * return       \GIndie\ScriptGenerator\HTML5\Category\Basic\Body::addScriptOnDocumentReady()
      */
-    public function addScriptOnDocumentReady($script) {
+    public function addScriptOnDocumentReady($script)
+    {
         return $this->_body->addScriptOnDocumentReady($script);
     }
 
     /**
      * @todo        define return.
-     * @version     GIG-HTML5.00.01
      */
-    public function getBody() {
+    public function getBody()
+    {
         return $this->_body;
     }
 

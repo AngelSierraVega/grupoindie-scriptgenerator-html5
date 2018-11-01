@@ -10,22 +10,25 @@ use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_a.asp>
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Links
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @version 00.E0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo Validate attributes
  *
- * @version     GIG-HTML5.00.02
  * @since       2017-04-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
  * - Updated for new DML node
  */
-class Anchor extends Node {
+class Anchor extends Node
+{
 
     use Attribute\GlobalAttributes;
     use Attribute\HyperlinkAttributes;
+
     /**
      * Creates a new anchor.
      * 
@@ -34,8 +37,9 @@ class Anchor extends Node {
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    public function __construct($content = []) {
-        parent::__construct(static::TYPE_DEFAULT, "a",[],$content);
+    public function __construct($content = [])
+    {
+        parent::__construct(static::TYPE_DEFAULT, "a", [], $content);
 //        parent::__construct("a", false, [],
 //                is_array($content) ? $content : [$content]);
     }

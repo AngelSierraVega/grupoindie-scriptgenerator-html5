@@ -18,12 +18,14 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  *  The <style> tag is used to define style information for an HTML document.
  * More info. at <https://www.w3schools.com/tags/tag_style.asp>
  * 
- * @version     GIG-HTML5.00.04
- *
- * @package     HTML5
- * @subpackage  Main
- * @category    API
- *
+ * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
+ * 
+ * @version 00.F0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo Validate attributes
+ * 
  * @since       2017-05-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18

@@ -5,10 +5,9 @@
  *
  * @copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @package Generator
- * @subpackage HTML5
+ * @package GIndie\ScriptGenerator\HTML5
  *
- * @version GIG-HTML5.02.00
+ * @version 00.FA
  */
 
 namespace GIndie\ScriptGenerator\HTML5;
@@ -18,10 +17,12 @@ use GIndie\ScriptGenerator\DML;
 /**
  * Represents an <b>HTML5</b> node.
  * 
- * @version GIG-HTML5.01.03  
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
  * - Updated for new DML node
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock
  */
 class Node extends DML\Node
 {
@@ -30,7 +31,8 @@ class Node extends DML\Node
      * @var \GIgenerator\DML\Node Stores an instance of the content-only node containing the scripts. 
      * 
      * @since GIG-HTML5.01.??
-     * @version GIG-HTML.02.00 Renamed due to compliance with PSR-1.
+     * @edit ??
+     * - Renamed due to compliance with PSR-1.
      * 
      */
     private $scripts;
@@ -44,7 +46,8 @@ class Node extends DML\Node
      * @return \GIgenerator\DML\HTML5\Programming\Script
      * 
      * @since GIG-HTML5.01.??
-     * @version GIG-HTML.02.00 renamed vars from _scripts to scripts
+     * @edit  
+     * renamed vars from _scripts to scripts
      * 
      */
     public function addScript($script, $external = false)
@@ -80,7 +83,7 @@ class Node extends DML\Node
 //        if ($this->_emptyNode == \FALSE) {
 //            $this->addContent();
 //        }
-        return parent::__toString().$this->defineScript();
+        return parent::__toString() . $this->defineScript();
     }
 
     /**

@@ -16,13 +16,16 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * 
  * More info. at <https://www.w3schools.com/tags/ref_byfunc.asp>.
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Basic
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GIG-HTML5.00.02
+ * @version 00.C0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo <head>
+ * 
  * @since       2017-04-12
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
@@ -31,8 +34,9 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * - Deleted class BasicTest
  * - Renamed methods for PSR-1 compliance.
  */
-class Basic {
-    
+class Basic
+{
+
     /**
      * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Body}
      *
@@ -44,7 +48,8 @@ class Basic {
      * @ut_str body "<body></body>"
      * @edit SG-HTML5.00.01
      */
-    public static function body() {
+    public static function body()
+    {
         return new Basic\Body();
     }
 
@@ -59,10 +64,11 @@ class Basic {
      * @ut_str breakLine "<br />"
      * @edit SG-HTML5.00.01
      */
-    public static function breakLine() {
+    public static function breakLine()
+    {
         return new Basic\BreakLine();
     }
-    
+
     /**
      * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Comment}
      * 
@@ -77,7 +83,8 @@ class Basic {
      * @ut_str comment "<!--This is a comment-->"
      * @edit SG-HTML5.00.01
      */
-    public static function comment($comment) {
+    public static function comment($comment)
+    {
         return new Basic\Comment($comment);
     }
 
@@ -93,10 +100,11 @@ class Basic {
      * @ut_str doctype "<!DOCTYPE html>"
      * @edit SG-HTML5.00.01
      */
-    public static function doctype($doctype) {
+    public static function doctype($doctype)
+    {
         return new Basic\Doctype($doctype);
     }
-    
+
     /**
      * {@see        \GIgenerator\DML\HTML5\Basic\HTML}
      *
@@ -109,7 +117,8 @@ class Basic {
      * @ut_str html "<html lang="spanish"><head charset="utf-8"><title>Test</title></head><body></body></html>"
      * @edit SG-HTML5.00.01
      */
-    public static function html($title, $lang, $charset) {
+    public static function html($title, $lang, $charset)
+    {
         return new Basic\HTML($title, $lang, $charset);
     }
 
@@ -129,7 +138,8 @@ class Basic {
      * @ut_str header "<h1>Hello World!</h1>"
      * @edit SG-HTML5.00.01
      */
-    public static function header($level, $content) {
+    public static function header($level, $content)
+    {
         return new Basic\Header($level, $content);
     }
 
@@ -146,7 +156,8 @@ class Basic {
      * @ut_str hr "<hr />"
      * @edit SG-HTML5.00.01
      */
-    public static function hr() {
+    public static function hr()
+    {
         return new Basic\Hr();
     }
 
@@ -164,10 +175,11 @@ class Basic {
      * @ut_str paragraph "<p>Content</p>"
      * @edit SG-HTML5.00.01
      */
-    public static function paragraph($content) {
+    public static function paragraph($content)
+    {
         return new Basic\Paragraph($content);
     }
-    
+
     /**
      * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Title}
      *
@@ -182,7 +194,8 @@ class Basic {
      * @ut_str title "<title>Mytitle</title>"
      * 
      */
-    public static function title($title) {
+    public static function title($title)
+    {
         return new Basic\Title($title);
     }
 

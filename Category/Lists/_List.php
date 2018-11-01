@@ -16,15 +16,18 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
  * Abstract representation of a list.
- * @abstract
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Lists
+ * 
+ * @version 00.A0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Rename class for PSR-0 Violation
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo Validate attributes
  * 
  * @since       2017-01-04
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @version     GIG-HTML5.00.01
  * @edit SG-HTML5.00.01 18-01-18
  * @edit SG-HTML5.00.02 18-01-20
  * - Updated: addListElement()

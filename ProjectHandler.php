@@ -8,10 +8,11 @@ namespace GIndie\ScriptGenerator\HTML5;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
  *
- * @package ScriptGenerator
- * @subpackage HTML5
+ * @package GIndie\ScriptGenerator\HTML5\Components
  *
- * @version SG-HTML5.00.00 18-02-24 Empty class created.
+ * @version 00.44
+ * 
+ * @since 18-02-24
  * @edit SG-HTML5.00.01
  * - Class extends \GIndie\ProjectHandler
  * - Implemented abstrac methods 
@@ -19,9 +20,34 @@ namespace GIndie\ScriptGenerator\HTML5;
  * - Created projectClasses()
  * @edit SG-HTML5.00.03 18-03-09
  * - Deprecated autoloaderFilename()
+ * @edit 18-11-01
+ * - Class extends \GIndie\ProjectHandler\AbstractProjectHandler
  */
-class ProjectHandler extends \GIndie\ProjectHandler
+class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
 {
+
+    /**
+     * 
+     * @return array|string
+     * @since 18-11-01
+     */
+    public static function versions()
+    {
+        $rtnArray = [];
+        //AlphaCero
+        $rtnArray[\hexdec("00.01")]["code"] = "CERO";
+        $rtnArray[\hexdec("00.01")]["description"] = "Cero";
+        $rtnArray[\hexdec("00.01")]["threshold"] = "00.01";
+        //BetaCero
+        $rtnArray[\hexdec("00.44")]["code"] = "RVSD-VRSN";
+        $rtnArray[\hexdec("00.44")]["description"] = "Revised project version";
+        $rtnArray[\hexdec("00.44")]["threshold"] = "00.44";
+        //One
+        $rtnArray[\hexdec("01.00")]["code"] = "ONE";
+        $rtnArray[\hexdec("01.00")]["description"] = "One";
+        $rtnArray[\hexdec("01.00")]["threshold"] = "01.00";
+        return $rtnArray;
+    }
 
     /**
      * @since SG-HTML5.00.02
@@ -30,6 +56,7 @@ class ProjectHandler extends \GIndie\ProjectHandler
      */
     public static function projectClasses()
     {
+        return [];
         return [HTML5\Category\Basic::class
             , HTML5\Category\Links::class
             , HTML5\Category\Lists::class

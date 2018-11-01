@@ -8,17 +8,22 @@ namespace GIndie\ScriptGenerator\HTML5;
  * @copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
- * @package ScriptGenerator
- * @subpackage DML
+ * @package GIndie\ScriptGenerator\HTML5
  * 
- * @version GIG-HTML5.00.00 16-12-28
+ * @version 01.00
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * 
+ * @since 16-12-28
  * @edit GIG-HTML5.00.01
  * @edit SG-HTML5.00.01 18-01-18
  * @edit SG-HTML5.00.02 18-02-14
  * - Updated addContent()
  * - Updated varnames due to PSR-1 violation
  */
-class Document extends Node {
+class Document extends Node
+{
 
     /**
      *
@@ -26,7 +31,7 @@ class Document extends Node {
      * @edit SG-HTML5.00.02
      */
     private $doctype;
-    
+
     /**
      *
      * @var \GIndie\ScriptGenerator\HTML5\Category\Basic\HTML 
@@ -42,12 +47,12 @@ class Document extends Node {
      * @param       string $doctype [optional] The document type.
      * @param       string $charset [optional] The encoding of the html document.
      * 
-     * @version     GIG-HTML5.00.00
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * @edit SG-HTML5.00.01
      */
-    public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8") {
+    public function __construct($title, $lang = "en", $doctype = "html", $charset = "UTF-8")
+    {
         parent::__construct(static::TYPE_CONTENT_ONLY);
         $this->doctype = parent::addContentGetPointer(new Category\Basic\Doctype($doctype));
         $this->html = parent::addContentGetPointer(new Category\Basic\HTML($title, $lang, $charset));
@@ -58,14 +63,14 @@ class Document extends Node {
      * 
      * @param       mixed $content The content to add.
      * 
-     * @version     GIG-HqwTML5.00.00
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      * @return $this
      * @edit SG-HTML5.00.02
      */
-    public function addContent($content) {
+    public function addContent($content)
+    {
         $this->html->addContent($content);
         return $this;
     }
@@ -76,13 +81,13 @@ class Document extends Node {
      * @param       string $href Specifies the location of the linked document.
      * @param       string $rel Specifies the relationship between the current document and the linked document.
      * 
-     * @version     GIG-HTML5.00.00
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      * @return      mixed An instance of the added content.
      */
-    public function addLink($href, $rel) {
+    public function addLink($href, $rel)
+    {
         return $this->html->addLink($href, $rel);
     }
 
@@ -91,13 +96,13 @@ class Document extends Node {
      * 
      * @param       array $attributes
      * 
-     * @version     GIG-HTML5.00.00
      * @since       2016-12-29
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      * @return      mixed An instance of the added content.
      */
-    public function addMeta(array $attributes) {
+    public function addMeta(array $attributes)
+    {
         return $this->html->addMeta($attributes);
     }
 
@@ -107,33 +112,33 @@ class Document extends Node {
      * @param       string $script The script or the file path to the script.
      * @param       boolean $external [false] True if script is in a external file.
      * 
-     * @version     GIG-HTML5.00.00
      * @since       2016-12-28
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      * 
      * @return      mixed An instance of the added content.
      */
-    public function addScript($script, $external = false) {
+    public function addScript($script, $external = false)
+    {
         return $this->html->addScript($script, $external);
     }
-    
+
     //
-    
+
     /**
      * 
      * @since       2017-05-01
-     * @version     GIG-HTML5.00.01
      */
-    public function addScriptOnDocumentReady($script) {
+    public function addScriptOnDocumentReady($script)
+    {
         return $this->html->addScriptOnDocumentReady($script);
     }
 
     /**
      * 
      * @since       2017-05-01
-     * @version     GIG-HTML5.00.01
      */
-    public function getBody() {
+    public function getBody()
+    {
         return $this->html->getBody();
     }
 

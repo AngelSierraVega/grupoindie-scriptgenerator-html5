@@ -19,18 +19,22 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * https://www.w3schools.com/tags/tag_link.asp
  *
- * @package HTML5
- * @subpackage Main
- * @category API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Links
+ * 
+ * @version 00.F0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * 
  * 
  * @author Roberto Guzmán Sánchez <robertogs.soft@hotmail.com>
  * @since 2017-05-15
- * @version GIG-HTML5.00.02
  * 
  * @edit SG-HTML5.00.01 18-01-03
  * - Updated for new DML node
  */
-class Link extends Node {
+class Link extends Node
+{
 
     use Attribute\GlobalAttributes;
     use Attribute\crossoriginTrait;
@@ -50,9 +54,10 @@ class Link extends Node {
      *
      * @since       GIG-HTML5.00.01
      * @author      Roberto Guzmán Sánchez <robertogs.soft@hotmail.com>
-     */    
-    public function __construct($href, $rel) {
-        parent::__construct(static::TYPE_EMPTY_OPEN, "link",["href" => $href, "rel" => $rel]);
+     */
+    public function __construct($href, $rel)
+    {
+        parent::__construct(static::TYPE_EMPTY_OPEN, "link", ["href" => $href, "rel" => $rel]);
         //parent::__construct("link", true, ["href" => $href, "rel" => $rel]);
     }
 

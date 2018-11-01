@@ -11,11 +11,14 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
- *
- * @package ScriptGenerator
- * @subpackage HTML5
- *
- * @version SG-HTML5.00.00 18-02-04 Empty class created.
+ * 
+ * @package GIndie\ScriptGenerator\HTML5\Category\Frames
+ * 
+ * @version 00.F0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @since 18-02-04
  * @edit SG-HTML5.00.01
  * - Created iframe()
  */

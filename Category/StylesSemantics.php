@@ -14,7 +14,14 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
 /**
  * Description of StylesSemantics
  * 
- * @version GIG-HTML5.00.03
+ * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
+ * 
+ * @version 00.4A
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo <header> <main> <section> <article> <aside> <details> <dialog> <summary>
+ * @todo <data>
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18
@@ -44,7 +51,7 @@ class StylesSemantics
     {
         return new StylesSemantics\Div($content, $attributes);
     }
-    
+
     /**
      * 
      * @param type $content

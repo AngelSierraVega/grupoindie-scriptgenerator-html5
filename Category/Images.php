@@ -10,12 +10,16 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
  *
- * @package ScriptGenerator
- * @subpackage HTML5
+ * @package GIndie\ScriptGenerator\HTML5\Category\Images
+ * 
+ * @version 00.30
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
  *
- * @version SG-HTML5.00.00 18-02-23 
+ * @since 18-02-23 
  * - Empty class created.
- * @edit SG-HTML5.00.01
+ * @edit SG-HTML5.00.01 18-02-23 
  * - Created all static functions for class
  * - Abstract class
  * - Funcional method img()

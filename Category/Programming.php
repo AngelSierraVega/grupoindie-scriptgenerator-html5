@@ -18,13 +18,14 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * 
  * More info. at <https://www.w3schools.com/tags/ref_byfunc.asp>.
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Programming
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version     GIG-HTML5.00.02
+ * @version 00.70
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo <embed> <object> <param>
+ * 
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18

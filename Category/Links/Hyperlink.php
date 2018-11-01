@@ -17,13 +17,13 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_a.asp>
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Links
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @version 00.F0
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
  *
- * @version     GIG-HTML5.00.02
  * @since       2017-04-15
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 

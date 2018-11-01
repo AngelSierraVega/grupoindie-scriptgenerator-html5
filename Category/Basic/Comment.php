@@ -19,19 +19,22 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_comment.asp>
  * 
- * @package     HTML5
- * @subpackage  Main
- * @category    API
+ * @package GIndie\ScriptGenerator\HTML5\Category\Basic
  * 
- * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version     GIG-HTML5.00.02
+ * @version 00.A0
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
  * - Updated for new DML node
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Upgrade DocBlock using https://www.computerhope.com
+ * @todo Validate attributes
  */
-class Comment extends Node {
+class Comment extends Node
+{
 
     use Attribute\acceptTrait;
 
@@ -43,7 +46,8 @@ class Comment extends Node {
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    public function __construct($comment) {
+    public function __construct($comment)
+    {
         parent::__construct(static::TYPE_EMPTY_OPEN, "!--{$comment}--");
     }
 

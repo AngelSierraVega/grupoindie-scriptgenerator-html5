@@ -1,25 +1,34 @@
 <?php
 
-/*
- * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
+/**
+ * 
+ * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
  *
- * This software is protected under GNU: you can use, study and modify it
- * but not distribute it under the terms of the GNU General Public License 
- * as published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
+ * @package GIndie\ScriptGenerator\HTML5\Attribute
+ * 
+ * @since 17-04-14
+ * @version 00.30
+ * @edit 18-11-01
+ * - Revised version
+ * @todo Validate trait using https://www.computerhope.com
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Attribute;
-/*
-require_once __DIR__ . '/Hyperlink/download.php';
-require_once __DIR__ . '/Hyperlink/href.php';
-require_once __DIR__ . '/Hyperlink/hreflang.php';
-require_once __DIR__ . '/Hyperlink/media.php';
-require_once __DIR__ . '/Hyperlink/rel.php';
-require_once __DIR__ . '/Hyperlink/target.php';
-require_once __DIR__ . '/Hyperlink/type.php';*/
 
-trait HyperlinkAttributes {
+/*
+  require_once __DIR__ . '/Hyperlink/download.php';
+  require_once __DIR__ . '/Hyperlink/href.php';
+  require_once __DIR__ . '/Hyperlink/hreflang.php';
+  require_once __DIR__ . '/Hyperlink/media.php';
+  require_once __DIR__ . '/Hyperlink/rel.php';
+  require_once __DIR__ . '/Hyperlink/target.php';
+  require_once __DIR__ . '/Hyperlink/type.php'; */
+
+/**
+ * 
+ */
+trait HyperlinkAttributes
+{
 
     use hrefTrait;
     use targetTrait;

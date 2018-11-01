@@ -7,12 +7,12 @@ ${licenseFirst}
 ${licensePrefix}${project.displayName} - ${name}
 ${licensePrefix?replace(" +$", "", "r")}
 ${licensePrefix}@author Angel Sierra Vega <angel.sierra@grupoindie.com>
-${licensePrefix}@copyright (c) ${date?date?string("yyyy")} Angel Sierra Vega. Grupo INDIE.
+${licensePrefix}@copyright (C) ${date?date?string("yyyy")} Angel Sierra Vega. Grupo INDIE.
 ${licensePrefix?replace(" +$", "", "r")}
-${licensePrefix}@package ScriptGenerator
-${licensePrefix}@subpackage HTML5
+${licensePrefix}@package GIndie\ScriptGenerator\HTML5
 ${licensePrefix?replace(" +$", "", "r")}
-${licensePrefix}@version SG-HTML5.00.00 ${date?date?string("yy-MM-dd")} Empty [class/trait/interface/file] created.
+${licensePrefix}@since ${date?date?string("yy-MM-dd")}
+${licensePrefix}@version UNDEFINED
 <#if licenseLast??>
 ${licenseLast}
 </#if>
