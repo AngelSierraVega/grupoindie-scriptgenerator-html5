@@ -2,6 +2,8 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Images;
 
+use \GIndie\ScriptGenerator\HTML5\Attribute;
+
 /**
  * The <img> tag defines an image in an HTML page.
  * 
@@ -12,7 +14,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category\Images;
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Images
  * 
- * @version 00.A0
+ * @version 00.AA
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -25,6 +27,11 @@ namespace GIndie\ScriptGenerator\HTML5\Category\Images;
  */
 class Img extends \GIndie\ScriptGenerator\HTML5\Node
 {
+
+    /**
+     * @since 19-02-02
+     */
+    use Attribute\GlobalAttributes;
 
     /**
      * The <img> tag defines an image in an HTML page.

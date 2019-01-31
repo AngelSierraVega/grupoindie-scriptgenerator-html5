@@ -12,7 +12,7 @@ ${licensePrefix?replace(" +$", "", "r")}
 ${licensePrefix}@package GIndie\ScriptGenerator\HTML5
 ${licensePrefix?replace(" +$", "", "r")}
 ${licensePrefix}@since ${date?date?string("yy-MM-dd")}
-${licensePrefix}@version UNDEFINED
+${licensePrefix}@version 00.00
 <#if licenseLast??>
 ${licenseLast}
 </#if>

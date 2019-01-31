@@ -11,15 +11,16 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Lists;
 
-use \GIndie\ScriptGenerator\HTML5\Node;
-use \GIndie\ScriptGenerator\HTML5\Attribute;
+use GIndie\ScriptGenerator\HTML5\Node;
+use GIndie\ScriptGenerator\HTML5\Attribute;
+use GIndie\ScriptGenerator\HTML5\Category\Links;
 
 /**
  * Abstract representation of a list.
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 
- * @version 00.A0
+ * @version 00.A7
  * @edit 18-11-01
  * - Revised version
  * @todo Rename class for PSR-0 Violation
@@ -31,6 +32,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * @edit SG-HTML5.00.01 18-01-18
  * @edit SG-HTML5.00.02 18-01-20
  * - Updated: addListElement()
+ * @edit 19-01-15
+ * - Created addListElementHyperlink()
  */
 abstract class _List extends Node
 {
@@ -61,19 +64,41 @@ abstract class _List extends Node
      * Adds an element to the list.
      * 
      * @param mixed $element The elemen to add
-     * @return \GIndie\ScriptGenerator\HTML5\Category\Lists\_List
+     * @return \GIndie\ScriptGenerator\HTML5\Category\Lists\Unordered|\GIndie\ScriptGenerator\HTML5\Category\Lists\Ordered
      * 
      * @since GIG-HTML5.00.01
      * @edit SG-HTML5.00.02
      * - Return $this instead of function result
+     * @edit 19-01-15
+     * @edit 19-02-01
+     * - Debuged $element as ListItem
      */
     public function addListElement($element)
     {
-        if (\is_a($element, __NAMESPACE__ . "\ListItem")) {
-            $this->addContent($element);
-        } else {
-            $this->addContent(new ListItem([], [$element]));
+        switch (true)
+        {
+            case \is_a($element, ListItem::class):
+            case \is_subclass_of($element, ListItem::class, true):
+                $this->addContent($element);
+                break;
+            default:
+                $this->addContent(new ListItem([], [$element]));
+                break;
         }
+        return $this;
+    }
+
+    /**
+     * 
+     * @param string $href
+     * @param mixed $label
+     * @param string|null $target
+     * @return \GIndie\ScriptGenerator\HTML5\Category\Lists\Unordered|\GIndie\ScriptGenerator\HTML5\Category\Lists\Ordered
+     * @since 19-01-15
+     */
+    public function addListElementHyperlink($href, $label, $target = null)
+    {
+        $this->addListElement(Links::hyperlink($href, $label, $target));
         return $this;
     }
 

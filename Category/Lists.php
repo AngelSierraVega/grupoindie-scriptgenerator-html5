@@ -20,7 +20,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 
- * @version 00.80
+ * @version 00.A0
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -44,15 +44,17 @@ class Lists
      * @since GIG-HTML5.00.03
      * @author Liliana Hernández Castañeda <liliana.hercast@gmail.com>
      * 
-     * @return \GIndie\ScriptGenerator\HTML5\Lists\ListItem
+     * @return \GIndie\ScriptGenerator\HTML5\Category\Lists\ListItem
      * @ut_params listItem [] ["Coffee"] 
      * @ut_str listItem "<li>Coffee</li>"
      * @edit SG-HTML5.00.01
      * - Added unit test from class BasicTest
      * - Deleted class BasicTest
      * - Renamed methods for PSR-1 compliance.
+     * @edit 19-02-02
+     * - Updated attribute $content
      */
-    public static function listItem(array $attributes = [], array $content = [])
+    public static function listItem(array $attributes = [], $content = null)
     {
         return new Lists\ListItem($attributes, $content);
     }

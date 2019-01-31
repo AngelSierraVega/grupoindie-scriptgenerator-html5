@@ -19,18 +19,25 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 
- * @version 00.A0
+ * @version 00.AA
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
  * @todo Validate attributes
  * 
- * @since       2017-05-18
- * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @edit SG-HTML5.00.01 18-01-18
+ * @since 17-05-18
+ * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @edit 18-01-18
+ * @edit 19-01-28
+ * - Added classTrait
  */
 class ListItem extends Node
 {
+    
+    /**
+     * @since 19-01-28
+     */
+    use \GIndie\ScriptGenerator\HTML5\Attribute\classTrait;
 
     /**
      * 
@@ -38,9 +45,11 @@ class ListItem extends Node
      * @param   array $content
      * @since   GIG-HTML5.00.02
      * @author  Angel Sierra Vega <angel.sierra@grupoindie.com>
-     * @edit SG-HTML5.00.01
+     * @edit 18-01-18
+     * @edit 19-02-02
+     * - Updated attribute $content
      */
-    public function __construct(array $attributes = [], array $content = [])
+    public function __construct(array $attributes = [], $content = null)
     {
         parent::__construct(static::TYPE_DEFAULT, "li", $attributes, $content);
     }

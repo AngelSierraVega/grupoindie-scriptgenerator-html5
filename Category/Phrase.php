@@ -9,7 +9,7 @@
  * @package GIndie\ScriptGenerator\HTML5\Category\Phrase
  *
  * @since 18-05-16
- * @version 00.40
+ * @version 00.70
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category;
@@ -57,12 +57,15 @@ class Phrase
      * that a section of text has structural meaning.
      * 
      * @param mixed $content The content of the Strong node.
+     * @param array $attributes The attributes of the Strong node.
      * @return \GIndie\ScriptGenerator\HTML5\Phrase\Strong
      * @since 18-11-01
+     * @edit 19-02-02
+     * - Added param $attributes
      */
-    public static function strong($content)
+    public static function strong($content, $attributes = [])
     {
-        return new Phrase\Strong($content);
+        return new Phrase\Strong($content, $attributes);
     }
 
     /**

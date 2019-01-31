@@ -10,7 +10,7 @@ namespace GIndie\ScriptGenerator\HTML5;
  *
  * @package GIndie\ScriptGenerator\HTML5\Components
  *
- * @version 00.44
+ * @version 00.49
  * 
  * @since 18-02-24
  * @edit SG-HTML5.00.01
@@ -30,6 +30,7 @@ class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
      * 
      * @return array|string
      * @since 18-11-01
+     * @edit 19-02-03
      */
     public static function versions()
     {
@@ -42,6 +43,28 @@ class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
         $rtnArray[\hexdec("00.44")]["code"] = "RVSD-VRSN";
         $rtnArray[\hexdec("00.44")]["description"] = "Revised project version";
         $rtnArray[\hexdec("00.44")]["threshold"] = "00.44";
+
+        /**
+         * 00.46: CMM-UPDT
+         */
+        $rtnArray[\hexdec("00.46")]["code"] = "CMM-UPDT";
+        $rtnArray[\hexdec("00.46")]["description"] = "19-02-03 Common updates";
+        $rtnArray[\hexdec("00.46")]["threshold"] = "00.46";
+        
+        /**
+         * 00.49: NEW-FRM-ELMTN
+         */
+        $rtnArray[\hexdec("00.49")]["code"] = "NEW-FRM-ELMTN";
+        $rtnArray[\hexdec("00.49")]["description"] = "NEW FormElement";
+        $rtnArray[\hexdec("00.49")]["threshold"] = "00.49";
+
+        /**
+         * 00.A0: RLS-ALPHA
+         */
+        $rtnArray[\hexdec("00.A0")]["code"] = "RLS-ALPHA";
+        $rtnArray[\hexdec("00.A0")]["description"] = "Alpha release";
+        $rtnArray[\hexdec("00.A0")]["threshold"] = "00.A0";
+
         //One
         $rtnArray[\hexdec("01.00")]["code"] = "ONE";
         $rtnArray[\hexdec("01.00")]["description"] = "One";

@@ -9,11 +9,10 @@
  * @package GIndie\ScriptGenerator\HTML5\Category\Phrase
  *
  * @since 18-11-01
- * @version 01.00
+ * @version 01.30
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Phrase;
-
 
 /**
  * When writing in HTML, the <strong> tag is an inline element used to 
@@ -34,13 +33,18 @@ class Strong extends AbstractPhrase
 
     /**
      * Creates a new Strong node.
+     * 
+     * @param mixed $content The content of the Strong node.
+     * @param array $attributes The attributes of the node.
      *
      * @since 18-11-01
-     * @param mixed $content The content of the Strong node.
+     * 
+     * @edit 19-02-02
+     * - Added param $attributes
      */
-    public function __construct($content)
+    public function __construct($content, $attributes = [])
     {
-        parent::__construct(static::TYPE_DEFAULT, "strong", [], $content);
+        parent::__construct(static::TYPE_DEFAULT, "strong", $attributes, $content);
     }
 
 }
