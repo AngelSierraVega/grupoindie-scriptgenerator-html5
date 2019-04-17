@@ -32,18 +32,20 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  *
  * @link <https://www.w3schools.com/tags/tag_b.asp>
  * 
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
+ * 
  */
 class Bold extends Node
 {
 
     /**
-     * @since 18-11-01
-     * 
-     */
-    use Attribute\GlobalAttributes;
-
-    /**
-     * Creates a new Bold node.
+     * The bold tag specifies bold text.
+     * According to the HTML 5 specification, the <b> tag should be used as a LAST 
+     * resort when no other tag is more appropriate. The HTML 5 specification states 
+     * that headings should be denoted with the <h1> to <h6> tags, emphasized text 
+     * should be denoted with the <em> tag, important text should be denoted with 
+     * the <strong> tag, and marked/highlighted text should use the <mark> tag.
      *
      * @since 18-11-01
      * @param mixed $content The content of the Preformatted node.

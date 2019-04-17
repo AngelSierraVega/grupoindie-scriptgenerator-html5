@@ -9,7 +9,7 @@
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @since 19-04-01
- * @version 00.A0
+ * @version 00.A8
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\FormElement;
@@ -20,7 +20,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
 /**
  * Description of Select
  *
- * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Select extends Node
 {
@@ -28,7 +29,6 @@ class Select extends Node
     /**
      * @since 19-04-01
      */
-    use Attribute\GlobalAttributes;
     use Attribute\autofocusTrait;
     use Attribute\disabledTrait;
     use Attribute\formTrait;

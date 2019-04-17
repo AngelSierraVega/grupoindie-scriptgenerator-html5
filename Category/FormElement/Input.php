@@ -9,7 +9,7 @@
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @since 19-04-01
- * @version 00.A0
+ * @version 00.A8
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\FormElement;
@@ -29,16 +29,13 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * - Implemented traits
  * @todo Validate constructor
  * @todo Unit test
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 abstract class Input extends Node
 {
 
     /**
-     * @since 18-02-27
-     */
-    use Attribute\GlobalAttributes;
-
-/**
      * @since 19-04-01
      * accept 	Designates the files types that a server accepts (only used for type="file").
      * alt 	Designates an alternate text for images (only used for type="image").

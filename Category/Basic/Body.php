@@ -23,7 +23,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version 00.A0
+ * @version 00.A8
  * @since 16-12-28
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit 18-01-03
@@ -32,11 +32,11 @@ use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
  * @todo Validate attributes
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Body extends Node
 {
-
-    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new Body object

@@ -14,7 +14,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Images
  * 
- * @version 00.AA
+ * @version 00.AF
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -24,14 +24,11 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * - Empty class created.
  * @edit SG-HTML5.00.01
  * - Created __construct()
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Img extends \GIndie\ScriptGenerator\HTML5\Node
 {
-
-    /**
-     * @since 19-02-02
-     */
-    use Attribute\GlobalAttributes;
 
     /**
      * The <img> tag defines an image in an HTML page.

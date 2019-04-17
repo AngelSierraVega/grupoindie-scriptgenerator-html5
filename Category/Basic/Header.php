@@ -22,7 +22,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version 00.A0
+ * @version 00.A8
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
@@ -31,13 +31,13 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
  * @todo Validate attributes
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Header extends Node
 {
 
-    use Attribute\GlobalAttributes;
-
-    /*     * w
+    /**
      * Creates a new Header object
      * 
      * @todo        Error throwing on $level.
@@ -48,7 +48,6 @@ class Header extends Node
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-
     public function __construct($level, $content)
     {
         parent::__construct(static::TYPE_DEFAULT, "h" . $level, [], $content);

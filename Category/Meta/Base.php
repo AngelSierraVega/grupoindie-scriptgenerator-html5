@@ -21,7 +21,7 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Meta
  * 
- * @version 00.A0
+ * @version 00.A8
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -30,13 +30,14 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @since  2017-05-18
  * @edit SG-HTML5.00.01 18-01-18
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Base extends Node
 {
 
     use Attribute\hrefTrait;
     use Attribute\targetTrait;
-    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new tag base object

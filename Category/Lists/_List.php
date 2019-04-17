@@ -20,7 +20,7 @@ use GIndie\ScriptGenerator\HTML5\Category\Links;
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 
- * @version 00.A7
+ * @version 00.AC
  * @edit 18-11-01
  * - Revised version
  * @todo Rename class for PSR-0 Violation
@@ -34,14 +34,12 @@ use GIndie\ScriptGenerator\HTML5\Category\Links;
  * - Updated: addListElement()
  * @edit 19-01-15
  * - Created addListElementHyperlink()
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 abstract class _List extends Node
 {
 
-    /**
-     * 
-     */
-    use Attribute\GlobalAttributes;
 
     /**
      * Creates an ordered/unodered HTML list element.

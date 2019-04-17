@@ -9,7 +9,7 @@
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @since 17-04-23
- * @version 00.A0
+ * @version 00.A8
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\FormElement;
@@ -68,11 +68,11 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * 
  * @edit 19-04-01
  * - Moved from HTML5form
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Form extends Node
 {
-
-    use Attribute\GlobalAttributes;
 
     use Attribute\acceptcharsetTrait;
     use Attribute\actionTrait;

@@ -22,12 +22,10 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * - Revised version
  *
  * @since 18-05-16
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 abstract class AbstractPhrase extends Node
 {
-
-    /**
-     * @since 18-05-16
-     */
-    use Attribute\GlobalAttributes;
+    
 }

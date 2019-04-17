@@ -21,7 +21,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Links
  * 
- * @version 00.F0
+ * @version 00.A8
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -32,11 +32,12 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * @edit SG-HTML5.00.01 18-01-03
  * - Updated for new DML node
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Link extends Node
 {
 
-    use Attribute\GlobalAttributes;
     use Attribute\crossoriginTrait;
     use Attribute\hrefTrait;
     use Attribute\hreflangTrait;

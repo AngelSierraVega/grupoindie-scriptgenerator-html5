@@ -1,21 +1,64 @@
 <?php
 
 /**
- * 
- * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * GI-SG1-HTML5-DVLP
+ *
+ * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @copyright (C) 2019 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5\Attribute
- * 
- * @version 00.01
+ *
  * @since 17-04-15
- * @edit 18-02-27
- * @edit 18-11-01
- * - Revised version
- * @todo Programm class
+ * @version 00.C0
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Attribute;
 
-trait maxlengthTrait {
-    //put your code here
+/**
+ * The maxlength attribute specifies the maximum number of characters allowed in the element.
+ * 
+ * The maxlength attribute can be used on the following elements: <input> <textarea>
+ * 
+ * @link <https://www.w3schools.com/tags/att_maxlength.asp>
+ * 
+ * @edit 18-02-27
+ * @edit 18-11-01
+ * - Revised version
+ * @edit 19-04-16
+ * - Functional trait
+ * - Docblock upgraded
+ */
+trait maxlengthTrait
+{
+
+    /**
+     * Specifies the maximum number of characters allowed in the element.
+     * 
+     * @since 19-04-16
+     */
+    public function getMaxlength()
+    {
+        return $this->getAttribute("maxlength");
+    }
+
+    /**
+     * Specifies the maximum number of characters allowed in the element.
+     * @since 19-04-16
+     */
+    public function removeMaxlength()
+    {
+        $this->unsetAttribute("maxlength");
+        return $this;
+    }
+
+    /**
+     * Specifies the maximum number of characters allowed in the element.
+     * @since 19-04-16
+     */
+    public function setMaxlength($number)
+    {
+        $this->setAttribute("maxlength", $number);
+        return $this;
+    }
+
 }

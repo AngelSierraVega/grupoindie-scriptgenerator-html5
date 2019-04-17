@@ -9,7 +9,7 @@
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @since 19-04-01
- * @version 00.A0
+ * @version 00.BC
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\FormElement;
@@ -40,11 +40,12 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * @link <https://www.computerhope.com/jargon/h/html-button-tag.htm>
  * 
  * @todo Unit test
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Button extends Node
 {
 
-    use Attribute\GlobalAttributes;
     use Attribute\autofocusTrait;
     use Attribute\disabledTrait;
     use Attribute\formTrait;

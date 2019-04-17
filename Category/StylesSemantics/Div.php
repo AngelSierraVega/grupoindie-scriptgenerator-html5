@@ -21,7 +21,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
  * 
- * @version 00.A0
+ * @version 00.A8
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -31,14 +31,11 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18
  * @edit SG-HTML5.00.02 18-02-19
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Div extends Node
 {
-
-    /**
-     * 
-     */
-    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new section object.

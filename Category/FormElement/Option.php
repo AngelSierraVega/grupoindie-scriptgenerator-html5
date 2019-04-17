@@ -9,7 +9,7 @@
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @since 19-04-01
- * @version 00.A0
+ * @version 00.A8
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\FormElement;
@@ -18,7 +18,8 @@ use \GIndie\ScriptGenerator\HTML5\Node;
 use \GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
- * 
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Option extends Node
 {
@@ -26,7 +27,6 @@ class Option extends Node
     /**
      * @since 19-04-01
      */
-    use Attribute\globalAttributes;
     use Attribute\disabledTrait;
     use Attribute\labelTrait;
     use Attribute\selectedTrait;

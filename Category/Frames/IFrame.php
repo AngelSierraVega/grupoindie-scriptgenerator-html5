@@ -16,7 +16,7 @@ use GIndie\ScriptGenerator\HTML5\Attribute;
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Frames
  * 
- * @version 00.F0
+ * @version 00.A8
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -24,6 +24,8 @@ use GIndie\ScriptGenerator\HTML5\Attribute;
  * @since 18-02-04 Empty class created.
  * @edit SG-HTML5.00.01
  * - Extend from Node
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class IFrame extends Node
 {
@@ -32,7 +34,6 @@ class IFrame extends Node
      * Uses for class
      * @since SG-HTML5.00.01
      */
-    use Attribute\GlobalAttributes;
     use Attribute\nameTrait;
     use Attribute\srcTrait;
     use Attribute\sandboxTrait; //Enables an extra set of restrictions for the content in an <iframe>

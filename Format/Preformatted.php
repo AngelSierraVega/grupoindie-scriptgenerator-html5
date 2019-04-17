@@ -18,19 +18,17 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @since 18-05-16
- * @version 00.9A
+ * @version 00.30
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
  * @todo Move class to category, and deprecate
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Preformatted extends Node
 {
 
-    /**
-     * @since 18-05-16
-     */
-    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new Code node.

@@ -23,7 +23,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
  *
- * @version 00.A0
+ * @version 00.A8
  * @since       2017-04-14
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
@@ -32,10 +32,11 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
  * @todo Validate attributes
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
-class Paragraph extends Node {
-
-    use Attribute\GlobalAttributes;
+class Paragraph extends Node
+{
 
     /**
      * Creates a new Paragraph object.
@@ -45,8 +46,9 @@ class Paragraph extends Node {
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
      */
-    public function __construct($content) {
-        parent::__construct(static::TYPE_DEFAULT, "p",[],$content);
+    public function __construct($content)
+    {
+        parent::__construct(static::TYPE_DEFAULT, "p", [], $content);
         //parent::__construct("p", false, [], [$content]);
     }
 

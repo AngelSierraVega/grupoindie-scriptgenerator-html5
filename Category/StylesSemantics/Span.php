@@ -12,7 +12,7 @@
 namespace GIndie\ScriptGenerator\HTML5\Category\StylesSemantics;
 
 use \GIndie\ScriptGenerator\HTML5\Node;
-use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
+use \GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
  * Defines a section in a document
@@ -21,7 +21,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
  * 
- * @version 00.A0
+ * @version 00.A8
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -30,10 +30,11 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * @since       2017-04-16
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-18
+ * @edit 19-04-16
+ * - Deprecated use of Attribute\GlobalAttributes
  */
 class Span extends Node {
 
-    use Attribute\GlobalAttributes;
 
     /**
      * Creates a new section object.

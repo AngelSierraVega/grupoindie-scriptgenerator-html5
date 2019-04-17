@@ -7,7 +7,7 @@
  * @package GIndie\ScriptGenerator\HTML5\Attribute
  * 
  * @since 17-04-15
- * @version 00.A0
+ * @version 00.90
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
@@ -24,9 +24,8 @@ trait idTrait
 {
 
     /**
-     * @since SG-HTML5.00.01
+     * @since 18-02-14
      * @param type $id
-     * @return $this
      */
     public function setId($id)
     {
@@ -37,7 +36,7 @@ trait idTrait
     /**
      * 
      * @return string
-     * @since SG-HTML5.00.01
+     * @since 18-02-14
      */
     public function getId()
     {
