@@ -1,34 +1,37 @@
 <?php
 
-namespace GIndie\ScriptGenerator\HTML5;
-
 /**
- * DVLP-SG1-HTML5 - ProjectHandler
+ * GI-SG1-HTML5-DVLP - HTML5
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (C) 2019 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5\Components
  *
- * @version 00.49
- * 
  * @since 18-02-24
- * @edit SG-HTML5.00.01
+ * @version 00.49
+ */
+
+namespace GIndie\ScriptGenerator\HTML5\Components\ProjectHandler;
+
+/**
+ * Project Handler for project GI-SG-HTML5
+ * 
+ * @edit 18-02-24
  * - Class extends \GIndie\ProjectHandler
  * - Implemented abstrac methods 
- * @edit SG-HTML5.00.02 18-02-27
+ * @edit 18-02-27
  * - Created projectClasses()
- * @edit SG-HTML5.00.03 18-03-09
+ * @edit 18-03-09
  * - Deprecated autoloaderFilename()
  * @edit 18-11-01
  * - Class extends \GIndie\ProjectHandler\AbstractProjectHandler
  */
-class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
+class HTML5 extends \GIndie\ProjectHandler\AbstractProjectHandler
 {
 
     /**
-     * 
-     * @return array|string
+     * {@inheritdoc}
      * @since 18-11-01
      * @edit 19-02-03
      */
@@ -73,8 +76,8 @@ class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
     }
 
     /**
-     * @since SG-HTML5.00.02
-     * @return array
+     * {@inheritdoc}
+     * @since 18-02-27
      * @todo Unit test for Node\Tag\Attributes
      */
     public static function projectClasses()
@@ -90,19 +93,9 @@ class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
     }
 
     /**
-     * @return string
-     * @since SG-DML.00.01
-     * @deprecated since SG-HTML5.00.03
-     */
-    public static function autoloaderFilenameDPR()
-    {
-        return "main.php";
-    }
-
-    /**
      * 
      * {@inheritdoc}
-     * @since SG-DML.00.01
+     * @since 18-02-24
      * @edit 19-04-17
      */
     public static function pathToSourceCode()
@@ -111,8 +104,8 @@ class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
     }
 
     /**
-     * @return string
-     * @since SG-DML.00.01
+     * {@inheritdoc}
+     * @since 18-02-24
      */
     public static function projectName()
     {
@@ -120,8 +113,8 @@ class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
     }
 
     /**
-     * @return string
-     * @since SG-DML.00.01
+     * {@inheritdoc}
+     * @since 18-02-24
      */
     public static function projectNamespace()
     {
@@ -129,8 +122,8 @@ class ProjectHandler extends \GIndie\ProjectHandler\AbstractProjectHandler
     }
 
     /**
-     * @return string
-     * @since SG-DML.00.01
+     * {@inheritdoc}
+     * @since 18-02-24
      */
     public static function projectVendor()
     {

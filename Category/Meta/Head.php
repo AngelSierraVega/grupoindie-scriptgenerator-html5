@@ -68,9 +68,10 @@ class Head extends Node {
      * 
      * @since GIG-HTML5.00.05
      * @author  Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @todo Use Link class
      */
     public function addLink($href, $rel) {
-        return $this->addContentGetPointer(DML\Node::Simple("link",
+        return $this->addContentGetPointer(DML\Factory::defaultNode("link",
                                 ["rel" => $rel, "href" => $href]));
     }
 
@@ -82,7 +83,7 @@ class Head extends Node {
      */
     public function addMeta(array $attributes) {
         if (isset($this->_metas) == FALSE) {
-            $this->_metas = $this->addContentGetPointer(DML\Node::ContentOnly([]));
+            $this->_metas = $this->addContentGetPointer(DML\Factory::contentOnly([]));
         }
         return $this->_metas->addContentGetPointer(new Meta($attributes));
     }

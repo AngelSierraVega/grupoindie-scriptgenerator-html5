@@ -16,7 +16,7 @@ use GIndie\ScriptGenerator\DML;
 use \GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
- * Represents an <b>HTML5</b> node.
+ * Represents an <b>HTML5</b> element.
  * 
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03
@@ -26,8 +26,13 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * @todo Upgrade DocBlock
  * @edit 19-04-16
  * - Added Global HTML attributes
+ * @edit 19-04-22
+ * - Class extends DML\Node
+ * - Abstract class
+ * @todo Rename to Element
+ * @todo Validate abstract class
  */
-class Node extends DML\Node
+abstract class Node extends DML\Node
 {
 
     /**
@@ -76,7 +81,7 @@ class Node extends DML\Node
     public function addScript($script, $external = false)
     {
         if (isset($this->scripts) == false) {
-            $this->scripts = $this->addContentGetPointer(DML\Node::ContentOnly([]));
+            $this->scripts = $this->addContentGetPointer(DML\Factory::contentOnly([]));
         }
         return $this->scripts->addContentGetPointer(Category\Programming::Script($script, $external));
     }

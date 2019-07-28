@@ -1,48 +1,45 @@
 <?php
 
-/*
- * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
+/**
+ * GI-SG1-HTML5-DVLP - Body
  *
- * This software is protected under GNU: you can use, study and modify it
- * but not distribute it under the terms of the GNU General Public License 
- * as published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
+ * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
+ * @copyright (C) 2019 Angel Sierra Vega. Grupo INDIE.
+ *
+ * @package GIndie\ScriptGenerator\HTML5\CategoryBasic
+ *
+ * @since 16-12-28
+ * @version 00.C0
+ * @todo Move to \GIndie\ScriptGenerator\HTML5\Basic
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\Basic;
 
 use \GIndie\ScriptGenerator\HTML5\Node;
-use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
 
 /**
- * Defines the document's body
+ * The <body> tag defines the document's body. The <body> element contains all the contents of an 
+ * HTML document, such as text, hyperlinks, images, tables, lists, etc.
+ * @link <https://www.w3schools.com/tags/tag_body.asp>
  * 
- * More info. at <https://www.w3schools.com/tags/tag_body.asp>
- * 
- * @package GIndie\ScriptGenerator\HTML5\Category\Basic
- * 
- * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version 00.A8
- * @since 16-12-28
- * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit 18-01-03
  * - Updated for new DML node
  * @edit 18-11-01
  * - Revised version
- * @todo Upgrade DocBlock using https://www.computerhope.com
- * @todo Validate attributes
  * @edit 19-04-16
  * - Deprecated use of Attribute\GlobalAttributes
+ * - Upgraded docblock
  */
 class Body extends Node
 {
 
     /**
-     * Creates a new Body object
+     * The <body> tag defines the document's body. The <body> element contains all the contents of an 
+     * HTML document, such as text, hyperlinks, images, tables, lists, etc.
+     * @link <https://www.w3schools.com/tags/tag_body.asp>
      * 
-     * @since     GI-HTML5.01.01
-     * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
+     * @since 17-??-??
+     * @edit 18-01-03
      */
     function __construct()
     {
