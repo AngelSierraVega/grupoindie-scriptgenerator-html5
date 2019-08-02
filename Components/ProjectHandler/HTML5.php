@@ -9,7 +9,7 @@
  * @package GIndie\ScriptGenerator\HTML5\Components
  *
  * @since 18-02-24
- * @version 00.49
+ * @version 00.4D
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Components\ProjectHandler;
@@ -34,6 +34,7 @@ class HTML5 extends \GIndie\ProjectHandler\AbstractProjectHandler
      * {@inheritdoc}
      * @since 18-11-01
      * @edit 19-02-03
+     * @edit 19-08-02
      */
     public static function versions()
     {
@@ -60,6 +61,13 @@ class HTML5 extends \GIndie\ProjectHandler\AbstractProjectHandler
         $rtnArray[\hexdec("00.49")]["code"] = "NEW-FRM-ELMTN";
         $rtnArray[\hexdec("00.49")]["description"] = "NEW FormElement";
         $rtnArray[\hexdec("00.49")]["threshold"] = "00.49";
+
+        /**
+         * 00.4D: MRG-HTML5form
+         */
+        $rtnArray[\hexdec("00.4D")]["code"] = "MRG-HTML5form";
+        $rtnArray[\hexdec("00.4D")]["description"] = "Merged with external project HTML5form";
+        $rtnArray[\hexdec("00.4D")]["threshold"] = "00.4D";
 
         /**
          * 00.A0: RLS-ALPHA
