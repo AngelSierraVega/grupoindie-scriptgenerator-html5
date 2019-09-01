@@ -4,6 +4,7 @@
  * HTML5 - Node 2016-12-21
  *
  * @copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @license file://LICENSE MIT License
  *
  * @package GIndie\ScriptGenerator\HTML5
  *

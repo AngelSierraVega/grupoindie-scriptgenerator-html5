@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Copyright (C) 2016 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -19,6 +19,7 @@ use \GIndie\ScriptGenerator\HTML5\Category\Basic\Title;
  * Element is a container for all the head elements
  * More info. at  <https://www.w3schools.com/tags/tag_head.asp>
  * 
+ * @license file://LICENSE MIT License
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Meta
  * 

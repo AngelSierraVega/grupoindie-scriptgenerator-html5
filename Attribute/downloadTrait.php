@@ -6,6 +6,8 @@
  *
  * @package GIndie\ScriptGenerator\HTML5\Attribute
  * 
+ * @license file://LICENSE MIT License
+ * 
  * @since 17-04-15
  * @version 00.A0
  * @edit 18-11-01

@@ -9,6 +9,7 @@ namespace GIndie\ScriptGenerator\HTML5;
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  * @package GIndie\ScriptGenerator\HTML5
+ * @license file://LICENSE MIT License
  * 
  * @version 01.00
  * @edit 18-11-01

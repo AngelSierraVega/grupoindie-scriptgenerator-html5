@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Copyright (C) 2016 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -17,6 +17,8 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * Describes metadata within an HTML document.
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Meta
+ * 
+ * @license file://LICENSE MIT License
  * 
  * @version 00.9A
  * @edit 18-11-01

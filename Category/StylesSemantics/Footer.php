@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -20,6 +20,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * https://www.w3schools.com/tags/tag_footer.asp
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
+ * @license file://LICENSE MIT License
  * 
  * @version 00.A8
  * @edit 18-11-01

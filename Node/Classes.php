@@ -7,6 +7,7 @@
  * @copyright (C) 2018 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5
+ * @license file://LICENSE MIT License
  *
  * @since 17-03-14
  * @version 00.80

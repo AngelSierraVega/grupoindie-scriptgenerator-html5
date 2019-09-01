@@ -13,7 +13,5 @@ namespace GIndie\ScriptGenerator\HTML5\Category\FormInput\Input;
  */
 class Email extends \GIndie\ScriptGenerator\HTML5\Category\FormElement\Input\Email
 {
-
     
-
 }

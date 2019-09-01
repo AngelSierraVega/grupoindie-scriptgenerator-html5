@@ -3,7 +3,8 @@
 /**
  * 
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
- *
+ * @license file://LICENSE MIT License
+ * 
  * @package GIndie\ScriptGenerator\HTML5\Attribute
  * 
  * @edit 18-02-27
@@ -15,6 +16,8 @@
 
 namespace GIndie\ScriptGenerator\HTML5\Attribute;
 
-trait formactionTrait {
+trait formactionTrait
+{
     //put your code here
+
 }

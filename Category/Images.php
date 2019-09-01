@@ -11,6 +11,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Images
+ * @license file://LICENSE MIT License
  * 
  * @version 00.30
  * @edit 18-11-01

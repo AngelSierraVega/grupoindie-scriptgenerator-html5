@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -19,6 +19,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * or have a browser that doesn't support script.
  *
  * More info. at <https://www.w3schools.com/tags/tag_noscript.asp>
+ * 
+ * @license file://LICENSE MIT License
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Programming
  * 

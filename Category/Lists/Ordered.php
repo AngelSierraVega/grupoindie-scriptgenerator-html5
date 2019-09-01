@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -16,6 +16,8 @@ namespace GIndie\ScriptGenerator\HTML5\Category\Lists;
 /**
  * Description defines an ordered list
  * More info. at <https://www.w3schools.com/tags/tag_ol.asp>
+ * 
+ * @license file://LICENSE MIT License
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 

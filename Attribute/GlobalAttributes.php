@@ -24,6 +24,7 @@ namespace GIndie\ScriptGenerator\HTML5\Attribute;
  * https://www.w3schools.com/tags/ref_standardattributes.asp
  * 
  * @copyright   (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @license file://LICENSE MIT License
  * 
  * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit 18-02-14

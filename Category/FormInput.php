@@ -7,6 +7,7 @@
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\FormInput
+ * @license file://LICENSE MIT License
  * 
  * @since 17-04-16
  * @version DEPRECATED

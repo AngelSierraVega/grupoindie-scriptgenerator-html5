@@ -2,6 +2,7 @@
 /**
  * 
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @license file://LICENSE MIT License
  *
  * @package GIndie\ScriptGenerator\HTML5\Attribute
  * 

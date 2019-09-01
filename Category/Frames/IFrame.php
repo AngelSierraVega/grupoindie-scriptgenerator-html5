@@ -13,6 +13,7 @@ use GIndie\ScriptGenerator\HTML5\Attribute;
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @license file://LICENSE MIT License
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Frames
  * 

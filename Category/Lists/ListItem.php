@@ -18,6 +18,7 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * More info. at <https://www.w3schools.com/tags/tag_li.asp>
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
+ * @license file://LICENSE MIT License
  * 
  * @version 00.AA
  * @edit 18-11-01

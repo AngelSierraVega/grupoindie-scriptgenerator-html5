@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
  *
  * This software is protected under GNU: you can use, study and modify it
@@ -17,6 +17,8 @@ use GIndie\ScriptGenerator\HTML5\Category\Links;
 
 /**
  * Abstract representation of a list.
+ * 
+ * @license file://LICENSE MIT License
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 

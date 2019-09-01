@@ -1,12 +1,13 @@
 <?php
 
-/*
- * Copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
+/**
+ * 
+ * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * 
+ * @package GIndie\ScriptGenerator\HTML5\Category\Basic
+ * @license file://LICENSE MIT License
  *
- * This software is protected under GNU: you can use, study and modify it
- * but not distribute it under the terms of the GNU General Public License 
- * as published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
+ * @version 00.C0
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category;
@@ -16,11 +17,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * 
  * More info. at <https://www.w3schools.com/tags/ref_byfunc.asp>.
  * 
- * @package GIndie\ScriptGenerator\HTML5\Category\Basic
  * 
- * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
- *
- * @version 00.C0
  * @edit 18-11-01
  * - Revised version
  * @todo Upgrade DocBlock using https://www.computerhope.com
