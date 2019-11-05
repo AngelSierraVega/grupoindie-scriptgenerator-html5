@@ -10,7 +10,7 @@
  * @license file://LICENSE MIT License
  *
  * @since 18-02-24
- * @version 00.4D
+ * @version 00.4E
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Components\ProjectHandler;
@@ -69,6 +69,13 @@ class HTML5 extends \GIndie\ProjectHandler\AbstractProjectHandler
         $rtnArray[\hexdec("00.4D")]["code"] = "MRG-HTML5form";
         $rtnArray[\hexdec("00.4D")]["description"] = "Merged with external project HTML5form";
         $rtnArray[\hexdec("00.4D")]["threshold"] = "00.4D";
+        
+        /**
+         * 00.4E: UPDT-ALBE-NOV
+         */
+        $rtnArray[\hexdec("00.4E")]["code"] = "UPDT-ALBE-NOV";
+        $rtnArray[\hexdec("00.4E")]["description"] = "2019-11-04 Update for ALBE";
+        $rtnArray[\hexdec("00.4E")]["threshold"] = "00.4E";
 
         /**
          * 00.A0: RLS-ALPHA

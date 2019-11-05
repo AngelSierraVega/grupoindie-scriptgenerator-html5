@@ -10,7 +10,7 @@
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @since 19-04-01
- * @version 00.A8
+ * @version 00.B0
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category\FormElement;
@@ -60,10 +60,12 @@ class Select extends Node
      * 
      * @return \GIndie\ScriptGenerator\HTML5\Category\FormInput\Select
      * @since 19-04-01
+     * @edit 19-11-04
+     * - Use removeContents()
      */
     public function setOptions($options)
     {
-        $this->removeContent();
+        $this->removeContents();
         $this->selectOptions = [];
         foreach ($options as $key => $value) {
             if (!\is_a($value, Option::class, false)) {

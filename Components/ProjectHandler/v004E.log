@@ -1,4 +1,9 @@
-19-11-04 a 19-??-??
+19-08-02 a 19-11-04
+19-08-01:
+ - Moved Category\FormInput\... from external project HTML5form
+19-09-01 v004D.1: 
+- Added License tag
+- Added netbeans folder
 
 -------------------------------PROJECT---------------------------------|
 \GIndie\ScriptGenerator\HTML5
