@@ -4,8 +4,8 @@
  * GI-SG1-HTML5-DVLP - DescriptionData
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (C) 2018 Angel Sierra Vega. Grupo INDIE.
- * @license file://LICENSE MIT License
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
+ * @license file://LICENSE
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  *

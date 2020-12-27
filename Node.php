@@ -1,14 +1,15 @@
 <?php
 
 /**
- * HTML5 - Node 2016-12-21
+ * HTML5 - Node
  *
- * @copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
- * @license file://LICENSE MIT License
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
+ * @license file://LICENSE
  *
  * @package GIndie\ScriptGenerator\HTML5
  *
  * @version 00.D0
+ * @since 16-12-21
  */
 
 namespace GIndie\ScriptGenerator\HTML5;
@@ -17,7 +18,7 @@ use GIndie\ScriptGenerator\DML;
 use \GIndie\ScriptGenerator\HTML5\Attribute;
 
 /**
- * Represents an <b>HTML5</b> element.
+ * Represents an abstract <b>HTML5</b> element.
  * 
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * @edit SG-HTML5.00.01 18-01-03

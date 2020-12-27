@@ -13,10 +13,10 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * @link <https://www.w3schools.com/tags/tag_pre.asp>
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (C) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  *
  * @since 18-05-16
  * @version 00.30

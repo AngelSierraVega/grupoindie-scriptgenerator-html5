@@ -4,10 +4,10 @@
  * GI-SG1-HTML5-DVLP - FormElement
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (C) 2019 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  *
  * @since 19-04-01
  * @version 00.F0

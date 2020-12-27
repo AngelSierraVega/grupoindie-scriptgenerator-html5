@@ -8,10 +8,10 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * @link <https://www.w3schools.com/tags/ref_byfunc.asp>
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Images
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @version 00.30
  * @edit 18-11-01

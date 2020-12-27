@@ -1,9 +1,9 @@
-19-11-04 a 19-??-??
+20-12-27 a 20-??-??
 
 -------------------------------PROJECT---------------------------------|
 \GIndie\ScriptGenerator\HTML5
-19-11-04 v:00.4E LOC:12408
-ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0) 
+20-12-27 v:00.58 LOC:13185
+ABS(6) CLA(152) INT(2) SCR(1) TRA(173) LOG(0) NDF(1) 
 -------------------------------VERSIONS--------------------------------|
 [00.01] CERO.........| Cero
 [00.44] RVSD-VRSN....| Revised project version
@@ -11,6 +11,7 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [00.49] NEW-FRM-ELMTN| NEW FormElement
 [00.4D] MRG-HTML5form| Merged with external project HTML5form
 [00.4E] UPDT-ALBE-NOV| 2019-11-04 Update for ALBE
+[00.4F] GTHB.........| 20-12-27 Added to hithub
 [00.A0] RLS-ALPHA....| Alpha release
 [01.00] ONE..........| One
 --------------------------------FILE-----------------------------|--V--|
@@ -51,7 +52,6 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [TRA] Attribute\formactionTrait.php..............................|00.01|
 [TRA] Attribute\formTrait.php....................................|00.F0|
 [TRA] Attribute\forTrait.php.....................................|00.01|
-[TRA] Attribute\GlobalAttributes.php.............................|DPRCT|
 [TRA] Attribute\headersTrait.php.................................|00.01|
 [TRA] Attribute\heightTrait.php..................................|00.01|
 [TRA] Attribute\hiddenTrait.php..................................|00.01|
@@ -82,49 +82,49 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [TRA] Attribute\onafterprintTrait.php............................|00.01|
 [TRA] Attribute\onbeforeprintTrait.php...........................|00.01|
 [TRA] Attribute\onbeforeunloadTrait.php..........................|00.01|
-[TRA] Attribute\onblurTrait.php..................................|00.01|
+[TRA] Attribute\onblurTrait.php..................................|DPRCT|
 [TRA] Attribute\oncanplaythroughTrait.php........................|00.01|
 [TRA] Attribute\oncanplayTrait.php...............................|00.01|
-[TRA] Attribute\onchangeTrait.php................................|00.01|
-[TRA] Attribute\onclickTrait.php.................................|00.01|
-[TRA] Attribute\oncontextmenuTrait.php...........................|00.01|
-[TRA] Attribute\oncopyTrait.php..................................|00.01|
+[TRA] Attribute\onchangeTrait.php................................|DPRCT|
+[TRA] Attribute\onclickTrait.php.................................|DPRCT|
+[TRA] Attribute\oncontextmenuTrait.php...........................|DPRCT|
+[TRA] Attribute\oncopyTrait.php..................................|DPRCT|
 [TRA] Attribute\oncuechangeTrait.php.............................|00.01|
-[TRA] Attribute\oncutTrait.php...................................|00.01|
-[TRA] Attribute\ondblclickTrait.php..............................|00.01|
-[TRA] Attribute\ondragendTrait.php...............................|00.01|
-[TRA] Attribute\ondragenterTrait.php.............................|00.01|
-[TRA] Attribute\ondragleaveTrait.php.............................|00.01|
-[TRA] Attribute\ondragoverTrait.php..............................|00.01|
-[TRA] Attribute\ondragstartTrait.php.............................|00.01|
-[TRA] Attribute\ondragTrait.php..................................|00.01|
-[TRA] Attribute\ondropTrait.php..................................|00.01|
+[TRA] Attribute\oncutTrait.php...................................|DPRCT|
+[TRA] Attribute\ondblclickTrait.php..............................|DPRCT|
+[TRA] Attribute\ondragendTrait.php...............................|DPRCT|
+[TRA] Attribute\ondragenterTrait.php.............................|DPRCT|
+[TRA] Attribute\ondragleaveTrait.php.............................|DPRCT|
+[TRA] Attribute\ondragoverTrait.php..............................|DPRCT|
+[TRA] Attribute\ondragstartTrait.php.............................|DPRCT|
+[TRA] Attribute\ondragTrait.php..................................|DPRCT|
+[TRA] Attribute\ondropTrait.php..................................|DPRCT|
 [TRA] Attribute\ondurationchangeTrait.php........................|00.01|
 [TRA] Attribute\onemptiedTrait.php...............................|00.01|
 [TRA] Attribute\onendedTrait.php.................................|00.01|
 [TRA] Attribute\onerrorTrait.php.................................|00.01|
-[TRA] Attribute\onfocusTrait.php.................................|00.01|
+[TRA] Attribute\onfocusTrait.php.................................|DPRCT|
 [TRA] Attribute\onhashchangeTrait.php............................|00.01|
-[TRA] Attribute\oninputTrait.php.................................|00.01|
-[TRA] Attribute\oninvalidTrait.php...............................|00.01|
-[TRA] Attribute\onkeydownTrait.php...............................|00.01|
-[TRA] Attribute\onkeypressTrait.php..............................|00.01|
-[TRA] Attribute\onkeyupTrait.php.................................|00.01|
+[TRA] Attribute\oninputTrait.php.................................|DPRCT|
+[TRA] Attribute\oninvalidTrait.php...............................|DPRCT|
+[TRA] Attribute\onkeydownTrait.php...............................|DPRCT|
+[TRA] Attribute\onkeypressTrait.php..............................|DPRCT|
+[TRA] Attribute\onkeyupTrait.php.................................|DPRCT|
 [TRA] Attribute\onloadeddataTrait.php............................|00.01|
 [TRA] Attribute\onloadedmetadataTrait.php........................|00.01|
 [TRA] Attribute\onloadstartTrait.php.............................|00.01|
 [TRA] Attribute\onloadTrait.php..................................|00.01|
-[TRA] Attribute\onmousedownTrait.php.............................|00.01|
-[TRA] Attribute\onmousemoveTrait.php.............................|00.01|
-[TRA] Attribute\onmouseoutTrait.php..............................|00.01|
-[TRA] Attribute\onmouseoverTrait.php.............................|00.01|
-[TRA] Attribute\onmouseupTrait.php...............................|00.01|
-[TRA] Attribute\onmousewheelTrait.php............................|00.01|
+[TRA] Attribute\onmousedownTrait.php.............................|DPRCT|
+[TRA] Attribute\onmousemoveTrait.php.............................|DPRCT|
+[TRA] Attribute\onmouseoutTrait.php..............................|DPRCT|
+[TRA] Attribute\onmouseoverTrait.php.............................|DPRCT|
+[TRA] Attribute\onmouseupTrait.php...............................|DPRCT|
+[TRA] Attribute\onmousewheelTrait.php............................|DPRCT|
 [TRA] Attribute\onofflineTrait.php...............................|00.01|
 [TRA] Attribute\ononlineTrait.php................................|00.01|
 [TRA] Attribute\onpagehideTrait.php..............................|00.01|
 [TRA] Attribute\onpageshowTrait.php..............................|00.01|
-[TRA] Attribute\onpasteTrait.php.................................|00.01|
+[TRA] Attribute\onpasteTrait.php.................................|DPRCT|
 [TRA] Attribute\onpauseTrait.php.................................|00.01|
 [TRA] Attribute\onplayingTrait.php...............................|00.01|
 [TRA] Attribute\onplayTrait.php..................................|00.01|
@@ -133,11 +133,11 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [TRA] Attribute\onratechangeTrait.php............................|00.01|
 [TRA] Attribute\onresetTrait.php.................................|00.01|
 [TRA] Attribute\onresizeTrait.php................................|00.01|
-[TRA] Attribute\onscrollTrait.php................................|00.01|
+[TRA] Attribute\onscrollTrait.php................................|DPRCT|
 [TRA] Attribute\onsearchTrait.php................................|00.01|
 [TRA] Attribute\onseekedTrait.php................................|00.01|
 [TRA] Attribute\onseekingTrait.php...............................|00.01|
-[TRA] Attribute\onselectTrait.php................................|00.01|
+[TRA] Attribute\onselectTrait.php................................|DPRCT|
 [TRA] Attribute\onshowTrait.php..................................|00.01|
 [TRA] Attribute\onstalledTrait.php...............................|00.01|
 [TRA] Attribute\onstorageTrait.php...............................|00.01|
@@ -148,7 +148,7 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [TRA] Attribute\onunloadTrait.php................................|00.01|
 [TRA] Attribute\onvolumechangeTrait.php..........................|00.01|
 [TRA] Attribute\onwaitingTrait.php...............................|00.01|
-[TRA] Attribute\onwheelTrait.php.................................|00.01|
+[TRA] Attribute\onwheelTrait.php.................................|DPRCT|
 [TRA] Attribute\openTrait.php....................................|00.01|
 [TRA] Attribute\optimumTrait.php.................................|00.01|
 [TRA] Attribute\patternTrait.php.................................|00.01|
@@ -186,64 +186,7 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [TRA] Attribute\valueTrait.php...................................|00.F0|
 [TRA] Attribute\widthTrait.php...................................|00.01|
 [TRA] Attribute\wrapTrait.php....................................|00.C0|
-[TRA] Attribute\formenctypeTrait.php.............................|00.01|
-[TRA] Attribute\formmethodTrait.php..............................|00.01|
-[TRA] Attribute\formnovalidateTrait.php..........................|00.01|
-[TRA] Attribute\formtargetTrait.php..............................|00.01|
-[SCR] AutoloaderHTML5.php........................................|01.00|
-[CLA] Category\FormElement\Button.php............................|00.BC|
-[CLA] Category\FormElement\DataList.php..........................|00.30|
-[CLA] Category\FormElement\FieldSet.php..........................|00.30|
-[CLA] Category\FormElement\Form.php..............................|00.A8|
-[CLA] Category\FormElement\Input\Button.php......................|00.80|
-[ABS] Category\FormElement\Input.php.............................|00.A8|
-[CLA] Category\FormElement\Keygen.php............................|00.30|
-[CLA] Category\FormElement\Label.php.............................|00.80|
-[CLA] Category\FormElement\Legend.php............................|00.30|
-[CLA] Category\FormElement\Option.php............................|00.A8|
-[CLA] Category\FormElement\OptionGroup.php.......................|00.30|
-[CLA] Category\FormElement\Output.php............................|00.30|
-[CLA] Category\FormElement\Select.php............................|00.B0|
-[CLA] Category\FormElement\TextArea.php..........................|00.C0|
-[CLA] Document.php...............................................|01.00|
-[CLA] Format\Bold.php............................................|00.30|
-[CLA] Format\Preformatted.php....................................|00.30|
-[CLA] Format.php.................................................|00.30|
-[CLA] FormElement.php............................................|00.F0|
-[CLA] Node\Classes.php...........................................|00.80|
-[ABS] Node.php...................................................|00.D0|
-[CLA] Category\Basic\Body.php....................................|00.C0|
-[CLA] Category\Basic\BreakLine.php...............................|00.A0|
-[CLA] Category\Basic\Comment.php.................................|00.A0|
-[CLA] Category\Basic\Doctype.php.................................|00.A0|
-[CLA] Category\Basic\Head.php....................................|00.01|
-[CLA] Category\Basic\Header.php..................................|00.A8|
-[CLA] Category\Basic\Hr.php......................................|00.A8|
-[CLA] Category\Basic\HTML.php....................................|00.A0|
-[CLA] Category\Basic\Paragraph.php...............................|00.A8|
-[CLA] Category\Basic\Title.php...................................|00.A0|
-[CLA] Category\Basic.php.........................................|00.C0|
-[CLA] Category\FormElement\Input\Checkbox.php....................|00.80|
-[CLA] Category\FormElement\Input\Color.php.......................|00.80|
-[CLA] Category\FormElement\Input\Date.php........................|00.80|
-[CLA] Category\FormElement\Input\DatetimeLocal.php...............|00.80|
-[CLA] Category\FormElement\Input\Email.php.......................|00.80|
-[CLA] Category\FormElement\Input\File.php........................|00.80|
-[CLA] Category\FormElement\Input\Hidden.php......................|00.80|
-[CLA] Category\FormElement\Input\Image.php.......................|00.90|
-[CLA] Category\FormElement\Input\Month.php.......................|00.80|
-[CLA] Category\FormElement\Input\Number.php......................|00.80|
-[CLA] Category\FormElement\Input\Password.php....................|00.50|
-[CLA] Category\FormElement\Input\Radio.php.......................|00.50|
-[CLA] Category\FormElement\Input\Range.php.......................|00.50|
-[CLA] Category\FormElement\Input\Reset.php.......................|00.50|
-[CLA] Category\FormElement\Input\Search.php......................|00.50|
-[CLA] Category\FormElement\Input\Submit.php......................|00.50|
-[CLA] Category\FormElement\Input\Tel.php.........................|00.50|
-[CLA] Category\FormElement\Input\Text.php........................|00.40|
-[CLA] Category\FormElement\Input\Time.php........................|00.50|
-[CLA] Category\FormElement\Input\URL.php.........................|00.50|
-[CLA] Category\FormElement\Input\Week.php........................|00.50|
+[NDF] Attribute\allvisibleelements...............................|NDFND|
 [CLA] Category\FormInput\Button.php..............................|DPRCT|
 [CLA] Category\FormInput\Datalist.php............................|DPRCT|
 [CLA] Category\FormInput\Fieldset.php............................|DPRCT|
@@ -279,6 +222,64 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [CLA] Category\FormInput\Output.php..............................|DPRCT|
 [CLA] Category\FormInput\Select.php..............................|DPRCT|
 [CLA] Category\FormInput\Textarea.php............................|DPRCT|
+[TRA] Attribute\formenctypeTrait.php.............................|00.01|
+[TRA] Attribute\formmethodTrait.php..............................|00.01|
+[TRA] Attribute\formnovalidateTrait.php..........................|00.01|
+[TRA] Attribute\formtargetTrait.php..............................|00.01|
+[SCR] AutoloaderHTML5.php........................................|01.00|
+[CLA] Category\FormElement\Button.php............................|00.BC|
+[CLA] Category\FormElement\DataList.php..........................|00.30|
+[CLA] Category\FormElement\FieldSet.php..........................|00.30|
+[CLA] Category\FormElement\Form.php..............................|00.A8|
+[CLA] Category\FormElement\Input\Button.php......................|00.80|
+[ABS] Category\FormElement\Input.php.............................|00.A8|
+[CLA] Category\FormElement\Keygen.php............................|00.30|
+[CLA] Category\FormElement\Label.php.............................|00.80|
+[CLA] Category\FormElement\Legend.php............................|00.30|
+[CLA] Category\FormElement\Option.php............................|00.A8|
+[CLA] Category\FormElement\OptionGroup.php.......................|00.30|
+[CLA] Category\FormElement\Output.php............................|00.30|
+[CLA] Category\FormElement\Select.php............................|00.B0|
+[CLA] Category\FormElement\TextArea.php..........................|00.C0|
+[CLA] Document.php...............................................|01.00|
+[CLA] Format\Bold.php............................................|00.30|
+[CLA] Format\Preformatted.php....................................|00.30|
+[CLA] Format.php.................................................|00.30|
+[CLA] FormElement.php............................................|00.F0|
+[CLA] Node\Classes.php...........................................|00.80|
+[ABS] Node.php...................................................|00.D0|
+[CLA] Category\Basic\Body.php....................................|00.C0|
+[CLA] Category\Basic\BreakLine.php...............................|00.A0|
+[CLA] Category\Basic\Comment.php.................................|00.A0|
+[CLA] Category\Basic\Doctype.php.................................|00.A0|
+[CLA] Category\Basic\Head.php....................................|01.00|
+[CLA] Category\Basic\Header.php..................................|00.A8|
+[CLA] Category\Basic\Hr.php......................................|00.A8|
+[CLA] Category\Basic\HTML.php....................................|00.A0|
+[CLA] Category\Basic\Paragraph.php...............................|00.A8|
+[CLA] Category\Basic\Title.php...................................|00.A0|
+[CLA] Category\Basic.php.........................................|00.D0|
+[CLA] Category\FormElement\Input\Checkbox.php....................|00.80|
+[CLA] Category\FormElement\Input\Color.php.......................|00.80|
+[CLA] Category\FormElement\Input\Date.php........................|00.80|
+[CLA] Category\FormElement\Input\DatetimeLocal.php...............|00.80|
+[CLA] Category\FormElement\Input\Email.php.......................|00.80|
+[CLA] Category\FormElement\Input\File.php........................|00.80|
+[CLA] Category\FormElement\Input\Hidden.php......................|00.80|
+[CLA] Category\FormElement\Input\Image.php.......................|00.90|
+[CLA] Category\FormElement\Input\Month.php.......................|00.80|
+[CLA] Category\FormElement\Input\Number.php......................|00.80|
+[CLA] Category\FormElement\Input\Password.php....................|00.50|
+[CLA] Category\FormElement\Input\Radio.php.......................|00.50|
+[CLA] Category\FormElement\Input\Range.php.......................|00.50|
+[CLA] Category\FormElement\Input\Reset.php.......................|00.50|
+[CLA] Category\FormElement\Input\Search.php......................|00.50|
+[CLA] Category\FormElement\Input\Submit.php......................|00.50|
+[CLA] Category\FormElement\Input\Tel.php.........................|00.50|
+[CLA] Category\FormElement\Input\Text.php........................|00.40|
+[CLA] Category\FormElement\Input\Time.php........................|00.50|
+[CLA] Category\FormElement\Input\URL.php.........................|00.50|
+[CLA] Category\FormElement\Input\Week.php........................|00.50|
 [CLA] Category\FormInput.php.....................................|DPRCT|
 [CLA] Category\Frames\IFrame.php.................................|00.A8|
 [CLA] Category\Frames.php........................................|00.F0|
@@ -337,6 +338,17 @@ ABS(6) CLA(141) INT(2) SCR(1) TRA(174) LOG(0) NDF(0)
 [CLA] Category\StylesSemantics\Style.php.........................|00.A8|
 [CLA] Category\StylesSemantics\Summary.php.......................|00.01|
 [CLA] Category\StylesSemantics.php...............................|00.4A|
-[CLA] Components\ProjectHandler\HTML5.php........................|00.4E|
+[CLA] Components\ProjectHandler\HTML5.php........................|00.4F|
+[CLA] Tables\Body.php............................................|00.10|
+[CLA] Tables\Caption.php.........................................|00.10|
+[CLA] Tables\Cell.php............................................|00.A0|
+[CLA] Tables\Column.php..........................................|00.10|
+[CLA] Tables\ColumnGroup.php.....................................|00.10|
+[CLA] Tables\Footer.php..........................................|00.70|
+[CLA] Tables\Header.php..........................................|00.A2|
+[CLA] Tables\Row.php.............................................|00.AA|
+[CLA] Tables\Table.php...........................................|00.80|
+[CLA] Tables\Traits\RowHandler.php...............................|00.B3|
+[CLA] Tables.php.................................................|00.20|
 -----------------------------------------------------------------------|
- \GIndie\ScriptGenerator\HTML5 v 00.4E
+ \GIndie\ScriptGenerator\HTML5 v 00.58

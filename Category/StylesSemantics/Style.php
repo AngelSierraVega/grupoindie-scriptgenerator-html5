@@ -18,7 +18,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  *  The <style> tag is used to define style information for an HTML document.
  * More info. at <https://www.w3schools.com/tags/tag_style.asp>
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
  * 

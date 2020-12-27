@@ -10,7 +10,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute As Attribute;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_a.asp>
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Links
  * 

@@ -10,10 +10,10 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * Description of Frames
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Frames
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @version 00.F0
  * @edit 18-11-01

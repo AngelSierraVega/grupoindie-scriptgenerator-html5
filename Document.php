@@ -5,11 +5,11 @@ namespace GIndie\ScriptGenerator\HTML5;
 /**
  * Represents an <b>HTML5</b> document.
  * 
- * @copyright (C) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
  * 
  * @package GIndie\ScriptGenerator\HTML5
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @version 01.00
  * @edit 18-11-01

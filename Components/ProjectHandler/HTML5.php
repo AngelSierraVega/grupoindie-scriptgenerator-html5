@@ -4,13 +4,13 @@
  * GI-SG1-HTML5-DVLP - HTML5
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (C) 2019 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5\Components
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  *
  * @since 18-02-24
- * @version 00.4E
+ * @version 00.4F
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Components\ProjectHandler;
@@ -76,6 +76,13 @@ class HTML5 extends \GIndie\ProjectHandler\AbstractProjectHandler
         $rtnArray[\hexdec("00.4E")]["code"] = "UPDT-ALBE-NOV";
         $rtnArray[\hexdec("00.4E")]["description"] = "2019-11-04 Update for ALBE";
         $rtnArray[\hexdec("00.4E")]["threshold"] = "00.4E";
+        
+        /**
+         * 00.4F: GTHB
+         */
+        $rtnArray[\hexdec("00.4F")]["code"] = "GTHB";
+        $rtnArray[\hexdec("00.4F")]["description"] = "20-12-27 Added to hithub";
+        $rtnArray[\hexdec("00.4F")]["threshold"] = "00.4F";
 
         /**
          * 00.A0: RLS-ALPHA
@@ -98,13 +105,14 @@ class HTML5 extends \GIndie\ProjectHandler\AbstractProjectHandler
      */
     public static function projectClasses()
     {
-        return [];
-        return [HTML5\Category\Basic::class
-            , HTML5\Category\Links::class
-            , HTML5\Category\Lists::class
-            , HTML5\Category\Meta::class
-            , HTML5\Category\Programming::class
-            , HTML5\Category\StylesSemantics::class
+//        return [];
+        return [ 
+            \GIndie\ScriptGenerator\HTML5\Category\Basic::class
+            , \GIndie\ScriptGenerator\HTML5\Category\Links::class
+            , \GIndie\ScriptGenerator\HTML5\Category\Lists::class
+            , \GIndie\ScriptGenerator\HTML5\Category\Meta::class
+            , \GIndie\ScriptGenerator\HTML5\Category\Programming::class
+            , \GIndie\ScriptGenerator\HTML5\Category\StylesSemantics::class
         ];
     }
 

@@ -15,7 +15,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category\Lists;
  * Tag defines an unordered
  * More info. at  <https://www.w3schools.com/tags/tag_ul.asp>
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 

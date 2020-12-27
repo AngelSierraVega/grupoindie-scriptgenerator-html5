@@ -21,8 +21,8 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Basic
  * 
- * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
- * @license file://LICENSE MIT License
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
+ * @license file://LICENSE
  *
  * @version 00.A0
  * @since       2017-04-14

@@ -2,11 +2,11 @@
 
 /**
  * 
- * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5\Attribute
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @since 17-04-15
  * @version 00.A0

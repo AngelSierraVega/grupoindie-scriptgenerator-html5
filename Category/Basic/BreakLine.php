@@ -18,11 +18,11 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * 
  * More info. at <https://www.w3schools.com/tags/tag_br.asp>
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Basic
  * 
- * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @version 00.A0
  * @since       2017-04-14

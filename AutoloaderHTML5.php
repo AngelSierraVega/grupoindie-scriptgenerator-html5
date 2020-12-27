@@ -4,10 +4,10 @@
  * DVLP-SG1-HTML5 - ProjectHandler
  *
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (c) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @since 17-??-??
  *

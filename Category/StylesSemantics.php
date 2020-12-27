@@ -15,7 +15,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * Description of StylesSemantics
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @version 00.4A
  * @edit 18-11-01

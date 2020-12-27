@@ -18,7 +18,7 @@ use \GIndie\ScriptGenerator\HTML5\Node;
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Meta
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @version 00.9A
  * @edit 18-11-01

@@ -19,7 +19,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * More info. at <https://www.w3schools.com/tags/ref_byfunc.asp>.
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @version 00.A0
  * @edit 18-11-01

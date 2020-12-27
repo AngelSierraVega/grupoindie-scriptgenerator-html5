@@ -17,7 +17,7 @@ namespace GIndie\ScriptGenerator\HTML5\Category;
  * @link https://www.w3schools.com/tags/ref_byfunc.asp
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Meta
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @version 00.F0
  * @edit 18-11-01

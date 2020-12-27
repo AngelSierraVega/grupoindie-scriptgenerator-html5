@@ -4,10 +4,10 @@
  * GI-SG1-HTML5-DVLP - Phrase
  * 
  * @author Angel Sierra Vega <angel.sierra@grupoindie.com>
- * @copyright (C) 2018 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Phrase
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  *
  * @since 18-05-16
  * @version 00.70

@@ -19,7 +19,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute;
  *
  * More info: <https://www.w3schools.com/tags/tag_div.asp>
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\StylesSemantics
  * 

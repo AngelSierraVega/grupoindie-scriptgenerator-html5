@@ -18,7 +18,7 @@ use GIndie\ScriptGenerator\HTML5\Category\Links;
 /**
  * Abstract representation of a list.
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Lists
  * 

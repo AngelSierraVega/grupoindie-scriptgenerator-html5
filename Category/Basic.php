@@ -2,12 +2,12 @@
 
 /**
  * 
- * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+ * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
  * 
  * @package GIndie\ScriptGenerator\HTML5\Category\Basic
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  *
- * @version 00.C0
+ * @version 00.D0
  */
 
 namespace GIndie\ScriptGenerator\HTML5\Category;
@@ -69,7 +69,7 @@ class Basic
     /**
      * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Comment}
      * 
-     * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+     * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
      *
      * @since       GIG-HTML5.00.01
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>
@@ -118,6 +118,20 @@ class Basic
     {
         return new Basic\HTML($title, $lang, $charset);
     }
+    
+    /**
+     * Contains metadata/information for the document
+     * 
+     * @since 20-12-26
+     * 
+     * @return \GIndie\ScriptGenerator\HTML5\Category\Basic\Head
+     * 
+     * @ut_str head "<head charset="UTF-8"><title>title</title></head>"
+     */
+    public static function head()
+    {
+        return new Basic\Head("UTF-8","title");
+    }
 
     /**
      * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Header}
@@ -143,7 +157,7 @@ class Basic
     /**
      * {@see        \GIndie\ScriptGenerator\HTML5\Category\Basic\Hr}
      * 
-     * @copyright (c) 2017 Angel Sierra Vega. Grupo INDIE.
+     * @copyright (CC) 2020 Angel Sierra Vega. Grupo INDIE.
      *
      * @since       GIG-HTML5.00.02
      * @author      Angel Sierra Vega <angel.sierra@grupoindie.com>

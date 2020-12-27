@@ -19,7 +19,7 @@ use \GIndie\ScriptGenerator\HTML5\Attribute as Attribute;
  * 
  * https://www.w3schools.com/tags/tag_link.asp
  * 
- * @license file://LICENSE MIT License
+ * @license file://LICENSE
  *
  * @package GIndie\ScriptGenerator\HTML5\Category\Links
  * 
