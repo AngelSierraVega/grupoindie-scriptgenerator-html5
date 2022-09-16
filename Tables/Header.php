@@ -64,8 +64,12 @@ class Header extends \GIndie\ScriptGenerator\HTML5\Node
                 $this->addContent($row);
                 break;
             default:
-                var_dump($data);
-                \trigger_error("todo", \E_USER_ERROR);
+                $row = new Row();
+                $row->addCell(Cell::header($data));
+                $this->addContent($row);
+//                var_dump($data);
+//                \trigger_error("todo", \E_USER_ERROR);
+                break;
         }
     }
 

@@ -109,7 +109,7 @@ class FormInput
      */
     public static function inputDateTimeLocal()
     {
-        return new FormInput\Input\DateTimeLocal();
+        return new FormInput\Input\DatetimeLocal();
     }
 
     /**
